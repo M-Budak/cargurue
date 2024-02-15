@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.text())
         .then(data => document.getElementById("header").innerHTML = data);
 
-    fetch("\fetch\footer.html")
+    fetch("/fetch/footer.html")
         .then(response => response.text())
         .then(data => document.getElementById("footer").innerHTML = data);
 
-    fetch("/car_bodies.html")
+    fetch("/fetch/car_bodies.html")
         .then(response => response.text())
         .then(data => document.getElementById("car_bodies").innerHTML = data);
 
