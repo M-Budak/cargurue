@@ -1,21 +1,147 @@
 .scrollable-cards {
     overflow-x: auto;
     white-space: nowrap;
-    flex-wrap: nowrap;
     display: flex;
-}
-.scrollable-cards .card {
+    flex-wrap: nowrap;
+  }
+  
+  .scrollable-cards .card {
     flex: 0 0 auto;
     width: 300px; /* Kart genişliği, ihtiyaca göre ayarlayabilirsiniz */
     margin-right: 10px; /* Kartlar arasındaki boşluk */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .scrollable-cards .card img {
+    max-height: 150px; /* Görselin yüksekliğini otomatik yapar */
+    width: 100%; /* Görselin genişliğini kartın genişliğiyle uyumlu hale getirir */
+  }
+  
+  .scrollable-cards .card .card-text {
+    white-space: normal; /* Metnin sarılmasını sağlar */
+    word-wrap: break-word; /* Uzun kelimelerin kırılmasını sağlar */
+  }
+ 
+  .scrollable-cards h5{
+    margin: 10px;
+  }
+
+
+  .card-product{
+    width: 224px;
+  }
+
+  .yeni-eklenen-title{
+    margin: 10px 0 0 10px;
+    display: flex;
+    align-items: center; /* Dikeyde ortala */
+    justify-content:left /* Yatayda ortala */
 }
 
+  
 .footer_haberler .col-12 li{
-    background-color: yellow;
     margin-left: auto; /* Sağa yasla */
     margin-right: 0;   /* Sağ kenara yapışık olmasını sağla */
     width: 125%;
 }
+
+
+
+/* ANASAYFA STARTS*/
+
+.full-width-carousel {
+    width: 100vw; /* Tam genişlik */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.carousel-item img {
+    height: 400px; /* İstediğiniz dikey yüksekliği ayarlayın */
+    object-fit: cover; /* Görsellerin doğru şekilde yerleşmesini sağlar */
+}
+
+/* Carousel item transition effect */
+.carousel-item {
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Fix white flash during transition */
+.carousel-item img {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right,
+.carousel-item-next,
+.carousel-item-prev {
+    transform: translateX(0);
+    opacity: 0;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+    opacity: 1;
+}
+
+.carousel-item.active,
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+    opacity: 1;
+}
+
+
+.side-news .news-thumbnail{
+margin-left: 10px;
+}
+
+.news-thumbnail {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 300px; /* İhtiyacınıza göre yükseklik ayarlayabilirsiniz */
+  }
+  
+  .news-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Başlık arka planı için yarı saydam siyah */
+    padding: 1px;
+    font-size: 1.2em;
+  }
+  
+  .main-news .news-thumbnail {
+    height: 100%; /* 9 col'luk ana haber alanı için tam yükseklik */
+    background-image: url('img/haberler/byd.jpg'); /* Ana haber görseli */
+  }
+  
+  .side-news .news-thumbnail {
+    height: 100px; /* 3 col'luk yan haber alanları için yükseklik */
+    background-image: url('img/haberler/c4x.jpg'); /* Yan haber görseli */
+  }
+  
+  /* Yan haber görselleri için */
+  .side-news .news-thumbnail:nth-child(2) {
+    background-image: url('img/haberler/togg.jpg');
+  }
+  
+  .side-news .news-thumbnail:nth-child(3) {
+    background-image: url('img/haberler/tesla.webp');
+  }
+  
+
+
+/* ANASAYFA ENDS */
 
 
 /* HEADER STARTS  */
@@ -119,7 +245,7 @@ header {
 
 .card-img-top-brand {
     object-fit: cover; 
-    height: 320px; 
+    height: 304px; 
     width: 100%; 
 }
 
@@ -224,7 +350,7 @@ a, a:visited, a:focus, a:active a:hover {
 
 .card-img-top {
     object-fit: cover; 
-    height: 150px; 
+    height: 163px; 
     width: 100%; 
 }
 
@@ -239,16 +365,21 @@ a, a:visited, a:focus, a:active a:hover {
     display: flex;
     justify-content: space-between;
 }
+.btn{
+    border: 10px;
+    font-size: 3rem;
+}
 
 .btn-custom {
     font-size: 22px;
     background-color: white;
     color: var(--primary-color);
-    border: 0.1rem solid black;
+    border: 0.1rem solid rgba(0, 0, 0, 0.793);
+    border-color: #020A2B;
     width: 10rem;
     padding: 5px 15px;
     margin: 0.3rem;
-    transition: background-color 0.3s, color 0.3s;
+    /* transition: background-color 0.3s, color 0.3s, border-color 0.3s; */
 }
 
 .btn-custom.active {
@@ -256,9 +387,8 @@ a, a:visited, a:focus, a:active a:hover {
     color: white;
     border-color: white;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
-
 
 /* Header Ends */
 
@@ -449,10 +579,14 @@ margin-top: -0.5rem;
 
 @media only screen and (max-width: 769px) {
 
+    .side-news .news-title {
+        padding: 1px;
+        font-size: 0.8em;
+      }
+
 /* HEADER < 769 STARTS  */
 
 .footer_haberler .col-12 li{
-    background-color: yellow;
     width: 100%;
 }
 
@@ -478,7 +612,7 @@ header {
 
 .card-img-top-brand {
     object-fit: cover; 
-    height: 180px; 
+    height: 224px; 
     width: 100%; 
 }
 
@@ -500,7 +634,7 @@ header {
 
 .card-img-top {
     object-fit: cover; /* Belirlediğiniz orana uygun şekilde sığdırma */
-    height: 90px; /* İstedğiniz yükseklik */
+    height: 116px; /* İstedğiniz yükseklik */
     width: 100%; /* Genişliği %100 yaparak kartın içinde tam olarak görünmesini sağlar */
 }
 
