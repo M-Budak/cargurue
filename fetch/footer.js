@@ -86,7 +86,7 @@ class MyFooter extends HTMLElement {
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 col-md-4">
-                            <a href="/anasayfa.html">
+                            <a href="\anasayfa.html">
                                 <h5 class="column-title" style="text-align: left;">aracyorumu.com</h5>
                             </a>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, atque animi.</p>
@@ -100,20 +100,20 @@ class MyFooter extends HTMLElement {
                             <ul class="list-unstyled">
                                 <div class="row">
                                     <div class="col-6 col-md-12">
-                                        <li><a href="/anasayfa.html">Anasayfa</a></li>
-                                        <li><a href="/markalar.html">Markalar</a></li>
-                                        <li><a href="/kasatipleri.html">Kasalar</a></li>
-                                        <li><a href="/modeller.html">Modeller</a></li>
-                                        <li><a href="/haberler.html">Haberler</a></li>
-                                        <li><a href="/hakkimizda.html">Hakkımızda</a></li>
+                                        <li><a href="\anasayfa.html">Anasayfa</a></li>
+                                        <li><a href="\markalar.html">Markalar</a></li>
+                                        <li><a href="\kasatipleri.html">Kasalar</a></li>
+                                        <li><a href="\modeller.html">Modeller</a></li>
+                                        <li><a href="\haberler.html">Haberler</a></li>
+                                        <li><a href="\hakkimizda.html">Hakkımızda</a></li>
                                     </div>
                                     <div class="col-6 col-md-12">
-                                        <li><a href="/kasatipleri.html#sedan">Sedan</a></li>
-                                        <li><a href="/kasatipleri.html#hb">Hatchback</a></li>
-                                        <li><a href="/kasatipleri.html#suv">SUV</a></li>
-                                        <li><a href="/kasatipleri.html#cabrio">Cabrio</a></li>
-                                        <li><a href="/kasatipleri.html#minivan">Minivan</a></li>
-                                        <li><a href="/kasatipleri.html#pickup">Pickup</a></li>
+                                        <li><a href="\kasatipleri.html#sedan">Sedan</a></li>
+                                        <li><a href="\kasatipleri.html#hb">Hatchback</a></li>
+                                        <li><a href="\kasatipleri.html#suv">SUV</a></li>
+                                        <li><a href="\kasatipleri.html#cabrio">Cabrio</a></li>
+                                        <li><a href="\kasatipleri.html#minivan">Minivan</a></li>
+                                        <li><a href="\kasatipleri.html#pickup">Pickup</a></li>
                                     </div>
                                 </div>
                             </ul>
@@ -138,7 +138,7 @@ class MyFooter extends HTMLElement {
                                         <li><a href="#link16">Toyota Corolla</a></li>
                                         <li><a href="#link18">Volkswagen Golf</a></li>
                                         <li><a href="#link19">Togg T10X</a></li>
-                                        <li><a href="/modeller/320i.html">BMW 320i</a></li>
+                                        <li><a href="\modeller/320i.html">BMW 320i</a></li>
                                         <li><a href="#link20">Tümü ></a></li>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@ class MyFooter extends HTMLElement {
                                 <div class="row">
                                     <div class="col-6 col-md-12">
                                         <li><a href="#link11">Fiat</a></li>
-                                        <li><a href="/markalar/renault.html">Renault</a></li>
+                                        <li><a href="\markalar/renault.html">Renault</a></li>
                                         <li><a href="#link13">Opel</a></li>
                                         <li><a href="#link14">Volkswagen</a></li>
                                         <li><a href="#link15">Peugeot</a></li>
