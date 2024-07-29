@@ -120,7 +120,7 @@ class MyFooter extends HTMLElement {
                         </div>
                         
                         <div class="col-sm-12 col-md-2 mt-3">
-                            <a href="modeller.html">
+                            <a href="\modeller.html">
                                 <h5 class="column-title">Modeller</h5>
                             </a>
                             <ul class="list-unstyled">
@@ -146,7 +146,7 @@ class MyFooter extends HTMLElement {
                         </div>
                         
                         <div class="col-sm-12 col-md-2 mt-3">
-                            <a href="markalar.html">
+                            <a href="\markalar.html">
                             <h5 class="column-title">Markalar</h5>
                           </a>
                             <ul class="list-unstyled">
