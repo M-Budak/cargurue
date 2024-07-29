@@ -40,12 +40,6 @@
 }
 
   
-.footer_haberler .col-12 li{
-    margin-left: auto; /* Sağa yasla */
-    margin-right: 0;   /* Sağ kenara yapışık olmasını sağla */
-    width: 125%;
-}
-
 
 
 /* ANASAYFA STARTS*/
@@ -759,6 +753,12 @@ font-size: 0.9rem;
 
 
 
+
+.footer_haberler .col-12 li{
+    margin-left: auto; /* Sağa yasla */
+    margin-right: 0;   /* Sağ kenara yapışık olmasını sağla */
+    width: 125%;
+}
 
 
 
