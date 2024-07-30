@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Geri Bildirim Formu</title>
+  <link rel="stylesheet" href="nps.css">
+  <style>
+    /* Pop-up stili */
+    .popup {
+      display: none; /* Başlangıçta gizli */
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .popup-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #2a5e68;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .popup-button:hover {
+      background-color: #1f4d55;
+    }
+  </style>
+  <script>
+    // Cookie oluşturma fonksiyonu
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    // Cookie okuma fonksiyonu
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    // Pop-up gösterme fonksiyonu
+    function showPopup() {
+      var popup = document.getElementById('feedback-popup');
+      popup.style.display = 'flex'; // Pop-up'ı göster
+    }
+
+    // Cookie kontrolü ve form gönderme fonksiyonu
+    function checkCookieAndSubmit() {
+      var feedbackGiven = getCookie('feedbackGiven');
+      if (feedbackGiven) {
+        showPopup(); // Pop-up'ı göster
+        return false; // Formun gönderilmesini engelle
+      } else {
+        setCookie('feedbackGiven', 'true', 1); // 1 gün geçerli
+        return true; // Formun gönderilmesine izin ver
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      // Form gönderme kontrolü
+      const form = document.getElementById('feedback-form');
+      if (form) {
+        form.addEventListener('submit', function(event) {
+          if (!checkCookieAndSubmit()) {
+            event.preventDefault(); // Formun gönderilmesini engelle
+          }
+        });
+      }
+      
+      // Pop-up kapatma butonuna tıklama olayını dinle
+      const closeButton = document.getElementById('close-popup');
+      if (closeButton) {
+        closeButton.addEventListener('click', function() {
+          const popup = document.getElementById('feedback-popup');
+          popup.style.display = 'none'; // Pop-up'ı gizle
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <form id="feedback-form" method="post" action="" name="nps-form">
+    <h1 id="page-title">Hakkında Düşüncelerini Paylaş!</h1>
+    <br>
+    <fieldset>
+      <legend>Eklemek İstedikleriniz Var mı?</legend>
+      <textarea placeholder="Düşüncelerinizi paylaşın" name="additional_thoughts"></textarea>
+    </fieldset>
+    <button type="submit" class="submit-btn">Gönder</button>
+  </form>
+
+  <!-- Success Pop-up -->
+  <div id="feedback-popup" class="popup">
+    <div class="popup-content">
+      <h2>Hata</h2>
+      <p>Zaten oy verdiniz.</p>
+      <button id="close-popup" class="popup-button">Tamam</button>
+    </div>
+  </div>
+</body>
+</html>
