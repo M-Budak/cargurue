@@ -16,10 +16,10 @@ class BrandModal extends HTMLElement {
                   ${this.createBrandCards()}
                 </div>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                <a href="kasatipleri.html" class="btn btn-custom brand-link">Kasa Tipleri</a>
-              </div>
+<div class="modal-footer">
+  <a href="kasatipleri.html" class="btn btn-custom brand-link">Kasa Tipleri</a>
+</div>
+
             </div>
           </div>
         </div>

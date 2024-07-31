@@ -100,10 +100,10 @@ class MyFooter extends HTMLElement {
                             <ul class="list-unstyled">
                                 <div class="row">
                                     <div class="col-6 col-md-12">
-                                        <li><a href="\anasayfa.html">Anasayfa</a></li>
+                                        <li><a href="/anasayfa.html">Anasayfa</a></li>
                                         <li><a href="\markalar.html">Markalar</a></li>
                                         <li><a href="\kasatipleri.html">Kasalar</a></li>
-                                        <li><a href="\modeller.html">Modeller</a></li>
+                                        <li><a href="/modeller.html">Modeller</a></li>
                                         <li><a href="\haberler.html">Haberler</a></li>
                                         <li><a href="\hakkimizda.html">Hakkımızda</a></li>
                                     </div>
