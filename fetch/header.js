@@ -37,15 +37,15 @@ class MyHeader extends HTMLElement {
                 }
             </style>
             <header class="bg-dark text-light py-2">
-                <a href="/anasayfa.html">
+                <a href="https://m-budak.github.io/cargurue/anasayfa.html">
                     <h1 class="logo m-2">aracyorumu.com</h1>
                 </a>
                 <nav class="menu">
                     <ul>
-                        <li><a href="/markalar.html">Markalar</a></li>
-                        <li><a href="/kasatipleri.html">Kasalar</a></li>
-                        <li><a href="/modeller.html">Modeller</a></li>
-                        <li><a href="/haberler.html">Haberler</a></li>
+                        <li><a href="https://m-budak.github.io/cargurue/markalar.html">Markalar</a></li>
+                        <li><a href="https://m-budak.github.io/cargurue/kasatipleri.html">Kasalar</a></li>
+                        <li><a href="https://m-budak.github.io/cargurue/modeller.html">Modeller</a></li>
+                        <li><a href="https://m-budak.github.io/cargurue/haberler.html">Haberler</a></li>
                     </ul>
                 </nav>
             </header>
