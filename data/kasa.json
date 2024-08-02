@@ -1,0 +1,135 @@
+{
+    "sedan": [
+      {
+        "title": "Renault Megane",
+        "image": "img/list/megane.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Toyota Hilux",
+        "image": "img/list/hilux.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "img/list/xc90.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Opel Mokka",
+        "image": "img/list/mokka.webp",
+        "link": "https://www.google.com"
+      }
+    ],
+    "hb": [
+      {
+        "title": "Renault Megane",
+        "image": "img/list/megane.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Toyota Hilux",
+        "image": "img/list/hilux.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "img/list/xc90.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Opel Mokka",
+        "image": "img/list/mokka.webp",
+        "link": "https://www.google.com"
+      }
+    ],
+    "suv": [
+      {
+        "title": "Renault Megane",
+        "image": "img/list/megane.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Toyota Hilux",
+        "image": "img/list/hilux.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "img/list/xc90.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Opel Mokka",
+        "image": "img/list/mokka.webp",
+        "link": "https://www.google.com"
+      }
+    ],
+    "cabrio": [
+      {
+        "title": "Renault Megane",
+        "image": "img/list/megane.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Toyota Hilux",
+        "image": "img/list/hilux.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "img/list/xc90.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Opel Mokka",
+        "image": "img/list/mokka.webp",
+        "link": "https://www.google.com"
+      }
+    ],
+    "minivan": [
+      {
+        "title": "Renault Megane",
+        "image": "img/list/megane.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Toyota Hilux",
+        "image": "img/list/hilux.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "img/list/xc90.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Opel Mokka",
+        "image": "img/list/mokka.webp",
+        "link": "https://www.google.com"
+      }
+    ],
+    "pickup": [
+      {
+        "title": "Renault Megane",
+        "image": "img/list/megane.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Toyota Hilux",
+        "image": "img/list/hilux.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "img/list/xc90.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Opel Mokka",
+        "image": "img/list/mokka.webp",
+        "link": "https://www.google.com"
+      }
+    ]
+  }
+  

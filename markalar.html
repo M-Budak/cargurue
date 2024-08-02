@@ -29,16 +29,36 @@
     <h1 class="genel-baslik-1 mt-2">Otomobil Markaları</h1>
         <div class="modal-body">
             <div class="row row-cols-2 row-cols-md-4 g-5 mt-1 justify-content-center align-items-center">
-                <div class="brand modal-card">
-                <a href="#" class="brand-link"> 
-                    <div class="card  h-100 d-flex flex-column align-items-center">
-                        <img src="logo/audi.svg" class="modal-img-brand" alt="...">
-                        <div class="home-card-body">
-                            <h5 class="home-text-brand">Audi</h5>
+<!-- Kart -->
+<div class="brand modal-card">
+    <a href="#" class="brand-link" onclick="showPopup(); return false;">
+        <div class="card h-100 d-flex flex-column align-items-center">
+            <img src="logo/audi.svg" class="modal-img-brand" alt="Audi Logo">
+            <div class="home-card-body">
+                <h5 class="home-text-brand">Audi</h5>
+            </div>
+            <div class="badge">Çok Yakında</div>
+        </div>
+    </a>
+</div>
+
+                <!-- Pop-up -->
+                <div id="popup" class="popup-overlay" style="display: none;">
+                    <div class="popup-content">
+                        <h2>Çok Yakında Sizlerle!</h2>
+                        <p>Sosyal medya hesaplarımızı takipte kal.</p>
+                        <div class="social-media-links">
+                            <a href="#"><img src="logo/facebook.svg" alt="Facebook" class="social-media-icon"></a>
+                            <a href="#"><img src="logo/twitter.svg" alt="Twitter" class="social-media-icon"></a>
+                            <a href="#"><img src="logo/instagram.svg" alt="Instagram" class="social-media-icon"></a>
+                            <a href="#"><img src="logo/linkedin.svg" alt="LinkedIn" class="social-media-icon"></a>
                         </div>
+                        <p>Paylaştığımızda haber almak istiyorsan iletişim adresini bırak!</p>
+                        <input type="text" placeholder="Cep telefonu, mail veya sosyal medya hesaplarından seninle iletişime geçebiliriz.">
+                        <button onclick="closePopup()">Kapat</button>
                     </div>
-                </a>
                 </div>
+
                 <div class="brand modal-card">
                 <a href="#" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
@@ -239,7 +259,16 @@
 
     <my-footer></my-footer>
 
-    
+    <script>
+        function showPopup() {
+    document.getElementById('popup').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+    </script>
     
         
     <script src="fetch/header.js"></script>  

@@ -1,0 +1,89 @@
+{
+    "yeni": [
+      {
+        "title": "Renault Megane",
+        "image": "../img/models/renault-duster.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Toyota Hilux",
+        "image": "../img/models/vw-wp.jpeg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "../img/models/volvo-s60.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Opel Mokka",
+        "image": "../img/models/mokka.webp",
+        "link": "https://www.google.com"
+      }
+    ],
+    "yorum": [
+      {
+        "title": "Renault Megane",
+        "image": "../img/list/megane.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "../img/models/volvo-s60.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Toyota Hilux",
+        "image": "../img/list/hilux.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "../img/list/xc90.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Opel Mokka",
+        "image": "../img/list/mokka.webp",
+        "link": "https://www.google.com"
+      }
+    ],
+    "popular": [
+      {
+        "title": "Renault Megane",
+        "image": "../img/list/megane.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Toyota Hilux",
+        "image": "../img/list/hilux.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "../img/models/volvo-s60.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "../img/list/xc90.png",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "../img/models/volvo-s60.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Volvo XC90",
+        "image": "../img/models/volvo-s60.jpg",
+        "link": "https://www.google.com"
+      },
+      {
+        "title": "Opel Mokka",
+        "image": "../img/list/mokka.webp",
+        "link": "https://www.google.com"
+      }
+    ]
+  }
+  
