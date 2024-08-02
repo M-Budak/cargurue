@@ -3,23 +3,6 @@ class BrandsSection extends HTMLElement {
       super();
       this.attachShadow({ mode: 'open' });
       this.shadowRoot.innerHTML = `
-        <style>
-          .six-brand-img {
-            width: 50%;
-            display: block;
-            text-align: center;
-            margin: auto;
-          }
-  
-          .brand .h-100:hover {
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-          }
-  
-          .brand {
-            padding: 5px;
-            margin: 0px;
-          }
-        </style>
         <h2 class="genel-baslik-2">Otomobil Markaları</h2>
         <div class="row row-cols-3 row-cols-md-6 g-4 mt-3">
           <div class="brand">
