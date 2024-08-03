@@ -1,0 +1,26 @@
+{
+    "A": {
+        "average": "8.8",
+        "votes": 113,
+        "categories": {
+            "Performans": "8.8",
+            "Konfor": "8.8",
+            "Tasarım": "8.8",
+            "Sürüş": "8.8",
+            "Servis": "8.8",
+            "Malzeme": "8.8"
+        }
+    },
+    "B": {
+        "average": "9.0",
+        "votes": 85,
+        "categories": {
+            "Performans": "9.0",
+            "Konfor": "9.0",
+            "Tasarım": "9.0",
+            "Sürüş": "9.0",
+            "Servis": "9.0",
+            "Malzeme": "9.0"
+        }
+    }
+}

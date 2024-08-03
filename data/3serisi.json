@@ -1,0 +1,35 @@
+{
+    "318i": {
+        "skor": {
+            "genel": "8.8",
+            "performans": "8.8",
+            "konfor": "8.8",
+            "tasarım": "8.8",
+            "sürüş": "8.8",
+            "servis": "8.8",
+            "malzeme": "8.8"
+        }
+    },
+    "320i": {
+        "skor": {
+            "genel": "9.0",
+            "performans": "9.2",
+            "konfor": "8.9",
+            "tasarım": "9.1",
+            "sürüş": "9.3",
+            "servis": "8.7",
+            "malzeme": "9.0"
+        }
+    },
+    "320d": {
+        "skor": {
+            "genel": "9.1",
+            "performans": "9.3",
+            "konfor": "9.0",
+            "tasarım": "9.2",
+            "sürüş": "9.4",
+            "servis": "8.8",
+            "malzeme": "9.1"
+        }
+    }
+}

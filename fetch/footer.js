@@ -138,7 +138,7 @@ class MyFooter extends HTMLElement {
                                         <li><a href="#link16">Toyota Corolla</a></li>
                                         <li><a href="#link18">Volkswagen Golf</a></li>
                                         <li><a href="#link19">Togg T10X</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/modeller/320i.html">BMW 320i</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/test/T3serisi.html">BMW 320i</a></li>
                                         <li><a href="#link20">Tümü ></a></li>
                                     </div>
                                 </div>

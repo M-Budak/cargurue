@@ -1,0 +1,39 @@
+{
+    "A": [
+      {
+        "author": "Recep Kurtuluş",
+        "title": "2022 BMW 320i First Edition M Sport",
+        "date": "24.10.2023",
+        "duration": "2 Yıllık Kullanıcı",
+        "content": "Performans açısından BMW 320 kesinlikle etkileyici. Motor gücü, hızlanma ve yol tutuş beklentilerimi fazlasıyla karşıladı. Özellikle spor modunda sürüş yaparken otomobil gerçekten canlı ve eğlenceli. Yakıt verimliliği de şaşırtıcı derecede iyidir. Hem şehir içi hem de uzun yolculuklarda tasarruflu bir şekilde ilerleyebiliyor."
+      }
+    ],
+    "B": [
+      {
+        "author": "Ali Yılmaz",
+        "title": "2023 Audi A4 Avant",
+        "date": "01.08.2024",
+        "duration": "1 Yıllık Kullanıcı",
+        "content": "Audi A4 Avant, konfor ve performans açısından harika bir seçenek. İç mekanı oldukça şık ve malzeme kalitesi yüksek. Sürüş dinamikleri de oldukça tatmin edici. Yakıt verimliliği ise biraz düşük."
+      }
+    ],
+    "Tesla": [
+      {
+        "author": "Teslacı Ali",
+        "title": "2023 Audi A4 Avant",
+        "date": "01.08.2024",
+        "duration": "1 Yıllık Kullanıcı",
+        "content": "Togg neymiş gardaşim  de oldukça tatmin edici. Yakıt verimliliği ise biraz düşük."
+      }
+    ],
+    "BMW": [
+      {
+        "author": "Muharrem İnce",
+        "title": "2025 BMW C Serisi",
+        "date": "11.11.2024",
+        "duration": "15 Yıllık Siyasetçi",
+        "content": "Togg neymiş gardaşim  de oldukça tatmin edici. Yakıt verimliliği ise biraz düşük."
+      }
+    ]
+  }
+  
