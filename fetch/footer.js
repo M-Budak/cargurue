@@ -102,25 +102,25 @@ class MyFooter extends HTMLElement {
                                     <div class="col-6 col-md-12">
                                         <li><a href="https://m-budak.github.io/cargurue/anasayfa.html">Anasayfa</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/markalar.html">Markalar</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/kasatipleri.html">Kasalar</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/modeller.html">Modeller</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/kasa.html">Kasalar</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model.html">Modeller</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/haberler.html">Haberler</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/hakkimizda.html">Hakkımızda</a></li>
                                     </div>
                                     <div class="col-6 col-md-12">
-                                        <li><a href="https://m-budak.github.io/cargurue/kasatipleri.html#sedan">Sedan</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/kasatipleri.html#hb">Hatchback</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/kasatipleri.html#suv">SUV</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/kasatipleri.html#cabrio">Cabrio</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/kasatipleri.html#minivan">Minivan</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/kasatipleri.html#pickup">Pickup</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/kasa.html#sedan">Sedan</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/kasa.html#hb">Hatchback</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/kasa.html#suv">SUV</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/kasa.html#cabrio">Cabrio</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/kasa.html#minivan">Minivan</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/kasa.html#pickup">Pickup</a></li>
                                     </div>
                                 </div>
                             </ul>
                         </div>
                         
                         <div class="col-sm-12 col-md-2 mt-3">
-                            <a href="https://m-budak.github.io/cargurue/modeller.html">
+                            <a href="https://m-budak.github.io/cargurue/model.html">
                                 <h5 class="column-title">Modeller</h5>
                             </a>
                             <ul class="list-unstyled">

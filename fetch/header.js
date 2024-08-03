@@ -44,7 +44,7 @@ class MyHeader extends HTMLElement {
                     <ul>
                         <li><a href="https://m-budak.github.io/cargurue/markalar.html">Markalar</a></li>
                         <li><a href="https://m-budak.github.io/cargurue/kasatipleri.html">Kasalar</a></li>
-                        <li><a href="https://m-budak.github.io/cargurue/modeller.html">Modeller</a></li>
+                        <li><a href="https://m-budak.github.io/cargurue/model.html">Modeller</a></li>
                         <li><a href="https://m-budak.github.io/cargurue/haberler.html">Haberler</a></li>
                     </ul>
                 </nav>
