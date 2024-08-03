@@ -1,0 +1,131 @@
+{
+    "toyota": {
+        "Sedan": [
+            {
+                "name": "Toyota Camry",
+                "image": "../img/toyota/camry.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Hatchback": [
+            {
+                "name": "Toyota Yaris",
+                "image": "../img/toyota/yaris.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "SUV": [
+            {
+                "name": "Toyota RAV4",
+                "image": "../img/list/x5.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Cabrio": [
+            {
+                "name": "Toyota Supra",
+                "image": "../img/toyota/supra.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Minivan": [
+            {
+                "name": "Toyota Sienna",
+                "image": "../img/toyota/sienna.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Pick-Up": [
+            {
+                "name": "Toyota Hilux",
+                "image": "../img/toyota/hilux.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Elektrikli": [
+            {
+                "name": "Toyota Prius",
+                "image": "../img/toyota/prius.jpg",
+                "link": "https://www.google.com"
+            }
+        ]
+    },
+    "bmw": {
+        "Sedan": [
+            {
+                "name": "BMW 3 Series",
+                "image": "../img/bmw/3series.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Hatchback": [
+            {
+                "name": "BMW 1 Series",
+                "image": "../img/bmw/1series.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "SUV": [
+            {
+                "name": "BMW X5",
+                "image": "../img/list/x5.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Cabrio": [
+            {
+                "name": "BMW Z4",
+                "image": "../img/bmw/z4.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Minivan": [],
+        "Pick-Up": [],
+        "Elektrikli": [
+            {
+                "name": "BMW i3",
+                "image": "../img/bmw/i3.jpg",
+                "link": "https://www.google.com"
+            }
+        ]
+    },
+    "citroen": {
+        "Sedan": [
+            {
+                "name": "Citroën C4",
+                "image": "../img/citroen/c4.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Hatchback": [
+            {
+                "name": "Citroën C3",
+                "image": "../img/list/x5.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "SUV": [
+            {
+                "name": "Citroën C5 Aircross",
+                "image": "../img/citroen/c5aircross.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Cabrio": [],
+        "Minivan": [
+            {
+                "name": "Citroën SpaceTourer",
+                "image": "../img/citroen/spacetourer.jpg",
+                "link": "https://www.google.com"
+            }
+        ],
+        "Pick-Up": [],
+        "Elektrikli": [
+            {
+                "name": "Citroën ë-C4",
+                "image": "../img/citroen/ec4.jpg",
+                "link": "https://www.google.com"
+            }
+        ]
+    }
+}

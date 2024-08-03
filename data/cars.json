@@ -1,0 +1,91 @@
+{
+    "renault": {
+        "sedan": [
+            {
+                "name": "Renault Megane",
+                "image": "../img/list/megane.jpg",
+                "link": "https://www.google.com.tr"
+            },            
+            {
+                "name": "BMW X5",
+                "image": "../img/list/x5.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ],
+        "suv": [
+            {
+                "name": "Renault Kadjar",
+                "image": "../img/list/kadjar.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ],
+        "elektrikli": [
+            {
+                "name": "Renault Zoe",
+                "image": "../img/list/zoe.jpg",
+                "link": "https://www.google.com.tr"
+            },            
+            {
+                "name": "BMW X5",
+                "image": "../img/list/x5.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ]
+    },
+    "toyota": {
+        "sedan": [
+            {
+                "name": "Toyota Corolla",
+                "image": "../img/list/corolla.png",
+                "link": "https://www.google.com.tr"
+            }
+        ],
+        "suv": [
+            {
+                "name": "Toyota RAV4",
+                "image": "../img/list/rav4.jpg",
+                "link": "https://www.google.com.tr"
+            },
+            {
+                "name": "Toyota Corolla",
+                "image": "../img/list/corolla.png",
+                "link": "https://www.google.com.tr"
+            },            
+            {
+                "name": "BMW X5",
+                "image": "../img/list/x5.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ],
+        "elektrikli": [
+            {
+                "name": "Toyota Prius",
+                "image": "../img/list/prius.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ]
+    },
+    "bmw": {
+        "sedan": [
+            {
+                "name": "BMW 3 Series",
+                "image": "../img/list/3series.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ],
+        "suv": [
+            {
+                "name": "BMW X5",
+                "image": "../img/list/x5.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ],
+        "elektrikli": [
+            {
+                "name": "BMW i3",
+                "image": "../img/list/i3.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ]
+    }
+}

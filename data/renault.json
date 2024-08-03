@@ -1,0 +1,80 @@
+{
+    "sedan": [
+        {
+            "name": "Renault Megane",
+            "image": "../img/list/megane.jpg",
+            "link": "https://www.google.com.tr"
+        },
+        {
+            "name": "Toyota Hilux",
+            "image": "../img/list/hilux.png",
+            "link": "https://www.google.com.tr"
+        },        {
+            "name": "Renault Megane",
+            "image": "../img/list/megane.jpg",
+            "link": "https://www.google.com.tr"
+        },
+        {
+            "name": "Volvo XC90",
+            "image": "../img/list/xc90.png",
+            "link": "https://www.google.com.tr"
+        },
+        {
+            "name": "Opel Mokka",
+            "image": "../img/list/mokka.webp",
+            "link": "https://www.google.com.tr"
+        }
+    ],
+    "suv": [
+        {
+            "name": "Renault Megane",
+            "image": "../img/list/megane.jpg",
+            "link": "https://www.google.com.tr"
+        },
+        {
+            "name": "Toyota Hilux",
+            "image": "../img/list/hilux.png",
+            "link": "https://www.google.com.tr"
+        },
+        {
+            "name": "Volvo XC90",
+            "image": "../img/list/xc90.png",
+            "link": "https://www.google.com.tr"
+        },        {
+            "name": "Renault Megane",
+            "image": "../img/list/megane.jpg",
+            "link": "https://www.google.com.tr"
+        },        {
+            "name": "Renault Megane",
+            "image": "../img/list/megane.jpg",
+            "link": "https://www.google.com.tr"
+        },
+        {
+            "name": "Opel Mokka",
+            "image": "../img/list/mokka.webp",
+            "link": "https://www.google.com.tr"
+        }
+    ],
+    "elektrikli": [
+        {
+            "name": "Renault Megane",
+            "image": "../img/list/megane.jpg",
+            "link": "https://www.google.com.tr"
+        },
+        {
+            "name": "Toyota Hilux",
+            "image": "../img/list/hilux.png",
+            "link": "https://www.google.com.tr"
+        },
+        {
+            "name": "Volvo XC90",
+            "image": "../img/list/xc90.png",
+            "link": "https://www.google.com.tr"
+        },
+        {
+            "name": "Opel Mokka",
+            "image": "../img/list/mokka.webp",
+            "link": "https://www.google.com.tr"
+        }
+    ]
+}
