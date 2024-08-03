@@ -43,7 +43,7 @@ class MyHeader extends HTMLElement {
                 <nav class="menu">
                     <ul>
                         <li><a href="https://m-budak.github.io/cargurue/markalar.html">Markalar</a></li>
-                        <li><a href="https://m-budak.github.io/cargurue/kasatipleri.html">Kasalar</a></li>
+                        <li><a href="https://m-budak.github.io/cargurue/kasa.html">Kasalar</a></li>
                         <li><a href="https://m-budak.github.io/cargurue/model.html">Modeller</a></li>
                         <li><a href="https://m-budak.github.io/cargurue/haberler.html">Haberler</a></li>
                     </ul>

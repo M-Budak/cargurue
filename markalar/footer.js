@@ -152,9 +152,9 @@ class MyFooter extends HTMLElement {
                             <ul class="list-unstyled">
                                 <div class="row">
                                     <div class="col-6 col-md-12">
-                                        <li><a href="#link11">Fiat</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/markalar/renault.html">Renault</a></li>
-                                        <li><a href="#link13">Opel</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/markalar/toyota.html?brand=toyota">Toyota</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/markalar/renault.html?brand=renault">Renault</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/markalar/bmw.html?brand=bmw">BMW</a></li>
                                         <li><a href="#link14">Volkswagen</a></li>
                                         <li><a href="#link15">Peugeot</a></li>
                                         <li><a href="#link15">Hyundai</a></li>
