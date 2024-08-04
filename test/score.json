@@ -22,5 +22,18 @@
             "Servis": "9.0",
             "Malzeme": "9.0"
         }
+    },
+    
+    "BMW": {
+        "average": "23",
+        "votes": 113,
+        "categories": {
+            "Performans": "9.0",
+            "Konfor": "9.0",
+            "Tasarım": "9.0",
+            "Sürüş": "9.0",
+            "Servis": "9.0",
+            "Malzeme": "9.0"
+        }
     }
 }

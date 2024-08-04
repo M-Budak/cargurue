@@ -5,10 +5,10 @@
                 "name": "Renault Megane",
                 "image": "../img/list/megane.jpg",
                 "link": "https://www.google.com.tr"
-            },            
+            },
             {
-                "name": "BMW X5",
-                "image": "../img/list/x5.jpg",
+                "name": "Clio",
+                "image": "../img/list/corolla.png",
                 "link": "https://www.google.com.tr"
             }
         ],
