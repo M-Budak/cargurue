@@ -42,8 +42,8 @@
         ],
         "suv": [
             {
-                "name": "Toyota RAV4",
-                "image": "../img/list/rav4.jpg",
+                "name": "Dacia Sandero",
+                "image": "img/models/sandero3.webp",
                 "link": "https://www.google.com.tr"
             },
             {
