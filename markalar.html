@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>   
 </head>
@@ -29,36 +30,18 @@
     <h1 class="genel-baslik-1 mt-2">Otomobil Markaları</h1>
         <div class="modal-body">
             <div class="row row-cols-2 row-cols-md-4 g-5 mt-1 justify-content-center align-items-center">
-<!-- Kart -->
-<div class="brand modal-card">
-    <a href="#" class="brand-link" onclick="showPopup(); return false;">
-        <div class="card h-100 d-flex flex-column align-items-center">
-            <img src="logo/audi.svg" class="modal-img-brand" alt="Audi Logo">
-            <div class="home-card-body">
-                <h5 class="home-text-brand">Audi</h5>
-            </div>
-            <div class="badge">Çok Yakında</div>
-        </div>
-    </a>
-</div>
-
-                <!-- Pop-up -->
-                <div id="popup" class="popup-overlay" style="display: none;">
-                    <div class="popup-content">
-                        <h2>Çok Yakında Sizlerle!</h2>
-                        <p>Sosyal medya hesaplarımızı takipte kal.</p>
-                        <div class="social-media-links">
-                            <a href="#"><img src="logo/facebook.svg" alt="Facebook" class="social-media-icon"></a>
-                            <a href="#"><img src="logo/twitter.svg" alt="Twitter" class="social-media-icon"></a>
-                            <a href="#"><img src="logo/instagram.svg" alt="Instagram" class="social-media-icon"></a>
-                            <a href="#"><img src="logo/linkedin.svg" alt="LinkedIn" class="social-media-icon"></a>
+                <!-- Kart -->
+                <div class="brand modal-card">
+                    <a href="#" class="brand-link">
+                        <div class="card h-100 d-flex flex-column align-items-center">
+                            <img src="logo/audi.svg" class="modal-img-brand" alt="Audi Logo">
+                            <div class="home-card-body">
+                                <h5 class="home-text-brand">Audi</h5>
+                            </div>
+                            <div class="badge">Çok Yakında</div>
                         </div>
-                        <p>Paylaştığımızda haber almak istiyorsan iletişim adresini bırak!</p>
-                        <input type="text" placeholder="Cep telefonu, mail veya sosyal medya hesaplarından seninle iletişime geçebiliriz.">
-                        <button onclick="closePopup()">Kapat</button>
-                    </div>
+                    </a>
                 </div>
-
                 <div class="brand modal-card">
                 <a href="https://m-budak.github.io/cargurue/markalar/bmw.html?brand=bmw" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
@@ -69,7 +52,7 @@
                     </div>
                 </a>
                 </div>
-                <div class="brand modal-card">
+                <div class="brand modal-card" data-popup="true">
                 <a href="#" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                     <img src="logo/chevrolet.svg" class="modal-img-brand" alt="...">
@@ -149,7 +132,7 @@
                     </div>
                 </a>
                 </div>
-                <div class="brand modal-card">
+                <div class="brand modal-card" data-popup="true">
                 <a href="#" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                     <img src="logo/mitsubishi.svg" class="modal-img-brand" alt="...">
@@ -199,7 +182,7 @@
                     </div>
                 </a>
                 </div>
-                <div class="brand modal-card">
+                <div class="brand modal-card" data-popup="true">
                 <a href="#" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                     <img src="logo/seat.svg" class="modal-img-brand" alt="...">
@@ -209,7 +192,7 @@
                     </div>
                 </a>
                 </div>
-                <div class="brand modal-card">
+                <div class="brand modal-card" data-popup="true">
                 <a href="#" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                     <img src="logo/skoda.svg" class="modal-img-brand" alt="...">
@@ -229,7 +212,7 @@
                     </div>
                 </a>
                 </div>
-                <div class="brand modal-card">
+                <div class="brand modal-card" data-popup="true">
                 <a href="#" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                     <img src="logo/volkswagen.svg" class="modal-img-brand" alt="...">
@@ -239,7 +222,7 @@
                     </div>
                 </a>
                 </div>
-                <div class="brand modal-card">
+                <div class="brand modal-card" data-popup="true">
                 <a href="#" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                     <img src="logo/volvo.svg" class="modal-img-brand" alt="...">
@@ -253,26 +236,62 @@
         </div>
 
         
-    <div id="car_bodies"></div>
+    <!-- <div id="car_bodies"></div> -->
+     
+    <car-bodies></car-bodies>
+
+
+        <!-- Pop-up -->
+        <div id="popup" class="popup-overlay" style="display: none;">
+            <div class="popup-content">
+                <h2>Çok Yakında Sizlerle!</h2>
+                <p>Sosyal medya hesaplarımızı takipte kal.</p>
+                <div class="social-media-links">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+                <p>Paylaştığımızda haber almak istiyorsan iletişim adresini bırak!</p>
+                <input type="text" placeholder="Cep telefonu, mail veya sosyal medya hesaplarından seninle iletişime geçebiliriz.">
+                <button onclick="closePopup()">Kapat</button>
+            </div>
+        </div>
+
 
     </div>
 
     <my-footer></my-footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tüm kartları seç
+            const cards = document.querySelectorAll('.modal-card[data-popup="true"]');
+
+            // Her bir karta tıklama olayı ekle
+            cards.forEach(card => {
+                card.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    showPopup();
+                });
+            });
+        });
+
         function showPopup() {
-    document.getElementById('popup').style.display = 'flex';
-}
+            document.getElementById('popup').style.display = 'flex';
+        }
 
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-}
-
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
     </script>
+
     
         
     <script src="fetch/header.js"></script>  
-    <script src="fetch/footer.js"></script> 
+    <script src="fetch/footer.js"></script>
+    
+    <script src="fetch/car_bodies.js"></script>  
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

@@ -98,8 +98,8 @@ class MyFooter extends HTMLElement {
                                         <li><a href="#link16">Toyota Corolla</a></li>
                                         <li><a href="#link18">Volkswagen Golf</a></li>
                                         <li><a href="#link19">Togg T10X</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/test/T3serisi.html">BMW 320i</a></li>
-                                        <li><a href="#link20">Tümü ></a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/modeller/320i.html">BMW 320i</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/markalar.html">Tümü ></a></li>
                                     </div>
                                 </div>
                             </ul>
@@ -112,9 +112,9 @@ class MyFooter extends HTMLElement {
                             <ul class="list-unstyled">
                                 <div class="row">
                                     <div class="col-6 col-md-12">
-                                        <li><a href="#link11">Fiat</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/markalar/renault.html">Renault</a></li>
-                                        <li><a href="#link13">Opel</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/markalar/toyota.html?brand=toyota">Toyota</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/markalar/renault.html?brand=renault">Renault</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/markalar/bmw.html?brand=bmw">BMW</a></li>
                                         <li><a href="#link14">Volkswagen</a></li>
                                         <li><a href="#link15">Peugeot</a></li>
                                         <li><a href="#link15">Hyundai</a></li>
@@ -125,7 +125,7 @@ class MyFooter extends HTMLElement {
                                         <li><a href="#link18">Toyota</a></li>
                                         <li><a href="#link19">Togg</a></li>
                                         <li><a href="#link15">Tesla</a></li>
-                                        <li><a href="#link20">Tümü ></a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/markalar.html">Tümü ></a></li>
                                     </div>
                                 </div>
                             </ul>
@@ -150,6 +150,8 @@ class MyFooter extends HTMLElement {
                     </div>
                 </div>
             </footer>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="style.css">
         `;
     }
 }
