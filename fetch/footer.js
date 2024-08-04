@@ -64,7 +64,7 @@ class MyFooter extends HTMLElement {
                                         <li><a href="https://m-budak.github.io/cargurue/markalar.html">Markalar</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/kasa.html">Kasalar</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/modeller.html">Modeller</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/haberler.html">Haberler</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/bizbize.html">Biz Bize</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/hakkimizda.html">Hakkımızda</a></li>
                                     </div>
                                     <div class="col-6 col-md-12">
@@ -132,8 +132,8 @@ class MyFooter extends HTMLElement {
                         </div>
               
                         <div class="col-sm-12 col-md-2 mt-3 footer_haberler">
-                            <a href="https://m-budak.github.io/cargurue/haberler.html">
-                                <h5 class="column-title">Son Haberler</h5>
+                            <a href="https://m-budak.github.io/cargurue/bizbize.html">
+                                <h5 class="column-title">Araç Yorumu Biz Bize</h5>
                             </a>
                             <ul class="list-unstyled">
                                 <div class="row">

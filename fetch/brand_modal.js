@@ -42,17 +42,17 @@ class BrandModal extends HTMLElement {
         { name: "Nissan", img: "logo/nissan.svg" },
         { name: "Opel", img: "logo/opel.svg" },
         { name: "Peugeot", img: "logo/peugeot.svg" },
-        { name: "Renault", img: "logo/renault.svg", link: "/markalar/renault.html" },
+        { name: "Renault", img: "logo/renault.svg" },
         { name: "Seat", img: "logo/seat.svg" },
         { name: "Skoda", img: "logo/skoda.svg" },
         { name: "Toyota", img: "logo/toyota.svg" },
         { name: "Volkswagen", img: "logo/volkswagen.svg" },
         { name: "Volvo", img: "logo/volvo.svg" }
       ];
-  
+    
       return brands.map(brand => `
         <div class="brand modal-card">
-          <a href="${brand.link || '#'}" class="brand-link">
+          <a href="https://m-budak.github.io/cargurue/markalar/${brand.name.toLowerCase()}.html?brand=${brand.name.toLowerCase()}" class="brand-link">
             <div class="card h-100 d-flex flex-column align-items-center">
               <img src="${brand.img}" class="modal-img-brand" alt="${brand.name}">
               <div class="home-card-body">
@@ -62,7 +62,7 @@ class BrandModal extends HTMLElement {
           </a>
         </div>
       `).join('');
-    }
+    }    
   }
   
   customElements.define('brand-modal', BrandModal);
