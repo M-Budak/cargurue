@@ -18,7 +18,6 @@
         width: 90%; /* Daha küçük ekranlar için genişlik ayarı */
         max-width: 360px;
         text-align: center;
-        transform: translateY(-50%); /* Pop-up'ı tam ortalamak için */
     }
 
     .popup-content h2 {
@@ -27,21 +26,6 @@
 
     .popup-content p {
         margin-bottom: 20px;
-    }
-
-    .social-media-links {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-
-    .social-media-links a {
-        margin: 0 10px;
-    }
-
-    .social-media-icon {
-        width: 30px;
-        height: 30px;
     }
 
     .popup-content input[type="text"] {
@@ -66,6 +50,50 @@
         background-color: #0056b3;
     }
 
+    /* Sosyal medya ikonları */
+    .fa {
+        padding: 120px;
+        font-size: 130px;
+        width: 170px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        color: white; /* İkonların rengini beyaz yapmak için */
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook { background: #3B5998; }
+    .fa-twitter { background: #55ACEE; }
+    .fa-google { background: #dd4b39; }
+    .fa-linkedin { background: #007bb5; }
+    .fa-youtube { background: #bb0000; }
+    .fa-instagram { background: #125688; }
+
+/* Sosyal medya ikonları için özel stil */
+.popup-content a.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: white; /* İkonların rengini beyaz yapmak için */
+    background: transparent; /* Global a stilini bozma */
+}
+
+.popup-content a.fa:hover {
+    opacity: 0.7;
+}
+
+.popup-content a.fa-facebook { background: #3B5998; }
+.popup-content a.fa-twitter { background: #55ACEE; }
+.popup-content a.fa-google { background: #dd4b39; }
+.popup-content a.fa-linkedin { background: #007bb5; }
+.popup-content a.fa-youtube { background: #bb0000; }
+.popup-content a.fa-instagram { background: #125688; }
 
 
     .badge {

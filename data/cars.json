@@ -87,5 +87,28 @@
                 "link": "https://www.google.com.tr"
             }
         ]
+    },
+    "audi": {
+        "sedan": [
+            {
+                "name": "AUDI 1",
+                "image": "../img/list/3series.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ],
+        "suv": [
+            {
+                "name": "AUDI 3",
+                "image": "../img/list/x5.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ],
+        "elektrikli": [
+            {
+                "name": "AUDI 2",
+                "image": "../img/list/i3.jpg",
+                "link": "https://www.google.com.tr"
+            }
+        ]
     }
 }

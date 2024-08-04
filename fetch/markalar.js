@@ -55,6 +55,42 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 `).join('');
             });
+
+            // Scroll event listener ekleme
+            document.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('#categories-container > div');
+                const navLinks = document.querySelectorAll('#navbar-nav .nav-link');
+        
+                let current = '';
+        
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    const sectionBottom = sectionTop + sectionHeight;
+        
+                    // Sayfanın üst kısmında olan bölümün aktif olmasını sağla
+                    if (pageYOffset >= sectionTop - (sectionHeight / 3) && pageYOffset < sectionBottom) {
+                        current = section.getAttribute('id');
+                    }
+                });
+        
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Elektrikli butonunu özel olarak kontrol etme
+                const elektrikliLink = document.querySelector('#navbar-nav .nav-link[href*="elektrikli"]');
+                if (elektrikliLink) {
+                    if (current === 'elektrikli') {
+                        elektrikliLink.classList.add('active');
+                    } else {
+                        elektrikliLink.classList.remove('active');
+                    }
+                }
+            });
         })
         .catch(error => console.error("Error fetching data:", error));
 });
