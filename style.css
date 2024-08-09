@@ -232,6 +232,17 @@
     }
     
 
+
+    .container {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+    
+
 /* ANASAYFA STARTS*/
 
 .full-width-carousel {

@@ -1,130 +1,192 @@
-{
-    "sedan": [
-      {
-        "title": "Renault Megane",
-        "image": "img/list/megane.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Dacia Sandero",
-        "image": "img/models/sandero3.webp",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "img/list/xc90.png",
-        "link": "https://www.google.com"
-      }
+    {
+      "sedan": [
+          {
+              "title": "Renault Megane 4",
+              "image": "img/list/megane4.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/megane_4.html"
+          },      
+          {
+            "title": "Bu Test",
+            "image": "img/list/megane.jpg",
+            "link": "https://www.google.com"
+          },
+          {
+              "title": "Fiat Egea",
+              "image": "img/list/egea.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/egea.html"
+          },
+          {
+              "title": "Toyota Corolla(12.Nesil)",
+              "image": "img/list/corolla_12_nesil.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/corolla_12_nesil.html"
+          },
+          {
+              "title": "Volkswagen Passat B8",
+              "image": "img/list/passat_b8.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/passat_b8.html"
+          },
+          {
+              "title": "Honda Civic(11. Nesil)",
+              "image": "img/list/civic_11_nesil.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/civic_11_nesil.html"
+          },
+          {
+              "title": "Ford Focus (4. Nesil)",
+              "image": "img/list/focus_4_nesil.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/focus_4_nesil.html"
+          },
+          {
+              "title": "Mercedes-Benz C Serisi W206 (6. Nesil)",
+              "image": "img/list/c_serisi_w206.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/c_serisi_w206.html"
+          },
+          {
+              "title": "Tesla MODEL Y",
+              "image": "img/list/model_y.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/model_y.html"
+          }
+      ],
+        "hb": [
+            {
+                "title": "Renault Clio 5",
+                "image": "img/list/clio_5.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/clio_5.html"
+            },
+            {
+              "title": "Bu Test",
+              "image": "img/list/megane.jpg",
+              "link": "https://www.google.com"
+            },
+            {
+                "title": "Hyundai i20 (3. Nesil)",
+                "image": "img/list/i20_3_nesil.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/i20_3_nesil.html"
+            },
+            {
+                "title": "Opel CORSA F",
+                "image": "img/list/corsa_f.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/corsa_f.html"
+            },
+            {
+                "title": "Citroen C4X 1",
+                "image": "img/list/c4x_1.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/c4x_1.html"
+            },
+            {
+                "title": "Fiat Egea Cross",
+                "image": "img/list/egea_cross.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/egea_cross.html"
+            },
+            {
+                "title": "Volkswagen Golf 8",
+                "image": "img/list/golf_8.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/golf_8.html"
+            },
+            {
+                "title": "Volkswagen POLO (6. Nesil)",
+                "image": "img/list/polo_6_nesil.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/polo_6_nesil.html"
+            },
+            {
+                "title": "Dacia SANDERO 3",
+                "image": "img/list/sandero_3.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/sandero_3.html"
+            },
+            {
+                "title": "Peugeot 408",
+                "image": "img/list/408.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/408.html"
+            }
     ],
-    "hb": [
-      {
-        "title": "Renault Megane",
-        "image": "img/list/megane.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Toyota Hilux",
-        "image": "img/list/hilux.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "img/list/xc90.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Opel Mokka",
-        "image": "img/list/mokka.webp",
-        "link": "https://www.google.com"
-      }
-    ],
-    "suv": [
-      {
-        "title": "Renault Megane",
-        "image": "img/list/megane.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Toyota Hilux",
-        "image": "img/list/hilux.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "img/list/xc90.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Opel Mokka",
-        "image": "img/list/mokka.webp",
-        "link": "https://www.google.com"
-      }
-    ],
-    "cabrio": [
-      {
-        "title": "Renault Megane",
-        "image": "img/list/megane.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Toyota Hilux",
-        "image": "img/list/hilux.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "img/list/xc90.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Opel Mokka",
-        "image": "img/list/mokka.webp",
-        "link": "https://www.google.com"
-      }
-    ],
-    "minivan": [
-      {
-        "title": "Renault Megane",
-        "image": "img/list/megane.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Toyota Hilux",
-        "image": "img/list/hilux.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "img/list/xc90.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Opel Mokka",
-        "image": "img/list/mokka.webp",
-        "link": "https://www.google.com"
-      }
-    ],
-    "pickup": [
-      {
-        "title": "Renault Megane",
-        "image": "img/list/megane.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Toyota Hilux",
-        "image": "img/list/hilux.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "img/list/xc90.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Opel Mokka",
-        "image": "img/list/mokka.webp",
-        "link": "https://www.google.com"
-      }
-    ]
+      "suv": [
+          {
+              "title": "Renault MEGANE E-TECH",
+              "image": "img/list/megane_e_tech.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/megane_e_tech.html"
+          },
+          {
+            "title": "Bu Test",
+            "image": "img/list/megane.jpg",
+            "link": "https://www.google.com"
+          },
+          {
+              "title": "Hyundai BAYON 1",
+              "image": "img/list/bayon_1.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/bayon_1.html"
+          },
+          {
+              "title": "Opel MOKKA 2",
+              "image": "img/list/mokka_2.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/mokka_2.html"
+          },
+          {
+              "title": "Opel CROSSLAND 1",
+              "image": "img/list/crossland_1.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/crossland_1.html"
+          },
+          {
+              "title": "Hyundai TUCSON 4",
+              "image": "img/list/tucson_4.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/tucson_4.html"
+          },
+          {
+              "title": "Volkswagen T ROC 1",
+              "image": "img/list/t_roc_1.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/t_roc_1.html"
+          },
+          {
+              "title": "Volkswagen TAIGO 1",
+              "image": "img/list/taigo_1.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/taigo_1.html"
+          },
+          {
+              "title": "Volkswagen TIGUAN 3",
+              "image": "img/list/tiguan_3.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/tiguan_3.html"
+          },
+          {
+              "title": "Peugeot 2008 (2. Nesil)",
+              "image": "img/list/2008_2_nesil.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/2008_2_nesil.html"
+          },
+          {
+              "title": "Peugeot 3008 (2. Nesil)",
+              "image": "img/list/3008_2_nesil.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/3008_2_nesil.html"
+          },
+          {
+              "title": "Nissan Qasqai (3. Nesil)",
+              "image": "img/list/qasqai_3_nesil.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/qasqai_3_nesil.html"
+          },
+          {
+              "title": "Dacia Duster(2. Nesil)",
+              "image": "img/list/duster_2_nesil.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/duster_2_nesil.html"
+          },
+          {
+              "title": "Togg T10X",
+              "image": "img/list/t10x.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/t10x.html"
+          },
+          {
+              "title": "Chery TIGGO 8 PRO 1",
+              "image": "img/list/tiggo_8_pro_1.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/tiggo_8_pro_1.html"
+          },
+          {
+              "title": "Chery TIGGO 7 PRO 1",
+              "image": "img/list/tiggo_7_pro_1.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/tiggo_7_pro_1.html"
+          },
+          {
+              "title": "Chery OMODA 5 1",
+              "image": "img/list/omoda_5_1.jpg",
+              "link": "https://m-budak.github.io/cargurue/model/omoda_5_1.html"
+          }
+      ],
+    "cabrio": [],
+    "minivan": [],
+    "pickup": []
   }
   
