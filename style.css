@@ -74,9 +74,10 @@
 
 /* Sosyal medya ikonları için özel stil */
 .popup-content a.fa {
-    padding: 20px;
+    padding: 15px;
     font-size: 30px;
-    width: 70px;
+    width: 60px;
+    height: 60px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
@@ -150,9 +151,9 @@
         text-align: center;
     }
 
-    .modal-btn-oy {
-        background-color: var(--primary-color); 
-        color: white;
+    .modal-btn-oy{
+        background-color: white;
+        color: red;
         padding: 8px 40px;
         text-align: center;
         text-decoration: none;
@@ -207,7 +208,7 @@
     }
     
     .scrollable-cards .card img {
-        max-height: 150px; /* Görselin yüksekliğini otomatik yapar */
+        max-height: 168px; /* Görselin yüksekliğini otomatik yapar */
         width: 100%; /* Görselin genişliğini kartın genişliğiyle uyumlu hale getirir */
     }
     
@@ -235,7 +236,7 @@
 
     .container {
         width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     body {
@@ -526,8 +527,11 @@ a, a:visited, a:focus, a:active a:hover {
 /* CAR BODY STARTS  */
 #navbar-example2 {
     background-color: white;
-    margin: 0px -20px;
-  }  
+    margin: 0px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
 #navbar-example2 .nav-link {
     font-size: 22px;
@@ -539,7 +543,6 @@ a, a:visited, a:focus, a:active a:hover {
     border: 0.1rem solid black;
     transition: background-color 0.3s, color 0.3s;
 }
-
 #navbar-example2 .nav-link.active {
     background-color: var(--primary-color);
     color: white;
@@ -558,7 +561,7 @@ a, a:visited, a:focus, a:active a:hover {
 
 .card-img-top {
     object-fit: cover; 
-    height: 163px; 
+    height: 168px; 
     width: 100%; 
 }
 
@@ -591,20 +594,10 @@ a, a:visited, a:focus, a:active a:hover {
     /* transition: background-color 0.3s, color 0.3s, border-color 0.3s; */
 }
 
-.btn-custom.active {
-    background-color: var(--primary-color);
-    color: white;
-    border-color: white;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-
 .btn-custom {
     font-size: 22px;
-    background-color: var(--primary-color);
-    /* color: var(--primary-color); */
-    color: white;
+    /* background-color: var(--primary-color); */
+    color: var(--primary-color);
     border: 0.1rem solid rgba(0, 0, 0, 0.793);
     border-color: #020A2B;
     width: 10rem;
@@ -616,7 +609,7 @@ a, a:visited, a:focus, a:active a:hover {
 .btn-custom.active {
     background-color: var(--primary-color);
     color: white;
-    border-color: white;
+    border-color: red;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
@@ -733,6 +726,9 @@ margin-top: -0.5rem;
     color: #777;
 }
 
+.yorum .card{
+    width: 100%;
+}
 /* Comment section Ends  */
 
 /* Interested section Starts  */
@@ -871,7 +867,7 @@ header {
 
 .card-img-top {
     object-fit: cover; /* Belirlediğiniz orana uygun şekilde sığdırma */
-    height: 116px; /* İstedğiniz yükseklik */
+    height: 168px; /* İstedğiniz yükseklik */
     width: 100%; /* Genişliği %100 yaparak kartın içinde tam olarak görünmesini sağlar */
 }
 

@@ -42,9 +42,9 @@ class MyHeader extends HTMLElement {
                 </a>
                 <nav class="menu">
                     <ul>
-                        <li><a href="https://m-budak.github.io/cargurue/markalar.html">Markalar</a></li>
-                        <li><a href="https://m-budak.github.io/cargurue/kasa.html">Kasalar</a></li>
-                        <li><a href="https://m-budak.github.io/cargurue/model.html">Modeller</a></li>
+                        <li><a href="https://m-budak.github.io/cargurue/markalar.html">Marka</a></li>
+                        <li><a href="https://m-budak.github.io/cargurue/kasa.html">Kasa</a></li>
+                        <li><a href="https://m-budak.github.io/cargurue/model.html">Model</a></li>
                         <li><a href="https://m-budak.github.io/cargurue/bizbize.html">Biz Bize</a></li>
                     </ul>
                 </nav>

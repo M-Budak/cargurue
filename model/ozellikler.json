@@ -1,23 +1,131 @@
 {
     "A": {
-      "max_hiz": "220 km/s",
-      "0_100": "7.2 s",
-      "yakit": "Dizel",
-      "beygir": "170 hp",
-      "vites": "Otomatik",
-      "tork": "250 nm",
-      "ncap": "5 Yıldız",
-      "bagaj": "480 lt"
+      "Max Hız": {
+        "value": "220",
+        "unit": "km/s"
+      },
+      "0-100": {
+        "value": "7.2",
+        "unit": "s"
+      },
+      "Yakıt": {
+        "value": "Dizel"
+      },
+      "Beygir": {
+        "value": "170",
+        "unit": "hp"
+      },
+      "Vites": {
+        "value": "Otomatik"
+      },
+      "Tork": {
+        "value": "250",
+        "unit": "nm"
+      },
+      "NCAP": {
+        "value": "6.4",
+        "unit": "lt"
+      },
+      "Bagaj": {
+        "value": "480",
+        "unit": "lt"
+      }
     },
     "B": {
-      "max_hiz": "240 km/s",
-      "0_100": "6.8 s",
-      "yakit": "Benzin",
-      "beygir": "200 hp",
-      "vites": "Manuel",
-      "tork": "300 nm",
-      "ncap": "5 Yıldız",
-      "bagaj": "500 lt"
+      "Max Hız": {
+        "value": "240",
+        "unit": "km/s"
+      },
+      "0-100": {
+        "value": "6.5",
+        "unit": "s"
+      },
+      "Yakıt": {
+        "value": "Benzin"
+      },
+      "Beygir": {
+        "value": "200",
+        "unit": "hp"
+      },
+      "Vites": {
+        "value": "Manuel"
+      },
+      "Tork": {
+        "value": "300",
+        "unit": "nm"
+      },
+      "NCAP": {
+        "value": "5.5",
+        "unit": "lt"
+      },
+      "Bagaj": {
+        "value": "550",
+        "unit": "lt"
+      }
+    },
+    "Hilux1": {
+      "Max Hız": {
+        "value": "240",
+        "unit": "km/s"
+      },
+      "0-100": {
+        "value": "6.5",
+        "unit": "s"
+      },
+      "Yakıt": {
+        "value": "Benzin"
+      },
+      "Beygir": {
+        "value": "200",
+        "unit": "hp"
+      },
+      "Vites": {
+        "value": "Manuel"
+      },
+      "Tork": {
+        "value": "300",
+        "unit": "nm"
+      },
+      "NCAP": {
+        "value": "5.5",
+        "unit": "lt"
+      },
+      "Bagaj": {
+        "value": "550",
+        "unit": "lt"
+      }
+    },
+    "BMW": {
+      "Max Hız": {
+        "value": "333",
+        "unit": "km/s"
+      },
+      "0-100": {
+        "value": "66.5",
+        "unit": "s"
+      },
+      "Yakıt": {
+        "value": "citroeeen"
+      },
+      "Beygir": {
+        "value": "22500",
+        "unit": "hp"
+      },
+      "Vites": {
+        "value": "Manuel"
+      },
+      "Tork": {
+        "value": "300",
+        "unit": "nm"
+      },
+      "NCAP": {
+        "value": "5.5",
+        "unit": "lt"
+      },
+      "Bagaj": {
+        "value": "550",
+        "unit": "lt"
+      }
     }
   }
   

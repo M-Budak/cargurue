@@ -1,0 +1,23 @@
+{
+    "A": {
+      "max_hiz": "220 km/s",
+      "0_100": "7.2 s",
+      "yakit": "Dizel",
+      "beygir": "170 hp",
+      "vites": "Otomatik",
+      "tork": "250 nm",
+      "ncap": "5 Yıldız",
+      "bagaj": "480 lt"
+    },
+    "B": {
+      "max_hiz": "240 km/s",
+      "0_100": "6.8 s",
+      "yakit": "Benzin",
+      "beygir": "200 hp",
+      "vites": "Manuel",
+      "tork": "300 nm",
+      "ncap": "5 Yıldız",
+      "bagaj": "500 lt"
+    }
+  }
+  

@@ -34,6 +34,7 @@ class BrandModal extends HTMLElement {
         { name: "Citroen", img: "logo/citroen.svg" },
         { name: "Dacia", img: "logo/dacia.svg" },
         { name: "Fiat", img: "logo/fiat.svg" },
+        { name: "Ford", img: "logo/ford.svg" },
         { name: "Honda", img: "logo/honda.svg" },
         { name: "Hyundai", img: "logo/hyundai.svg" },
         { name: "Kia", img: "logo/kia.svg" },

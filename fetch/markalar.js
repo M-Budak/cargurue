@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
-    // Sayfa başlığını dinamik olarak güncelle
     document.querySelector('h1.genel-baslik-1').textContent = `${brand.charAt(0).toUpperCase() + brand.slice(1)} Otomobiller`;
 
     fetch('../data/markalar.json')
@@ -56,6 +55,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 `).join('');
             });
 
+            // Scrollspy'ı yeniden başlat
+            const scrollSpyElement = document.querySelector('[data-bs-spy="scroll"]');
+            new bootstrap.ScrollSpy(document.body, {
+                target: '#navbar-example2',
+                offset: 0
+            });
+
             // Scroll event listener ekleme
             document.addEventListener('scroll', function() {
                 const sections = document.querySelectorAll('#categories-container > div');
@@ -68,8 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     const sectionHeight = section.clientHeight;
                     const sectionBottom = sectionTop + sectionHeight;
         
-                    // Sayfanın üst kısmında olan bölümün aktif olmasını sağla
-                    if (pageYOffset >= sectionTop - (sectionHeight / 3) && pageYOffset < sectionBottom) {
+                    if (window.pageYOffset >= sectionTop - (sectionHeight / 3) && window.pageYOffset < sectionBottom) {
                         current = section.getAttribute('id');
                     }
                 });
@@ -80,17 +85,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         link.classList.add('active');
                     }
                 });
-
-                // Elektrikli butonunu özel olarak kontrol etme
-                const elektrikliLink = document.querySelector('#navbar-nav .nav-link[href*="elektrikli"]');
-                if (elektrikliLink) {
-                    if (current === 'elektrikli') {
-                        elektrikliLink.classList.add('active');
-                    } else {
-                        elektrikliLink.classList.remove('active');
-                    }
-                }
             });
+
+            // Sayfa yüklendiğinde ilk section'ı kontrol et
+            const event = new Event('scroll');
+            document.dispatchEvent(event);
         })
         .catch(error => console.error("Error fetching data:", error));
 });
