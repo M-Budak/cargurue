@@ -22,7 +22,7 @@
         "value": "250",
         "unit": "nm"
       },
-      "NCAP": {
+      "Tüketim": {
         "value": "6.4",
         "unit": "lt"
       },
@@ -54,7 +54,7 @@
         "value": "300",
         "unit": "nm"
       },
-      "NCAP": {
+      "Tüketim": {
         "value": "5.5",
         "unit": "lt"
       },
@@ -86,7 +86,7 @@
         "value": "300",
         "unit": "nm"
       },
-      "NCAP": {
+      "Tüketim": {
         "value": "5.5",
         "unit": "lt"
       },
@@ -118,7 +118,7 @@
         "value": "300",
         "unit": "nm"
       },
-      "NCAP": {
+      "Tüketim": {
         "value": "5.5",
         "unit": "lt"
       },
@@ -126,6 +126,936 @@
         "value": "550",
         "unit": "lt"
       }
-    }
-  }
-  
+    },
+      "Clio_1.0_Sce": {
+        "Max Hız": {
+          "value": "160",
+          "unit": "km/s"
+        },
+        "0-100": {
+          "value": "17.1",
+          "unit": "s"
+        },
+        "Yakıt": {
+          "value": "Benzin"
+        },
+        "Beygir": {
+          "value": "65",
+          "unit": "hp"
+        },
+        "Vites": {
+          "value": "Manuel"
+        },
+        "Tork": {
+          "value": "95",
+          "unit": "nm"
+        },
+        "Tüketim": {
+          "value": "4.9",
+          "unit": "lt"
+        },
+        "Bagaj": {
+          "value": "391",
+          "unit": "lt"
+        }
+      },
+      "Clio_1.0_Tce": {
+        "Max Hız": {
+          "value": "180",
+          "unit": "km/s"
+        },
+        "0-100": {
+          "value": "11.8-12.4",
+          "unit": "s"
+        },
+        "Yakıt": {
+          "value": "Benzin"
+        },
+        "Beygir": {
+          "value": "90-100",
+          "unit": "hp"
+        },
+        "Vites": {
+          "value": "Manuel/Otomatik"
+        },
+        "Tork": {
+          "value": "142-160",
+          "unit": "nm"
+        },
+        "Tüketim": {
+          "value": "4.7-5",
+          "unit": "lt"
+        },
+        "Bagaj": {
+          "value": "391",
+          "unit": "lt"
+        }
+      },
+      "Clio_1.3_Tce": {
+        "Max Hız": {
+          "value": "200",
+          "unit": "km/s"
+        },
+        "0-100": {
+          "value": "9",
+          "unit": "s"
+        },
+        "Yakıt": {
+          "value": "Benzin"
+        },
+        "Beygir": {
+          "value": "130",
+          "unit": "hp"
+        },
+        "Vites": {
+          "value": "Otomatik"
+        },
+        "Tork": {
+          "value": "240",
+          "unit": "nm"
+        },
+        "Tüketim": {
+          "value": "5.2",
+          "unit": "lt"
+        },
+        "Bagaj": {
+          "value": "391",
+          "unit": "lt"
+        }
+      },
+      "Clio_1.5_Blue_Dci": {
+        "Max Hız": {
+          "value": "178-197",
+          "unit": "km/s"
+        },
+        "0-100": {
+          "value": "9.9-14.7",
+          "unit": "s"
+        },
+        "Yakıt": {
+          "value": "Dizel"
+        },
+        "Beygir": {
+          "value": "85-115",
+          "unit": "hp"
+        },
+        "Vites": {
+          "value": "Manuel"
+        },
+        "Tork": {
+          "value": "220-260",
+          "unit": "nm"
+        },
+        "Tüketim": {
+          "value": "3.6",
+          "unit": "lt"
+        },
+        "Bagaj": {
+          "value": "391",
+          "unit": "lt"
+        }
+      },
+        "Egea_1.4_Fire": {
+          "Max Hız": {
+            "value": "186",
+            "unit": "km/s"
+          },
+          "0-100": {
+            "value": "11.8",
+            "unit": "s"
+          },
+          "Yakıt": {
+            "value": "Benzin"
+          },
+          "Beygir": {
+            "value": "95",
+            "unit": "hp"
+          },
+          "Vites": {
+            "value": "Manuel"
+          },
+          "Tork": {
+            "value": "127",
+            "unit": "nm"
+          },
+          "Tüketim": {
+            "value": "6.4",
+            "unit": "lt"
+          },
+          "Bagaj": {
+            "value": "520",
+            "unit": "lt"
+          }
+        },
+        "Egea_1.3_Multijet_II": {
+          "Max Hız": {
+            "value": "184",
+            "unit": "km/s"
+          },
+          "0-100": {
+            "value": "12.8",
+            "unit": "s"
+          },
+          "Yakıt": {
+            "value": "Dizel"
+          },
+          "Beygir": {
+            "value": "95",
+            "unit": "hp"
+          },
+          "Vites": {
+            "value": "Manuel"
+          },
+          "Tork": {
+            "value": "200",
+            "unit": "nm"
+          },
+          "Tüketim": {
+            "value": "4.1",
+            "unit": "lt"
+          },
+          "Bagaj": {
+            "value": "520",
+            "unit": "lt"
+          }
+        },
+        "Egea_1.6_Multijet_II": {
+          "Max Hız": {
+            "value": "212",
+            "unit": "km/s"
+          },
+          "0-100": {
+            "value": "9.6",
+            "unit": "s"
+          },
+          "Yakıt": {
+            "value": "Dizel"
+          },
+          "Beygir": {
+            "value": "130",
+            "unit": "hp"
+          },
+          "Vites": {
+            "value": "Manuel/Otomatik"
+          },
+          "Tork": {
+            "value": "320",
+            "unit": "nm"
+          },
+          "Tüketim": {
+            "value": "4.5",
+            "unit": "lt"
+          },
+          "Bagaj": {
+            "value": "520",
+            "unit": "lt"
+          }
+        },
+        "Egea_1.5_Hibrit_T4": {
+          "Max Hız": {
+            "value": "196",
+            "unit": "km/s"
+          },
+          "0-100": {
+            "value": "8.6",
+            "unit": "s"
+          },
+          "Yakıt": {
+            "value": "Hibrit"
+          },
+          "Beygir": {
+            "value": "130",
+            "unit": "hp"
+          },
+          "Vites": {
+            "value": "Otomatik"
+          },
+          "Tork": {
+            "value": "240",
+            "unit": "nm"
+          },
+          "Tüketim": {
+            "value": "5",
+            "unit": "lt"
+          },
+          "Bagaj": {
+            "value": "520",
+            "unit": "lt"
+          }
+        },
+        "Egea_1.0_Firefly": {
+          "Max Hız": {
+            "value": "195",
+            "unit": "km/s"
+          },
+          "0-100": {
+            "value": "11.5",
+            "unit": "s"
+          },
+          "Yakıt": {
+            "value": "Benzin"
+          },
+          "Beygir": {
+            "value": "100",
+            "unit": "hp"
+          },
+          "Vites": {
+            "value": "Manuel"
+          },
+          "Tork": {
+            "value": "190",
+            "unit": "nm"
+          },
+          "Tüketim": {
+            "value": "5.3",
+            "unit": "lt"
+          },
+          "Bagaj": {
+            "value": "520",
+            "unit": "lt"
+          }
+        },
+          "Egea_Cross_1.4_Fire": {
+              "Max Hız": {
+                  "value": "174",
+                  "unit": "km/s"
+              },
+              "0-100": {
+                  "value": "12.9",
+                  "unit": "s"
+              },
+              "Yakıt": {
+                  "value": "Benzin"
+              },
+              "Beygir": {
+                  "value": "95",
+                  "unit": "hp"
+              },
+              "Vites": {
+                  "value": "Manuel"
+              },
+              "Tork": {
+                  "value": "127",
+                  "unit": "nm"
+              },
+              "Tüketim": {
+                  "value": "6.8",
+                  "unit": "lt"
+              },
+              "Bagaj": {
+                  "value": "440",
+                  "unit": "lt"
+              }
+          },
+          "Egea_Cross_1.3_Multijet_II": {
+              "Max Hız": {
+                  "value": "173",
+                  "unit": "km/s"
+              },
+              "0-100": {
+                  "value": "13.8",
+                  "unit": "s"
+              },
+              "Yakıt": {
+                  "value": "Dizel"
+              },
+              "Beygir": {
+                  "value": "95",
+                  "unit": "hp"
+              },
+              "Vites": {
+                  "value": "Manuel"
+              },
+              "Tork": {
+                  "value": "200",
+                  "unit": "nm"
+              },
+              "Tüketim": {
+                  "value": "4.4",
+                  "unit": "lt"
+              },
+              "Bagaj": {
+                  "value": "440",
+                  "unit": "lt"
+              }
+          },
+          "Egea_Cross_1.6_Multijet_II": {
+              "Max Hız": {
+                  "value": "200",
+                  "unit": "km/s"
+              },
+              "0-100": {
+                  "value": "10.2",
+                  "unit": "s"
+              },
+              "Yakıt": {
+                  "value": "Dizel"
+              },
+              "Beygir": {
+                  "value": "130",
+                  "unit": "hp"
+              },
+              "Vites": {
+                  "value": "Otomatik"
+              },
+              "Tork": {
+                  "value": "320",
+                  "unit": "nm"
+              },
+              "Tüketim": {
+                  "value": "4.6",
+                  "unit": "lt"
+              },
+              "Bagaj": {
+                  "value": "440",
+                  "unit": "lt"
+              }
+          },
+          "Egea_Cross_1.5_Hibrit_T4": {
+              "Max Hız": {
+                  "value": "202",
+                  "unit": "km/s"
+              },
+              "0-100": {
+                  "value": "9",
+                  "unit": "s"
+              },
+              "Yakıt": {
+                  "value": "Hibrit"
+              },
+              "Beygir": {
+                  "value": "130",
+                  "unit": "hp"
+              },
+              "Vites": {
+                  "value": "Otomatik"
+              },
+              "Tork": {
+                  "value": "240",
+                  "unit": "nm"
+              },
+              "Tüketim": {
+                  "value": "5.3",
+                  "unit": "lt"
+              },
+              "Bagaj": {
+                  "value": "440",
+                  "unit": "lt"
+              }
+          },
+          "Egea_Cross_1.0_Firefly": {
+              "Max Hız": {
+                  "value": "183",
+                  "unit": "km/s"
+              },
+              "0-100": {
+                  "value": "12.4",
+                  "unit": "s"
+              },
+              "Yakıt": {
+                  "value": "Benzin"
+              },
+              "Beygir": {
+                  "value": "100",
+                  "unit": "hp"
+              },
+              "Vites": {
+                  "value": "Manuel"
+              },
+              "Tork": {
+                  "value": "190",
+                  "unit": "nm"
+              },
+              "Tüketim": {
+                  "value": "5.4",
+                  "unit": "lt"
+              },
+              "Bagaj": {
+                  "value": "550",
+                  "unit": "lt"
+              }
+          },
+            "Megane_4_1.2_Tce": {
+                "Max Hız": {
+                    "value": "200",
+                    "unit": "km/s"
+                },
+                "0-100": {
+                    "value": "10.9",
+                    "unit": "s"
+                },
+                "Yakıt": {
+                    "value": "Benzin"
+                },
+                "Beygir": {
+                    "value": "130",
+                    "unit": "hp"
+                },
+                "Vites": {
+                    "value": "Otomatik"
+                },
+                "Tork": {
+                    "value": "205",
+                    "unit": "nm"
+                },
+                "Tüketim": {
+                    "value": "5.4",
+                    "unit": "lt"
+                },
+                "Bagaj": {
+                    "value": "503",
+                    "unit": "lt"
+                }
+            },
+            "Megane_4_1.3_Tce": {
+                "Max Hız": {
+                    "value": "205",
+                    "unit": "km/s"
+                },
+                "0-100": {
+                    "value": "9.6",
+                    "unit": "s"
+                },
+                "Yakıt": {
+                    "value": "Benzin"
+                },
+                "Beygir": {
+                    "value": "140",
+                    "unit": "hp"
+                },
+                "Vites": {
+                    "value": "Manuel/Otomatik"
+                },
+                "Tork": {
+                    "value": "260",
+                    "unit": "nm"
+                },
+                "Tüketim": {
+                    "value": "5.9",
+                    "unit": "lt"
+                },
+                "Bagaj": {
+                    "value": "503",
+                    "unit": "lt"
+                }
+            },
+            "Megane_4_1.5_Blue_Dci": {
+                "Max Hız": {
+                    "value": "190",
+                    "unit": "km/s"
+                },
+                "0-100": {
+                    "value": "11.2",
+                    "unit": "s"
+                },
+                "Yakıt": {
+                    "value": "Dizel"
+                },
+                "Beygir": {
+                    "value": "115",
+                    "unit": "hp"
+                },
+                "Vites": {
+                    "value": "Otomatik"
+                },
+                "Tork": {
+                    "value": "270",
+                    "unit": "nm"
+                },
+                "Tüketim": {
+                    "value": "4.6",
+                    "unit": "lt"
+                },
+                "Bagaj": {
+                    "value": "503",
+                    "unit": "lt"
+                }
+            },
+            "Megane_4_1.5_Dci": {
+                "Max Hız": {
+                    "value": "190",
+                    "unit": "km/s"
+                },
+                "0-100": {
+                    "value": "11.6-13.7",
+                    "unit": "s"
+                },
+                "Yakıt": {
+                    "value": "Dizel"
+                },
+                "Beygir": {
+                    "value": "90-110",
+                    "unit": "hp"
+                },
+                "Vites": {
+                    "value": "Manuel/Otomatik"
+                },
+                "Tork": {
+                    "value": "220-260",
+                    "unit": "nm"
+                },
+                "Tüketim": {
+                    "value": "3.7",
+                    "unit": "lt"
+                },
+                "Bagaj": {
+                    "value": "503",
+                    "unit": "lt"
+                }
+            },
+            "Megane_4_1.6": {
+                "Max Hız": {
+                    "value": "190",
+                    "unit": "km/s"
+                },
+                "0-100": {
+                    "value": "11.8",
+                    "unit": "s"
+                },
+                "Yakıt": {
+                    "value": "Benzin"
+                },
+                "Beygir": {
+                    "value": "115",
+                    "unit": "hp"
+                },
+                "Vites": {
+                    "value": "Manuel"
+                },
+                "Tork": {
+                    "value": "156",
+                    "unit": "nm"
+                },
+                "Tüketim": {
+                    "value": "6.3",
+                    "unit": "lt"
+                },
+                "Bagaj": {
+                    "value": "503",
+                    "unit": "lt"
+                }
+            },
+          "Passat_B8_1.4_Tsi_Bluemotion": {
+              "Max Hız": {
+                  "value": "220",
+                  "unit": "km/s"
+              },
+              "0-100": {
+                  "value": "9.7-8.4",
+                  "unit": "s"
+              },
+              "Yakıt": {
+                  "value": "Benzin"
+              },
+              "Beygir": {
+                  "value": "125-150",
+                  "unit": "hp"
+              },
+              "Vites": {
+                  "value": "Manuel/Otomatik"
+              },
+              "Tork": {
+                  "value": "200-250",
+                  "unit": "nm"
+              },
+              "Tüketim": {
+                  "value": "5.4-5",
+                  "unit": "lt"
+              },
+              "Bagaj": {
+                  "value": "586",
+                  "unit": "lt"
+              }
+          },
+          "Passat_B8_1.5_Tsi": {
+              "Max Hız": {
+                  "value": "220",
+                  "unit": "km/s"
+              },
+              "0-100": {
+                  "value": "8.7",
+                  "unit": "s"
+              },
+              "Yakıt": {
+                  "value": "Benzin"
+              },
+              "Beygir": {
+                  "value": "150",
+                  "unit": "hp"
+              },
+              "Vites": {
+                  "value": "Otomatik"
+              },
+              "Tork": {
+                  "value": "250",
+                  "unit": "nm"
+              },
+              "Tüketim": {
+                  "value": "5.1",
+                  "unit": "lt"
+              },
+              "Bagaj": {
+                  "value": "586",
+                  "unit": "lt"
+              }
+          },
+          "Passat_B8_1.6_Tdi": {
+              "Max Hız": {
+                  "value": "206",
+                  "unit": "km/s"
+              },
+              "0-100": {
+                  "value": "10.8",
+                  "unit": "s"
+              },
+              "Yakıt": {
+                  "value": "Dizel"
+              },
+              "Beygir": {
+                  "value": "120",
+                  "unit": "hp"
+              },
+              "Vites": {
+                  "value": "Manuel/Otomatik"
+              },
+              "Tork": {
+                  "value": "250",
+                  "unit": "nm"
+              },
+              "Tüketim": {
+                  "value": "4.2",
+                  "unit": "lt"
+              },
+              "Bagaj": {
+                  "value": "586",
+                  "unit": "lt"
+              }
+          },
+          "Passat_B8_2.0_Tdi_Bluemotion": {
+              "Max Hız": {
+                  "value": "235",
+                  "unit": "km/s"
+              },
+              "0-100": {
+                  "value": "8.7-7.7",
+                  "unit": "s"
+              },
+              "Yakıt": {
+                  "value": "Dizel"
+              },
+              "Beygir": {
+                  "value": "150-190",
+                  "unit": "hp"
+              },
+              "Vites": {
+                  "value": "Otomatik"
+              },
+              "Tork": {
+                  "value": "340-400",
+                  "unit": "nm"
+              },
+              "Tüketim": {
+                  "value": "4.5-4.6",
+                  "unit": "lt"
+              },
+              "Bagaj": {
+                  "value": "586",
+                  "unit": "lt"
+              }
+          },
+          "Passat_B8_2.0_Tdi_Bluemotion_4x4": {
+              "Max Hız": {
+                  "value": "240",
+                  "unit": "km/s"
+              },
+              "0-100": {
+                  "value": "6.1",
+                  "unit": "s"
+              },
+              "Yakıt": {
+                  "value": "Dizel"
+              },
+              "Beygir": {
+                  "value": "240",
+                  "unit": "hp"
+              },
+              "Vites": {
+                  "value": "Otomatik"
+              },
+              "Tork": {
+                  "value": "500",
+                  "unit": "nm"
+              },
+              "Tüketim": {
+                  "value": "5.5",
+                  "unit": "lt"
+              },
+              "Bagaj": {
+                  "value": "586",
+                  "unit": "lt"
+              }
+          },
+            "Golf_8_1.0_TSI": {
+                "Max Hız": {
+                    "value": "202",
+                    "unit": "km/s"
+                },
+                "0-100": {
+                    "value": "10.2",
+                    "unit": "s"
+                },
+                "Yakıt": {
+                    "value": "Benzin"
+                },
+                "Beygir": {
+                    "value": "110",
+                    "unit": "hp"
+                },
+                "Vites": {
+                    "value": "Manuel"
+                },
+                "Tork": {
+                    "value": "200",
+                    "unit": "nm"
+                },
+                "Tüketim": {
+                    "value": "5.4",
+                    "unit": "lt"
+                },
+                "Bagaj": {
+                    "value": "380",
+                    "unit": "lt"
+                }
+            },
+            "Golf_8_1.0_eTSI": {
+                "Max Hız": {
+                    "value": "202",
+                    "unit": "km/s"
+                },
+                "0-100": {
+                    "value": "10.2",
+                    "unit": "s"
+                },
+                "Yakıt": {
+                    "value": "Hibrit"
+                },
+                "Beygir": {
+                    "value": "110",
+                    "unit": "hp"
+                },
+                "Vites": {
+                    "value": "Otomatik"
+                },
+                "Tork": {
+                    "value": "200",
+                    "unit": "nm"
+                },
+                "Tüketim": {
+                    "value": "5.2",
+                    "unit": "lt"
+                },
+                "Bagaj": {
+                    "value": "380",
+                    "unit": "lt"
+                }
+            },
+            "Golf_8_1.5_TSI": {
+                "Max Hız": {
+                    "value": "216",
+                    "unit": "km/s"
+                },
+                "0-100": {
+                    "value": "8.4",
+                    "unit": "s"
+                },
+                "Yakıt": {
+                    "value": "Benzin"
+                },
+                "Beygir": {
+                    "value": "150",
+                    "unit": "hp"
+                },
+                "Vites": {
+                    "value": "Otomatik"
+                },
+                "Tork": {
+                    "value": "250",
+                    "unit": "nm"
+                },
+                "Tüketim": {
+                    "value": "5.4",
+                    "unit": "lt"
+                },
+                "Bagaj": {
+                    "value": "380",
+                    "unit": "lt"
+                }
+            },
+            "Golf_8_1.5_eTSI": {
+                "Max Hız": {
+                    "value": "224",
+                    "unit": "km/s"
+                },
+                "0-100": {
+                    "value": "8.5",
+                    "unit": "s"
+                },
+                "Yakıt": {
+                    "value": "Hibrit"
+                },
+                "Beygir": {
+                    "value": "150",
+                    "unit": "hp"
+                },
+                "Vites": {
+                    "value": "Otomatik"
+                },
+                "Tork": {
+                    "value": "250",
+                    "unit": "nm"
+                },
+                "Tüketim": {
+                    "value": "5.8",
+                    "unit": "lt"
+                },
+                "Bagaj": {
+                    "value": "380",
+                    "unit": "lt"
+                }
+            },
+            "Golf_8_1.6_TDI": {
+                "Max Hız": {
+                    "value": "198",
+                    "unit": "km/s"
+                },
+                "0-100": {
+                    "value": "10.4",
+                    "unit": "s"
+                },
+                "Yakıt": {
+                    "value": "Dizel"
+                },
+                "Beygir": {
+                    "value": "115",
+                    "unit": "hp"
+                },
+                "Vites": {
+                    "value": "Manuel"
+                },
+                "Tork": {
+                    "value": "250",
+                    "unit": "nm"
+                },
+                "Tüketim": {
+                    "value": "4.3",
+                    "unit": "lt"
+                },
+                "Bagaj": {
+                    "value": "380",
+                    "unit": "lt"
+                }
+            }
+        }
+        
+      
+    
