@@ -370,7 +370,7 @@
                         },
                         {
                             "name": "Qasqai",
-                            "image": "../img/markalar/nissan/qasqai.web",
+                            "image": "../img/markalar/nissan/qasqai.webp",
                             "link": "https://m-budak.github.io/cargurue/model/qasqai.html"
                         },
                         {
@@ -489,24 +489,81 @@
     "audi": {
         "Sedan": [
             {
-                "name": "Audi A3 Sedan",
+                "name": "A3 Sedan",
                 "image": "../img/markalar/citroen/a3_sedan.jpg",
                 "link": "https://m-budak.github.io/cargurue/model/a3_sedan.html"
             }
         ],
         "Hatchback": [
             {
-                "name": "Audi A3",
+                "name": "A3",
                 "image": "../img/markalar/citroen/a3.jpg",
                 "link": "https://m-budak.github.io/cargurue/model/a3.html"
             }
         ],
         "SUV": [
             {
-                "name": "Audi Q2",
+                "name": "Q2",
                 "image": "../img/markalar/citroen/q2.jpg",
                 "link": "https://m-budak.github.io/cargurue/model/q2.html"
             }
         ]
+    },
+        "kia": {
+            "Hatchback": [
+                {
+                    "name": "Yeni Picanto",
+                    "image": "../img/kia/yeni_picanto.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/yeni_picanto.html"
+                }
+            ],
+            "SUV": [
+                {
+                    "name": "Stonic",
+                    "image": "../img/kia/stonic.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/stonic.html"
+                },
+                {
+                    "name": "Sportage",
+                    "image": "../img/kia/sportage.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/sportage.html"
+                },
+                {
+                    "name": "Sorento",
+                    "image": "../img/kia/sorento.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/sorento.html"
+                }
+            ]
+        },
+        "volvo": {
+            "SUV": [
+                {
+                    "name": "XC90",
+                    "image": "../img/volvo/xc90.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/xc90.html"
+                },
+                {
+                    "name": "XC60",
+                    "image": "../img/volvo/xc60.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/xc60.html"
+                },
+                {
+                    "name": "XC40",
+                    "image": "../img/volvo/xc40.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/xc40.html"
+                }
+            ],
+            "Sedan": [
+                {
+                    "name": "S90",
+                    "image": "../img/volvo/s90.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/s90.html"
+                },
+                {
+                    "name": "S60",
+                    "image": "../img/volvo/s60.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/s60.html"
+                }
+            ]
+        }
     }
-}

@@ -1,89 +1,69 @@
 {
     "yeni": [
       {
-        "title": "Hyundai Bayon",
-        "image": "img/models/bayon.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Dacia Sandero",
-        "image": "img/models/sandero3.webp",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "../img/models/volvo-s60.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Opel Mokka",
-        "image": "../img/models/mokka.webp",
-        "link": "https://www.google.com"
-      }
+        "title": "Honda Civic",
+        "image": "img/models/civic11.jpg",
+        "link": "https://m-budak.github.io/cargurue/model/civic.html"
+    },
+    {
+        "title": "Ford Focus",
+        "image": "img/models/focus.jpg",
+        "link": "https://m-budak.github.io/cargurue/model/focus.html"
+    },
+    {
+        "title": "Mercedes-Benz C Serisi W206",
+        "image": "img/models/cserisi.webp",
+        "link": "https://m-budak.github.io/cargurue/model/c_serisi.html"
+    },
+    {
+        "title": "Tesla MODEL Y",
+        "image": "img/models/modely.webp",
+        "link": "https://m-budak.github.io/cargurue/model/model_y.html"
+    }
     ],
     "yorum": [
       {
-        "title": "Renault Megane",
-        "image": "../img/list/megane.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "../img/models/volvo-s60.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Toyota Hilux",
-        "image": "../img/list/hilux.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "../img/list/xc90.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Opel Mokka",
-        "image": "../img/list/mokka.webp",
-        "link": "https://www.google.com"
-      }
+        "title": "Honda Civic",
+        "image": "img/models/civic11.jpg",
+        "link": "https://m-budak.github.io/cargurue/model/civic.html"
+    },
+    {
+        "title": "Ford Focus",
+        "image": "img/models/focus.jpg",
+        "link": "https://m-budak.github.io/cargurue/model/focus.html"
+    },
+    {
+        "title": "Mercedes-Benz C Serisi W206",
+        "image": "img/models/cserisi.webp",
+        "link": "https://m-budak.github.io/cargurue/model/c_serisi.html"
+    },
+    {
+        "title": "Tesla MODEL Y",
+        "image": "img/models/modely.webp",
+        "link": "https://m-budak.github.io/cargurue/model/model_y.html"
+    }
     ],
     "popular": [
       {
-        "title": "Renault Megane",
-        "image": "../img/list/megane.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Toyota Hilux",
-        "image": "../img/list/hilux.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "../img/models/volvo-s60.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "../img/list/xc90.png",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "../img/models/volvo-s60.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Volvo XC90",
-        "image": "../img/models/volvo-s60.jpg",
-        "link": "https://www.google.com"
-      },
-      {
-        "title": "Opel Mokka",
-        "image": "../img/list/mokka.webp",
-        "link": "https://www.google.com"
-      }
+        "title": "Volkswagen Golf 8",
+        "image": "img/models/golf8.jpg",
+        "link": "https://m-budak.github.io/cargurue/model/golf.html"
+    },
+    {
+        "title": "Volkswagen POLO",
+        "image": "img/models/polo6.jpg",
+        "link": "https://m-budak.github.io/cargurue/model/polo.html"
+    },
+    {
+        "title": "Dacia SANDERO 3",
+        "image": "img/models/sandero3.webp",
+        "link": "https://m-budak.github.io/cargurue/model/sandero.html"
+    },
+    {
+        "title": "Peugeot 408",
+        "image": "img/models/408.png",
+        "link": "https://m-budak.github.io/cargurue/model/408.html"
+    }
     ]
   }
   
