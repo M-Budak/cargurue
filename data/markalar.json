@@ -1,42 +1,5 @@
 {
     "bmw": {
-        "Sedan": [
-            {
-                "name": "BMW 3 Series",
-                "image": "../img/markalar/bmw/3series.jpg",
-                "link": "https://www.google.com"
-            }
-        ],
-        "Hatchback": [
-            {
-                "name": "BMW 1 Series",
-                "image": "../img/markalar/bmw/1series.jpg",
-                "link": "https://www.google.com"
-            }
-        ],
-        "SUV": [
-            {
-                "name": "BMW X5",
-                "image": "../img/markalar/list/x5.jpg",
-                "link": "https://www.google.com"
-            }
-        ],
-        "Cabrio": [
-            {
-                "name": "BMW Z4",
-                "image": "../img/markalar/bmw/z4.jpg",
-                "link": "https://www.google.com"
-            }
-        ],
-        "Minivan": [],
-        "Pick-Up": [],
-        "Elektrikli": [
-            {
-                "name": "BMW i3",
-                "image": "../img/markalar/bmw/i3.jpg",
-                "link": "https://www.google.com"
-            }
-        ]
     },
         "toyota": {
             "Sedan": [
@@ -111,56 +74,56 @@
         "opel": {
             "Hatchback": [
                 {
-                    "name": "Opel Corsa",
+                    "name": "Corsa",
                     "image": "../img/markalar/opel/corsa.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/corsa.html"
                 },
                 {
-                    "name": "Opel Astra",
+                    "name": "Astra",
                     "image": "../img/markalar/opel/astra.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/astra.html"
                 },
                 {
-                    "name": "Opel Mokka",
+                    "name": "Mokka",
                     "image": "../img/markalar/opel/mokka.webp",
                     "link": "https://m-budak.github.io/cargurue/model/mokka.html"
                 }
             ],
             "Elektrikli": [
                 {
-                    "name": "Opel Corsa Elektrik",
+                    "name": "Corsa Elektrik",
                     "image": "../img/markalar/opel/corsa_elektrik.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/corsa_elektrik.html"
                 },
                 {
-                    "name": "Opel Astra Elektrik",
+                    "name": "Astra Elektrik",
                     "image": "../img/markalar/opel/astra_elektrik.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/astra_elektrik.html"
                 },
                 {
-                    "name": "Opel Mokka Elektrik",
+                    "name": "Mokka Elektrik",
                     "image": "../img/markalar/opel/mokka_elektrik.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/mokka_elektrik.html"
                 }
             ],
             "SUV": [
                 {
-                    "name": "Opel Crossland",
+                    "name": "Crossland",
                     "image": "../img/markalar/opel/crossland.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/crossland.html"
                 },
                 {
-                    "name": "Opel Grandland",
+                    "name": "Grandland",
                     "image": "../img/markalar/opel/grandland.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/grandland.html"
                 },
                 {
-                    "name": "Opel Yeni Grandland",
+                    "name": "Yeni Grandland",
                     "image": "../img/markalar/opel/yeni_grandland.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/yeni_grandland.html"
                 },
                 {
-                    "name": "Opel Yeni Frontera",
+                    "name": "Yeni Frontera",
                     "image": "../img/markalar/opel/yeni_frontera.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/yeni_frontera.html"
                 }
@@ -276,7 +239,7 @@
                     {
                         "name": "Yeni BAYON",
                         "image": "../img/markalar/hyundai/bayon.jpg",
-                        "link": "https://m-budak.github.io/cargurue/model/Bayon.html"
+                        "link": "https://m-budak.github.io/cargurue/model/bayon.html"
                     },
                     {
                         "name": "KONA",
@@ -388,7 +351,7 @@
                             },
                             {
                                 "name": "TAIGO 1",
-                                "image": "../img/volkswagen/taigo.jpg",
+                                "image": "../img/volkswagen/taigo.webp",
                                 "link": "https://m-budak.github.io/cargurue/model/taigo.html"
                             },
                             {
@@ -526,39 +489,23 @@
     "audi": {
         "Sedan": [
             {
-                "name": "Citroën C4",
-                "image": "../img/markalar/citroen/c4.jpg",
-                "link": "https://www.google.com"
+                "name": "Audi A3 Sedan",
+                "image": "../img/markalar/citroen/a3_sedan.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/a3_sedan.html"
             }
         ],
         "Hatchback": [
             {
-                "name": "Citroën C3",
-                "image": "../img/markalar/list/x5.jpg",
-                "link": "https://www.google.com"
+                "name": "Audi A3",
+                "image": "../img/markalar/citroen/a3.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/a3.html"
             }
         ],
         "SUV": [
             {
-                "name": "Citroën C5 Aircross",
-                "image": "../img/markalar/citroen/c5aircross.jpg",
-                "link": "https://www.google.com"
-            }
-        ],
-        "Cabrio": [],
-        "Minivan": [
-            {
-                "name": "Citroën SpaceTourer",
-                "image": "../img/markalar/citroen/spacetourer.jpg",
-                "link": "https://www.google.com"
-            }
-        ],
-        "Pick-Up": [],
-        "Elektrikli": [
-            {
-                "name": "Citroën ë-C4",
-                "image": "../img/markalar/citroen/ec4.jpg",
-                "link": "https://www.google.com"
+                "name": "Audi Q2",
+                "image": "../img/markalar/citroen/q2.jpg",
+                "link": "https://m-budak.github.io/cargurue/model/q2.html"
             }
         ]
     }
