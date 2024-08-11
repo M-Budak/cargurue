@@ -1,5 +1,29 @@
 let featuresData = {};
 
+// Sabit özellik isimleri listesi
+const featureNames = [
+    "Max Hız", 
+    "0-100", 
+    "Yakıt Türü", 
+    "Motor Gücü", 
+    "Şanzıman", 
+    "Beygir Gücü", 
+    "Şehir İçi Tüketim", 
+    "Şehir Dışı Tüketim"
+];
+
+// Sabit birimler listesi
+const featureUnits = [
+    "km/h", 
+    "sn", 
+    "",         // Yakıt Türü için birim yok
+    "HP", 
+    "",         // Şanzıman için birim yok
+    "HP", 
+    "lt/100km", 
+    "lt/100km"
+];
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('ozellikler.json')
         .then(response => response.json())
@@ -21,24 +45,23 @@ function showFeatures(category) {
 
     if (featuresData[category]) {
         const features = featuresData[category];
-        for (const key in features) {
-            const value = features[key];
-            const featureElement = createFeatureElement(key, value);
+        features.forEach((value, index) => {
+            const featureElement = createFeatureElement(featureNames[index], value, featureUnits[index]);
             featuresContainer.appendChild(featureElement);
-        }
+        });
     }
 }
 
-function createFeatureElement(key, value) {
-    const feature = document.createElement('div');
-    feature.className = 'feature col-3';
-    feature.innerHTML = `
-        <h4>${key}</h4>
+function createFeatureElement(name, value, unit) {
+    const featureElement = document.createElement('div');
+    featureElement.className = 'feature col-3';
+    featureElement.innerHTML = `
+        <h4>${name}</h4>
         <span class="material-symbols-outlined">settings</span>
         <p>
-            <span class="f_number">${value.value}</span>
-            ${value.unit ? `<span class="f_unit">${value.unit}</span>` : ''}
+            <span class="f_number">${value}</span>
+            ${unit ? `<span class="f_unit">${unit}</span>` : ''}
         </p>
     `;
-    return feature;
+    return featureElement;
 }
