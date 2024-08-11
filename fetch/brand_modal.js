@@ -17,7 +17,7 @@ class BrandModal extends HTMLElement {
                 </div>
               </div>
 <div class="modal-footer">
-  <a href="kasatipleri.html" class="btn btn-custom brand-link">Kasa Tipleri</a>
+  <a href="kasa.html" class="btn btn-custom brand-link">Kasa Tipleri</a>
 </div>
 
             </div>
@@ -32,6 +32,7 @@ class BrandModal extends HTMLElement {
         { name: "BMW", img: "logo/bmw.svg" },
         { name: "Chevrolet", img: "logo/chevrolet.svg" },
         { name: "Citroen", img: "logo/citroen.svg" },
+        { name: "Cupra", img: "logo/cupra.svg" },
         { name: "Dacia", img: "logo/dacia.svg" },
         { name: "Fiat", img: "logo/fiat.svg" },
         { name: "Ford", img: "logo/ford.svg" },

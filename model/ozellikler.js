@@ -4,24 +4,24 @@ let featuresData = {};
 const featureNames = [
     "Max Hız", 
     "0-100", 
-    "Yakıt Türü", 
-    "Motor Gücü", 
+    "Yakıt", 
+    "Beygir", 
     "Şanzıman", 
-    "Beygir Gücü", 
+    "Tork", 
     "Şehir İçi Tüketim", 
-    "Şehir Dışı Tüketim"
+    "Bagaj"
 ];
 
 // Sabit birimler listesi
 const featureUnits = [
     "km/h", 
-    "sn", 
+    "s", 
     "",         // Yakıt Türü için birim yok
-    "HP", 
+    "hp", 
     "",         // Şanzıman için birim yok
-    "HP", 
+    "nm", 
     "lt/100km", 
-    "lt/100km"
+    "lt"
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
