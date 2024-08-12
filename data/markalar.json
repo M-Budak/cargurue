@@ -376,7 +376,8 @@
                         {
                             "name": "Juke",
                             "image": "../img/markalar/nissan/juke.jpg",
-                            "link": "https://m-budak.github.io/cargurue/model/juke.html"
+                            "link": "https://m-budak.github.io/cargurue/model/juke.html",
+                            "isComingSoon": true
                         },
                         {
                             "name": "Qasqai",
@@ -386,7 +387,8 @@
                         {
                             "name": "X-Trail",
                             "image": "../img/markalar/nissan/x_trail.webp",
-                            "link": "https://m-budak.github.io/cargurue/model/x_trail.html"
+                            "link": "https://m-budak.github.io/cargurue/model/x_trail.html",
+                            "isComingSoon": true
                         }
                     ]
                 },
