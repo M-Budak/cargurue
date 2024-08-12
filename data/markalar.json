@@ -81,7 +81,8 @@
                 {
                     "name": "Astra",
                     "image": "../img/markalar/opel/astra.jpg",
-                    "link": "https://m-budak.github.io/cargurue/model/astra.html"
+                    "link": "https://m-budak.github.io/cargurue/model/astra.html",
+                    "isComingSoon": true
                 },
                 {
                     "name": "Mokka",
@@ -92,18 +93,21 @@
             "Elektrikli": [
                 {
                     "name": "Corsa Elektrik",
-                    "image": "../img/markalar/opel/corsa_elektrik.jpg",
-                    "link": "https://m-budak.github.io/cargurue/model/corsa_elektrik.html"
+                    "image": "../img/markalar/opel/corsa_e.webp",
+                    "link": "https://m-budak.github.io/cargurue/model/corsa_elektrik.html",
+                    "isComingSoon": true
                 },
                 {
                     "name": "Astra Elektrik",
-                    "image": "../img/markalar/opel/astra_elektrik.jpg",
-                    "link": "https://m-budak.github.io/cargurue/model/astra_elektrik.html"
+                    "image": "../img/markalar/opel/astra_e.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/astra_elektrik.html",
+                    "isComingSoon": true
                 },
                 {
                     "name": "Mokka Elektrik",
-                    "image": "../img/markalar/opel/mokka_elektrik.jpg",
-                    "link": "https://m-budak.github.io/cargurue/model/mokka_elektrik.html"
+                    "image": "../img/markalar/opel/mokka_e.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/mokka_elektrik.html",
+                    "isComingSoon": true
                 }
             ],
             "SUV": [
@@ -113,19 +117,16 @@
                     "link": "https://m-budak.github.io/cargurue/model/crossland.html"
                 },
                 {
-                    "name": "Grandland",
-                    "image": "../img/markalar/opel/grandland.jpg",
-                    "link": "https://m-budak.github.io/cargurue/model/grandland.html"
-                },
-                {
                     "name": "Yeni Grandland",
-                    "image": "../img/markalar/opel/yeni_grandland.jpg",
-                    "link": "https://m-budak.github.io/cargurue/model/yeni_grandland.html"
+                    "image": "../img/markalar/opel/grandland.webp",
+                    "link": "https://m-budak.github.io/cargurue/model/yeni_grandland.html",
+                    "isComingSoon": true
                 },
                 {
                     "name": "Yeni Frontera",
-                    "image": "../img/markalar/opel/yeni_frontera.jpg",
-                    "link": "https://m-budak.github.io/cargurue/model/yeni_frontera.html"
+                    "image": "../img/markalar/opel/frontera.webp",
+                    "link": "https://m-budak.github.io/cargurue/model/yeni_frontera.html",
+                    "isComingSoon": true
                 }
             ]
         },
@@ -285,12 +286,14 @@
                         {
                             "name": "208",
                             "image": "../img/markalar/peugeot/208.jpg",
-                            "link": "https://m-budak.github.io/cargurue/model/208.html"
+                            "link": "https://m-budak.github.io/cargurue/model/208.html",
+                            "isComingSoon": true
                         },
                         {
                             "name": "308",
-                            "image": "../img/markalar/peugeot/308.jpg",
-                            "link": "https://m-budak.github.io/cargurue/model/308.html"
+                            "image": "../img/markalar/peugeot/308.webp",
+                            "link": "https://m-budak.github.io/cargurue/model/308.html",
+                            "isComingSoon": true
                         }
                     ],
                     "SUV": [
@@ -312,14 +315,16 @@
                         {
                             "name": "5008",
                             "image": "../img/markalar/peugeot/5008.jpg",
-                            "link": "https://m-budak.github.io/cargurue/model/5008.html"
+                            "link": "https://m-budak.github.io/cargurue/model/5008.html",
+                            "isComingSoon": true
                         }
                     ],
                     "Sedan": [
                         {
                             "name": "508",
                             "image": "../img/markalar/peugeot/508.jpg",
-                            "link": "https://m-budak.github.io/cargurue/model/508.html"
+                            "link": "https://m-budak.github.io/cargurue/model/508.html",
+                            "isComingSoon": true
                         }
                     ]
                 },
@@ -375,7 +380,7 @@
                         },
                         {
                             "name": "X-Trail",
-                            "image": "../img/markalar/nissan/x_trail.jpg",
+                            "image": "../img/markalar/nissan/x_trail.webp",
                             "link": "https://m-budak.github.io/cargurue/model/x_trail.html"
                         }
                     ]
@@ -385,7 +390,8 @@
                         {
                             "name": "Spring",
                             "image": "../img/markalar/dacia/spring.jpg",
-                            "link": "https://m-budak.github.io/cargurue/model/spring.html"
+                            "link": "https://m-budak.github.io/cargurue/model/spring.html",
+                            "isComingSoon": true
                         },
                         {
                             "name": "Duster",

@@ -6,9 +6,9 @@ const featureNames = [
     "0-100", 
     "Yakıt", 
     "Beygir", 
-    "Şanzıman", 
+    "Vites", 
     "Tork", 
-    "Şehir İçi Tüketim", 
+    "Tüketim", 
     "Bagaj"
 ];
 

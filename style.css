@@ -110,6 +110,24 @@
         z-index: 10;
     }
 
+    /* Siyah beyaz yapacak sınıf */
+.grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+/* Hover efekti */
+.grayscale:hover {
+    filter: grayscale(0%);
+}
+
+/* Linkleri devre dışı bırakma */
+.disabled-link {
+    pointer-events: none;
+    color: gray;
+}
+
+
     .brand {
         position: relative;
     }
@@ -388,7 +406,7 @@ header {
     padding: 0.1rem 0.2rem;
 }
 .car-card:hover .card-img-top {
-    transform: scale(1.1); 
+    transform: scale(1); 
     transition: transform 0.3s ease;
 }
 
@@ -420,8 +438,8 @@ header {
 }
 
 .modal-card:hover .modal-img-brand {
-    transform: scale(1.2); /* %10 büyütme */
-    transition: transform 0.3s ease; /* Animasyon süresi ve efekti */
+    transform: scale(1.2); 
+    transition: transform 0.3s ease; 
 }
 
 /* MODAL ENDS  */
