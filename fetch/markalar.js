@@ -44,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 categoryRow.innerHTML = categoryData.map(item => `
                     <div class="col-lg-6 col-12">
                         <div class="card car-card ${item.isComingSoon ? 'coming-soon' : ''}">
+                                <a href="${item.link}" ${item.isComingSoon ? 'class="disabled-link"' : ''}>
                             <img src="${item.image}" class="card-img-top-brand ${item.isComingSoon ? 'grayscale' : ''}" alt="${item.name}">
                             <div class="card-body">
                                 ${item.isComingSoon ? '<div class="badge">Çok Yakında</div>' : ''}
-                                <a href="${item.link}" ${item.isComingSoon ? 'class="disabled-link"' : ''}>
                                     <h5 class="card-title">${item.name}</h5>
                                 </a>
                             </div>
