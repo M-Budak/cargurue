@@ -25,6 +25,11 @@
                     "link": "https://m-budak.github.io/cargurue/model/megane4.html"
                 },
                 {
+                    "name": "Toyota Corolla",
+                    "image": "../img/markalar/toyota/corolla.jpg",
+                    "link": "https://m-budak.github.io/cargurue/model/corolla.html"
+                },
+                {
                     "name": "Renault Taliant",
                     "image": "../img/markalar/renault/taliant.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/taliant.html"
