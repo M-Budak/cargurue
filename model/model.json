@@ -1,0 +1,13 @@
+{
+    "models": [
+        {
+            "id": "egea_sedan",
+            "title": "Egeaaaaa Sedan Araç Yorumu",
+            "name": "Egea Sedaaaaan",
+            "description": "Egea Sedan, Accayip mükemmel tasarımı ve üstün performansıyla sürüş deneyimini zirveye taşıyor. Her ayrıntısı özenle düşünülmüş olan bu otomobil, zarif bir şıklığı, teknolojik yenilikleri ve dinamik sürüşü bir araya getiriyor.",
+            "image": "../img/models/egea.jpg",
+            "alt": "Görsel"
+        }
+        
+    ]
+}
