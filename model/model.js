@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             // URL'den model ID'sini alın (Örneğin: egea_sedan)
             const urlParams = new URLSearchParams(window.location.search);
-            const modelId = urlParams.get('model') || 'egea_sedan'; // Default olarak 'egea_sedan' kullanılır
+            const modelId = urlParams.get('model') || 'egea_sedan'; // Default olarak 'egea_sedan' kullanılır - bu ne abi neden default bunu alıyorum?!
 
             const model = data.models.find(m => m.id === modelId);
 

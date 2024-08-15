@@ -32,7 +32,7 @@ function createReviewElement(review) {
     cardTitle.innerHTML = `<strong>${review.author}</strong> - ${review.title}`;
     const cardText = document.createElement('p');
     cardText.className = 'card-text';
-    cardText.textContent = `${review.date} / ${review.duration}`;
+    cardText.textContent = `${review.date} ${review.duration}`;
     cardHeader.appendChild(cardTitle);
     cardHeader.appendChild(cardText);
 

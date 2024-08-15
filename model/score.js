@@ -28,7 +28,7 @@ function showScores(category) {
                 <div class="skor col-5">
                     <p>
                         <span class="skor_number">${categoryData.average}</span>
-                        <span class="skor_unit">/ 10</span>
+                        <span class="skor_unit">/ 5</span>
                     </p>
                     <p class="skor-oy">${categoryData.votes} Oy</p>
                 </div>
@@ -45,7 +45,7 @@ function showScores(category) {
                     <h4>${key}</h4>
                     <p>
                         <span class="s_number">${value}</span>
-                        <span class="s_unit">/ 10</span>
+                        <span class="s_unit">/ 5</span>
                     </p>
                 </div>
             `;

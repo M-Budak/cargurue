@@ -1,62 +1,127 @@
 {
-    "A": [
-      {
-        "author": "Recep Kurtuluş",
-        "title": "2022 BMW 320i First Edition M Sport",
-        "date": "24.10.2023",
-        "duration": "2 Yıllık Kullanıcı",
-        "content": "Performans açısından BMW 320 kesinlikle etkileyici. Motor gücü, hızlanma ve yol tutuş beklentilerimi fazlasıyla karşıladı. Özellikle spor modunda sürüş yaparken otomobil gerçekten canlı ve eğlenceli. Yakıt verimliliği de şaşırtıcı derecede iyidir. Hem şehir içi hem de uzun yolculuklarda tasarruflu bir şekilde ilerleyebiliyor."
-      }
-    ],
-    "B": [
-      {
-        "author": "Ali Yılmaz",
-        "title": "2023 Audi A4 Avant",
-        "date": "01.08.2024",
-        "duration": "1 Yıllık Kullanıcı",
-        "content": "Audi A4 Avant, konfor ve performans açısından harika bir seçenek. İç mekanı oldukça şık ve malzeme kalitesi yüksek. Sürüş dinamikleri de oldukça tatmin edici. Yakıt verimliliği ise biraz düşük."
-      }
-    ],
-    "Tesla": [
-      {
-        "author": "Teslacı Ali",
-        "title": "2023 Audi A4 Avant",
-        "date": "01.08.2024",
-        "duration": "1 Yıllık Kullanıcı",
-        "content": "Togg neymiş gardaşim  de oldukça tatmin edici. Yakıt verimliliği ise biraz düşük."
-      }
-    ],
-    "BMW": [
-      {
-        "author": "Muharrem İnce",
-        "title": "2025 BMW C Serisi",
-        "date": "11.11.2024",
-        "duration": "15 Yıllık Siyasetçi",
-        "content": "Togg neymiş gardaşim  de oldukça tatmin edici. Yakıt verimliliği ise biraz düşük."
-      },
-      {
-        "author": "Burak İnce",
-        "title": "BMW Eski Kasa",
-        "date": "11.11.2024",
-        "duration": "thyspor",
-        "content": "sanayiden çıkmak istemiyorsanız alın.ogg neymiş gardaşim  de oldukça tatmin edici. ogg neymiş gardaşim  de oldukça tatmin edici. ogg neymiş gardaşim  de oldukça tatmin edici. ."
-      }
-    ],
-    "Hilux1": [
-      {
-        "author": "Muharrem Budak",
-        "title": "2025 BMW C Serisi",
-        "date": "11.11.2024",
-        "duration": "15 Yıllık Siyasetçi",
-        "content": "Sen ilk göz ağrımsın, çocukluk aşkımsın.."
-      },
-      {
-        "author": "Burak İnce",
-        "title": "BMW Eski Kasa",
-        "date": "11.11.2024",
-        "duration": "thyspor",
-        "content": "sanayiden çıkmak istemiyorsanız alın.ogg neymiş gardaşim  de oldukça tatmin edici. ogg neymiş gardaşim  de oldukça tatmin edici. ogg neymiş gardaşim  de oldukça tatmin edici. ."
-      }
-    ]
+"Clio_1.0_Sce": [],
+"Clio_1.0_Tce": [],
+"Clio_1.3_Tce": [],
+"Clio_1.5_Blue_Dci": [],
+"Egea_1.4_Fire": [],
+"Egea_1.3_Multijet_II": [],
+"Egea_1.6_Multijet_II": [],
+"Egea_1.5_Hibrit_T4": [],
+"Egea_1.0_Firefly": [],
+"Egea_Cross_1.4_Fire": [],
+"Egea_Cross_1.3_Multijet_II": [],
+"Egea_Cross_1.6_Multijet_II": [],
+"Egea_Cross_1.5_Hibrit_T4": [],
+"Egea_Cross_1.0_Firefly": [],
+"Corolla_12_1.8_Hybrid": [],
+"Corolla_12_1.5_Benzin": [],
+"Corolla_12_1.6_Valvematic": [],
+"Megane_4_1.2_Tce": [],
+"Megane_4_1.3_Tce": [],
+"Megane_4_1.5_Blue_Dci": [],
+"Megane_4_1.5_Dci": [],
+"Megane_4_1.6": [],
+"Passat_B8_1.4_Tsi_Bluemotion": [],
+"Passat_B8_1.5_Tsi": [],
+"Passat_B8_1.6_Tdi": [],
+"Passat_B8_2.0_Tdi_Bluemotion": [],
+"Passat_B8_2.0_Tdi_Bluemotion_4x4": [],
+"Civic_11_1.5_Turbo": [],
+"Civic_11_1.5_Turbo_Eco": [],
+"i20_3_Nesil_1.4_Mpi": [],
+"i20_3_Nesil_1.0_T_Gdi": [],
+"Focus_4_1.0L_EcoBoost": [],
+"Focus_4_1.5L_Ti_VCT": [],
+"Focus_4_1.5L_EcoBlue": [],
+"Focus_4_1.5L_EcoBlue_1.5_TDCi": [],
+"2008_2_1.2_PureTech": [
+  {"author": "Hasan Kaya", "title": "1.2 PureTech", "date": "15.06.2024", "duration": "", "content": "Küçük bir SUV olarak şehir içi kullanımı için ideal. Manevra kabiliyeti oldukça iyi."},
+{"author": "Ayhan Yurt", "title": "1.2 PureTech", "date": "09.08.2024", "duration": "", "content": "Dizaynı güzel ama iç mekan genişliği biraz daha iyi olabilirdi. Performans yeterli."},
+{"author": "Kemal Akman", "title": "1.2 PureTech", "date": "27.07.2024", "duration": "/ 2 Yıllık Kullanıcı", "content": "Şehir içi kullanımda çok rahat. Ancak bagaj hacmi biraz daha geniş olabilirdi."}
+],
+"2008_2_1.5_BlueHDi": [
+  {"author": "Murat Aydın", "title": "1.5 BlueHDi", "date": "03.07.2024", "duration": "/ 0-6 Aylık Kullanıcı", "content": "Yakıt verimliliği harika ama performans konusunda beklentilerimi tam olarak karşılamadı."},
+{"author": "Yusuf Güneş", "title": "1.5 BlueHDi", "date": "23.06.2024", "duration": "", "content": "Dizaynı çok şık, yakıt tüketimi oldukça düşük. Ancak sürüş dinamikleri biraz daha iyi olabilirdi."},
+{"author": "İsmail Kaplan", "title": "1.5 BlueHDi", "date": "05.08.2024", "duration": "", "content": "Bu araç ekonomik ve şehir içi için ideal. Fakat biraz daha güçlü bir motor tercih edebilirdim."}
+],
+"3008_2_1.2_PureTech": [
+  {"author": "Okan Yalçın", "title": "1.2 PureTech", "date": "19.07.2024", "duration": "/ 1 Yıllık Kullanıcı", "content": "Yol tutuşu ve sürüş konforu çok iyi. Motor gücü yeterli ancak yakıt tüketimi biraz yüksek."}
+],
+"3008_2_1.5_BlueHDi": [
+  {"author": "Fatih Polat", "title": "1.5 BlueHDi", "date": "12.08.2024", "duration": "", "content": "Genel olarak tatmin edici. İç mekan oldukça kaliteli ama sürüş biraz gürültülü."},
+{"author": "Serkan Korkmaz", "title": "1.5 BlueHDi", "date": "08.06.2024", "duration": "/ 0-6 Aylık Kullanıcı", "content": "Yakıt tüketimi çok iyi, ama iç mekan genişliği daha fazla olabilir. Performans iyi."}
+],
+"3008_2_1.6_BlueHDi": [
+  {"author": "Emre Şahin", "title": "1.6 BlueHDi", "date": "30.06.2024", "duration": "", "content": "Yol tutuşu mükemmel, konforlu bir sürüş sunuyor. Yakıt verimliliği beklentimin altında."},
+{"author": "Oğuz Karan", "title": "1.6 BlueHDi", "date": "25.08.2024", "duration": "/ 1 Yıllık Kullanıcı", "content": "Sürüş konforu ve iç mekan kalitesi çok iyi. Ancak motor biraz daha sessiz olabilir."}
+],
+"3008_2_1.6_PureTech": [
+  {"author": "Mert Bayram", "title": "1.6 PureTech", "date": "14.07.2024", "duration": "", "content": "Performansı iyi ama yakıt tüketimi biraz fazla. Yine de konfor ve iç mekan kalite açısından tatmin edici."},
+{"author": "Ege Altun", "title": "1.6 PureTech", "date": "01.09.2024", "duration": "", "content": "Yol tutuşu ve sürüş dinamikleri oldukça başarılı. İç mekan ferah ama motorun daha sessiz olmasını beklerdim."}
+],
+"3008_2_1.2_Hybrid": [
+  {"author": "Selçuk Yavuz", "title": "1.2 Hybrid", "date": "16.08.2024", "duration": "/ 2 Yıllık Kullanıcı", "content": "Elektrikli motor desteği iyi, ancak benzinli motor biraz daha güçlü olabilirdi."},
+{"author": "Bora Erdem", "title": "1.2 Hybrid", "date": "21.07.2024", "duration": "/ 0-6 Aylık Kullanıcı", "content": "Yakıt tüketimi ve performans dengesi iyi. İç mekan ve sürüş konforu tatmin edici."}
+],
+"Golf_8_1.0_TSI": [],
+"Golf_8_1.0_eTSI": [],
+"Golf_8_1.5_TSI": [],
+"Golf_8_1.5_eTSI": [],
+"Golf_8_1.6_TDI": [],
+"Qasqai_3_1.3_DIG-T": [],
+"Qasqai_3_1.5_e-Power": [],
+"Duster_2_1.0_Tce": [],
+"Duster_2_1.0_Tce_Eco-G": [],
+"Duster_2_1.3_Tce": [],
+"Duster_2_1.5_Dci": [],
+"Duster_2_1.5_Blue_Dci": [],
+"Duster_2_1.6_Sce": [],
+"C_Serisi_W206_6_C_200_1.5": [],
+"C_Serisi_W206_6_C_200d_1.6": [],
+"MEGANE_E-TECH_EV60": [],
+"T10X_V1_RWD": [],
+"T10X_V2_RWD": [],
+"Model_Y_Long_Range_4WD": [],
+"Model_Y_Performance_4WD": [],
+"CORSA_F_1.2_75_Hp": [],
+"CORSA_F_1.2_Turbo_100_Hp": [],
+"CORSA_F_1.2_Turbo_130_Hp": [],
+"CORSA_F_1.5_D": [],
+"Polo_6_1.0_80_Hp": [],
+"Polo_6_1.0_TSI_95_Hp": [],
+"BAYON_1_1.4_MPI": [],
+"BAYON_1_1.0_T-GDI": [],
+"BAYON_1_1.0_T-GDI_MHEV": [],
+"MOKKA_2_1.2_Turbo": [],
+"T_ROC_1_1.5_TSI": [],
+"TIGGO_8_PRO_1_1.6_TGDI": [],
+"TIGGO_7_PRO_1_1.6_TGDI": [],
+"OMODA_5_1_1.6_TGDI": [],
+"CROSSLAND_1_1.2_Turbo_110": [],
+"CROSSLAND_1_1.2_Turbo_130": [],
+"CROSSLAND_1_1.5_Turbo_Dizel": [],
+"C4X_1_1.2_PureTech_100": [],
+"C4X_1_1.2_PureTech_130": [],
+"C4X_1_1.5_BlueHdi": [],
+"SANDERO_3_1.0_Sce": [],
+"SANDERO_3_1.0_Tce": [],
+"SANDERO_3_1.0_Eco-G": [],
+"B_Serisi_F40_1_116i": [],
+"B_Serisi_F40_1_118i": [],
+"B_Serisi_F40_1_120i": [],
+"B_Serisi_F40_1_120d": [],
+"TAIGO_1_1.0_TSI_95": [],
+"TAIGO_1_1.0_TSI_110": [],
+"TAIGO_1_1.5_TSI": [],
+"408_1.2_PureTech_130": [
+  {"author": "Ahmet Yılmaz", "title": "1.2 PureTech 130", "date": "11.06.2024", "duration": " / 0-6 Aylık Kullanıcı", "content": "Bu araç şehir içi kullanım için oldukça uygun. Yakıt ekonomisi iyi, fakat performansı daha yüksek olabilirdi."},
+{"author": "Mehmet Demir", "title": "1.2 PureTech 130", "date": "20.08.2024", "duration": "", "content": "Konforlu bir sürüş deneyimi sundu. Yalnızca motor gücü biraz daha yüksek olabilirdi."},
+{"author": "Ali Çelik", "title": "1.2 PureTech 130", "date": "29.07.2024", "duration": "/ 1 Yıllık Kullanıcı", "content": "Genel olarak memnunum, ancak uzun yolculuklarda motorun daha güçlü olmasını isterdim."}
+],
+"TUCSON_4_1.6_T-GDI_4x2": [],
+"TUCSON_4_1.6_T-GDI_4x4": [],
+"TUCSON_4_1.6_CRDI_4x2": [],
+"TUCSON_4_1.6_CRDI_4x4": [],
+"TIGUAN_3_1.5_eTSI": []
   }
   
