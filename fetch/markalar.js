@@ -39,22 +39,58 @@ document.addEventListener("DOMContentLoaded", function() {
                 `;
                 categoriesContainer.appendChild(categorySection);
 
-                // Kategori verilerini ekleme
-                const categoryRow = categorySection.querySelector('.row');
-                categoryRow.innerHTML = categoryData.map(item => `
-                    <div class="col-lg-6 col-12">
-                        <div class="card car-card ${item.isComingSoon ? 'coming-soon' : ''}">
-                                <a href="${item.link}" ${item.isComingSoon ? 'class="disabled-link"' : ''}>
-                            <img src="${item.image}" class="card-img-top-brand ${item.isComingSoon ? 'grayscale' : ''}" alt="${item.name}">
-                            <div class="card-body">
-                                ${item.isComingSoon ? '<div class="badge">Çok Yakında</div>' : ''}
-                                    <h5 class="card-title">${item.name}</h5>
-                                </a>
-                            </div>
-                        </div>
+            //     // Kategori verilerini ekleme
+            //     const categoryRow = categorySection.querySelector('.row');
+            //     categoryRow.innerHTML = categoryData.map(item => `
+            //         <div class="col-lg-6 col-12">
+            //             <div class="card car-card ${item.isComingSoon ? 'coming-soon' : ''}">
+            //                     <a href="${item.link}" ${item.isComingSoon ? 'class="disabled-link"' : ''}>
+            //                 <img src="${item.image}" class="card-img-top-brand ${item.isComingSoon ? 'grayscale' : ''}" alt="${item.name}">
+            //                 <div class="card-body">
+            //                     ${item.isComingSoon ? '<div class="badge">Çok Yakında</div>' : ''}
+            //                         <h5 class="card-title">${item.name}</h5>
+            //                     </a>
+            //                 </div>
+            //             </div>
+            //         </div>
+            //     `).join('');
+            // });
+
+// Kategori verilerini ekleme
+const categoryRow = categorySection.querySelector('.row');
+categoryRow.innerHTML = categoryData.map(item => {
+    const badgeInfo = getBadgeInfo(item.BadgeStatus);
+    return `
+        <div class="col-lg-6 col-12">
+            <div class="card car-card ${item.BadgeStatus === 'soon' ? 'coming-soon' : ''}">
+                <a href="${item.link}" ${item.BadgeStatus === 'soon' ? 'class="disabled-link"' : ''}>
+                    <img src="${item.image}" class="card-img-top-brand ${item.BadgeStatus === 'soon' ? 'grayscale' : ''}" alt="${item.name}">
+                    <div class="card-body">
+                        ${badgeInfo ? `<div class="badge" style="background-color:${badgeInfo.color}">${badgeInfo.text}</div>` : ''}
+                        <h5 class="card-title">${item.name}</h5>
                     </div>
-                `).join('');
-            });
+                </a>
+            </div>
+        </div>
+    `;
+}).join('');
+});
+
+function getBadgeInfo(status) {
+    switch (status) {
+        case 'elk':
+            return { text: 'Elektrikli', color: 'green' };
+        case 'hyb':
+            return { text: 'Hybrid', color: 'blue' };
+        case 'soon':
+            return { text: 'Çok Yakında', color: 'red' };
+        case 'new':
+            return { text: 'Yeni Eklendi', color: 'orange' };
+        default:
+            return null;  // Badge eklenmeyecekse null dönebiliriz
+    }
+}
+
 
             // Scrollspy'ı yeniden başlat
             const scrollSpyElement = document.querySelector('[data-bs-spy="scroll"]');

@@ -1,0 +1,10 @@
+
+
+{
+    "polo": ["golf", "focus", "tiggo_8_pro"],
+    "focus": ["golf", "clio5", "corsa_f","focus"],
+    "tiggo_8_pro": ["golf", "clio5", "corsa_f","focus","polo", "clio5", "tiggo_8_pro"],
+    "corsa_f": ["polo", "clio5", "tiggo_8_pro"],
+    "golf":["polo","focus"]
+  }
+  

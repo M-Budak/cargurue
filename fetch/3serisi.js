@@ -71,7 +71,7 @@ function loadCategoryData(category) {
                                 <h4>Malzeme</h4>
                                 <p>
                                     <span class="s_number">${skor.malzeme}</span>
-                                    <span class="s_unit">/ 10</span>
+                                    <span class="s_unit">/ 187</span>
                                 </p>
                             </div>
                         </div>

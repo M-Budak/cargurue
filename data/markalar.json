@@ -81,18 +81,20 @@
                 {
                     "name": "Corsa",
                     "image": "../img/markalar/opel/corsa.jpg",
-                    "link": "https://m-budak.github.io/cargurue/model/corsa.html"
+                    "link": "https://m-budak.github.io/cargurue/model/corsa.html",
+                    "BadgeStatus": "hyb"
                 },
                 {
                     "name": "Astra",
                     "image": "../img/markalar/opel/astra.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/astra.html",
-                    "isComingSoon": true
+                "BadgeStatus": "soon"
                 },
                 {
                     "name": "Mokka",
                     "image": "../img/markalar/opel/mokka.webp",
-                    "link": "https://m-budak.github.io/cargurue/model/mokka.html"
+                    "link": "https://m-budak.github.io/cargurue/model/mokka.html",
+                    "BadgeStatus": "elk"
                 }
             ],
             "Elektrikli": [
@@ -100,7 +102,7 @@
                     "name": "Corsa Elektrik",
                     "image": "../img/markalar/opel/corsa_e.webp",
                     "link": "https://m-budak.github.io/cargurue/model/corsa_elektrik.html",
-                    "isComingSoon": true
+                    "BadgeStatus": "new" 
                 },
                 {
                     "name": "Astra Elektrik",

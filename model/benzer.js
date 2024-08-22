@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('model.json')
         .then(response => response.json())
         .then(data => {
+            // URL'den model ID'sini alın
             const urlParams = new URLSearchParams(window.location.search);
             const modelId = urlParams.get('model') || 'egea_sedan'; // Default olarak 'egea_sedan' kullanılır
 
@@ -10,17 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
             if (model) {
                 // Sayfa başlığı
                 document.title = model.title;
-
-                // H1 Başlığı
-                document.querySelector('.genel-baslik-1').textContent = model.name;
-
-                // Açıklama Paragrafı
-                document.querySelector('.container p').textContent = model.description;
-
-                // Görsel
-                const imgElement = document.querySelector('.container img');
-                imgElement.src = model.image;
-                imgElement.alt = model.alt;
 
                 // Benzer araçları yükleme
                 loadSimilarCars(modelId, data.models);
@@ -50,7 +40,7 @@ function loadSimilarCars(modelId, models) {
                         card.style.width = '225px';
 
                         const link = document.createElement('a');
-                        link.href = `polo.html?model=${model.id}`;
+                        link.href = `${model.id}.html?model=${model.id}`;
 
                         const img = document.createElement('img');
                         img.src = model.image;
