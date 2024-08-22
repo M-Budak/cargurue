@@ -591,7 +591,7 @@ a, a:visited, a:focus, a:active a:hover {
 /* Header Starts */
 
 .button-container {
-    display: flex;
+    display:block;
     justify-content: space-between;
 }
 .btn{
@@ -627,6 +627,26 @@ a, a:visited, a:focus, a:active a:hover {
 .btn-custom.active {
     background-color: var(--primary-color);
     color: white;
+    border-color: red;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-motor {
+    font-size: 22px;
+    /* background-color: var(--primary-color); */
+    color: var(--primary-color);
+    border: 0.1rem solid rgba(0, 0, 0, 0.793);
+    border-color: #020A2B;
+    width: 10rem;
+    padding: 5px 15px;
+    margin: 0.3rem;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-motor.active {
+    background-color: var(--primary-color);
+    color: yellow;
     border-color: red;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
@@ -908,6 +928,11 @@ margin-bottom: 0.75rem;
 .btn-custom {
 font-size: 1rem; 
 }
+
+.btn-motor {
+    font-size: 1rem; 
+    }
+    
 
 /* Header Ends  */
 

@@ -1,22 +1,50 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // JSON dosyasını yükleyelim
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedModel = urlParams.get('model');
+
+    if (!selectedModel) {
+        console.error('Model parametresi bulunamadı.');
+        return;
+    }
+
     fetch('motor.json')
         .then(response => response.json())
         .then(data => {
-            // motor.json'dan gelen veriyi kullanarak butonları oluşturalım
             const motorContainer = document.querySelector('.button-container');
+            motorContainer.innerHTML = '';  // Butonları temizle
 
-            // Örneğin Golf 8 motorları için, golf_8 anahtarını kullanarak butonları oluşturuyoruz
-            const motorlar = data.golf_8;
+            const motorlar = data[selectedModel];
+            if (!motorlar) {
+                console.error(`Model "${selectedModel}" bulunamadı.`);
+                return;
+            }
 
-            motorlar.forEach(motor => {
+            motorlar.forEach((motor, index) => {
                 const button = document.createElement('button');
                 button.type = 'button';
-                button.className = 'btn btn-custom';
-                button.setAttribute('onclick', `showCategory('${motor}')`);
-                button.textContent = motor.split('_').join(' ');  // Buton textini daha okunabilir hale getiriyoruz
+                button.className = 'btn btn-motor';
+                button.setAttribute('data-motor', motor);
+                button.textContent = motor.split('_').join(' ');
+
+                button.addEventListener('click', function() {
+                    document.querySelectorAll('.btn-motor').forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    showCategory(motor);
+                });
+
                 motorContainer.appendChild(button);
+
+                if (index === 0) {
+                    button.classList.add('active');
+                    button.click();
+                }
             });
         })
         .catch(error => console.error('Motor verileri yüklenirken hata oluştu:', error));
 });
+
+function showCategory(category) {
+    showFeatures(category);
+    showScores(category);
+    showReviews(category);
+}

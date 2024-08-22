@@ -24,6 +24,18 @@ const featureUnits = [
     "lt"
 ];
 
+// İkonlar listesi
+const icons = [
+    'speed',                  // Max Hız
+    'avg_pace',               // 0-100
+    'local_gas_station',      // Yakıt
+    'bolt',                   // Beygir
+    'auto_transmission',      // Vites
+    'settings',               // Tork
+    'local_gas_station',      // Tüketim (örnek olarak health_and_safety yerine local_gas_station kullanılabilir)
+    'luggage'                 // Bagaj
+];
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('ozellikler.json')
         .then(response => response.json())
@@ -46,18 +58,20 @@ function showFeatures(category) {
     if (featuresData[category]) {
         const features = featuresData[category];
         features.forEach((value, index) => {
-            const featureElement = createFeatureElement(featureNames[index], value, featureUnits[index]);
+            const featureElement = createFeatureElement(featureNames[index], value, featureUnits[index], icons[index]);
             featuresContainer.appendChild(featureElement);
         });
     }
 }
 
-function createFeatureElement(name, value, unit) {
+function createFeatureElement(name, value, unit, icon) {
     const featureElement = document.createElement('div');
     featureElement.className = 'feature col-3';
     featureElement.innerHTML = `
         <h4>${name}</h4>
-        <span class="material-symbols-outlined">settings</span>
+        <span class="material-symbols-outlined">
+            ${icon}
+        </span>
         <p>
             <span class="f_number">${value}</span>
             ${unit ? `<span class="f_unit">${unit}</span>` : ''}

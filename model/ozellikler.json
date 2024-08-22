@@ -66,7 +66,7 @@
       "CORSA_F_1.2_Turbo_130_Hp": [208, 8.7, "Benzin", "130", "Otomatik", 230, "5,3", 309],
       "CORSA_F_1.5_D": [188, 10.2, "Dizel", "102", "Manuel", 250, "3,2", 309],
       "Polo_6_1.0_80_Hp": [171, 15.5, "Benzin", "80", "Manuel", 93, "5,6", 351],
-      "Polo_6_1.0_TSI_95_Hp": [187, 11.3, "Benzin", "95", "Manuel/Otomatik", 175, "5,7", 351],
+      "Polo_6_1.0_TSI_95_Hp": [187, 11.3, "Benzin", "95", "Manuel /Otomatik", 175, "5,7", 351],
       "BAYON_1_1.4_MPI": ["176", "12,6 - 13,7", "Benzin", "100", "Manuel/Otomatik", 134, "6,4", 411],
       "BAYON_1_1.0_T-GDI": [180, 11.7, "Benzin", "100", "Otomatik", 172, "5,8", 411],
       "BAYON_1_1.0_T-GDI_MHEV": [180, 10.4, "Hibrit", "120", "Otomatik", 200, "5,5", 411],
