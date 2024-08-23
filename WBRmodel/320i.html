@@ -51,7 +51,24 @@
                         <h2 class="skor-baslik">Skor</h2>
                         <p class="skor-bilgi">Bu sonuçlar kullanıcılar tarafından verilen puanların ortalamasıdır.</p>
                         <!-- Oy Ver Butonu -->
-                        <a href="../puan_ver.html?page=BMW%20320i" class="modal-btn-oy">Oy Ver</a>
+                        <button id="navigate-btn" class="button">Oy Ver</button>
+                        <script>
+                            document.getElementById('navigate-btn').addEventListener('click', function() {
+                                // Mevcut sayfanın URL'sini al
+                                var currentUrl = window.location.href;
+                    
+                                // URL'den model parametresini çıkart
+                                var urlParams = new URLSearchParams(new URL(currentUrl).search);
+                                var model = urlParams.get('model');
+                    
+                                // Eğer model parametresi varsa, yönlendirme URL'sini oluştur
+                                if (model) {
+                                    window.location.href = '../puan_ver.html?page=' + encodeURIComponent(model);
+                                } else {
+                                    alert('Model bilgisi mevcut URL\'de bulunamadı.');
+                                }
+                            });
+                        </script>
                     </div>
                     <div class="skor col-5">
                         <p>

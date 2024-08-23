@@ -171,14 +171,14 @@
 
     .modal-btn-oy{
         background-color: white;
-        color: red;
+        color: white;
         padding: 8px 40px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         border-radius: 5px;
-        border: none;
+        border: 1px;
         cursor: pointer;
         margin: 10px;
         margin-left: 0px;
@@ -186,6 +186,19 @@
         text-align: center;
     }
 
+    a.modal-btn-oy{
+        color: red;
+        background-color: var(--primary-color);
+    }
+    /* modal-btn-oy sınıfı için özel stil */
+a.modal-btn-oy, a.modal-btn-oy:visited, a.modal-btn-oy:focus, a.modal-btn-oy:active, a.modal-btn-oy:hover {
+    color: #ffffff; 
+    background-color: var(--primary-color); 
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block; 
+}
 
     .modal-btn:hover {
         background-color: #e09a00; /* Hover rengi */
@@ -646,8 +659,7 @@ a, a:visited, a:focus, a:active a:hover {
 
 .btn-motor.active {
     background-color: var(--primary-color);
-    color: yellow;
-    border-color: red;
+    color: white;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }

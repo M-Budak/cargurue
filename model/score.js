@@ -16,6 +16,12 @@ function showScores(category) {
     if (scoreData[category]) {
         const categoryData = scoreData[category];
 
+        // URL'den model parametresini al
+        const urlParams = new URLSearchParams(window.location.search);
+        const model = urlParams.get('model');
+        // Model parametresi varsa, yönlendirme URL'sini oluştur
+        const modelUrl = model ? `../puan_ver.html?page=${encodeURIComponent(model)}` : '#';
+
         const scoreElement = document.createElement('div');
         scoreElement.className = 'col-md-6';
         scoreElement.innerHTML = `
@@ -23,7 +29,7 @@ function showScores(category) {
                 <div class="col-7">
                     <h2 class="skor-baslik">Skor</h2>
                     <p class="skor-bilgi">Bu sonuçlar kullanıcılar tarafından verilen puanların ortalamasıdır.</p>
-                    <a href="../puan_ver.html?page=BMW%20320i" class="modal-btn-oy">Oy Ver</a>
+                    <a href="${modelUrl}" class="modal-btn-oy">Oy Ver</a>
                 </div>
                 <div class="skor col-5">
                     <p>

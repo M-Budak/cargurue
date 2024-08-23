@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
-            motorlar.forEach((motor, index) => {
+            motorlar.forEach((motor) => {
                 const button = document.createElement('button');
                 button.type = 'button';
                 button.className = 'btn btn-motor';
@@ -27,24 +27,31 @@ document.addEventListener("DOMContentLoaded", function() {
                 button.textContent = motor.split('_').join(' ');
 
                 button.addEventListener('click', function() {
+                    // Diğer butonların 'active' sınıfını kaldır
                     document.querySelectorAll('.btn-motor').forEach(btn => btn.classList.remove('active'));
+                    // Tıklanan butonu 'active' yap
                     button.classList.add('active');
-                    showCategory(motor);
+                    showCategory(motor);  // Motor parametresini geçiriyoruz
                 });
 
                 motorContainer.appendChild(button);
-
-                if (index === 0) {
-                    button.classList.add('active');
-                    button.click();
-                }
             });
+
+            // İlk butona tıklama işlevini ekleyin
+            function activateFirstButton() {
+                const firstButton = document.querySelector('.btn-motor');
+                if (firstButton) {
+                    // Diğer butonların 'active' sınıfını kaldır
+                    document.querySelectorAll('.btn-motor').forEach(btn => btn.classList.remove('active'));
+                    // İlk butonu 'active' yap
+                    firstButton.classList.add('active');
+                    // İlk butona tıklayın
+                    firstButton.click();
+                }
+            }
+
+            // İlk butona tıklamayı sayfa tamamen yüklendiğinde yapın
+            setTimeout(activateFirstButton, 100);  // Küçük bir gecikme ile çalıştır
         })
         .catch(error => console.error('Motor verileri yüklenirken hata oluştu:', error));
 });
-
-function showCategory(category) {
-    showFeatures(category);
-    showScores(category);
-    showReviews(category);
-}
