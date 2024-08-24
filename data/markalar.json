@@ -108,13 +108,13 @@
                     "name": "Astra Elektrik",
                     "image": "../img/markalar/opel/astra_e.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/astra_elektrik.html?model=astra_elektrik",
-                    "isComingSoon": true
+                    "BadgeStatus": "soon"
                 },
                 {
                     "name": "Mokka Elektrik",
                     "image": "../img/markalar/opel/mokka_e.jpg",
                     "link": "https://m-budak.github.io/cargurue/model/mokka_elektrik.html?model=mokka_elektrik",
-                    "isComingSoon": true
+                    "BadgeStatus": "soon"
                 }
             ],
             "SUV": [
@@ -127,13 +127,13 @@
                     "name": "Yeni Grandland",
                     "image": "../img/markalar/opel/grandland.webp",
                     "link": "https://m-budak.github.io/cargurue/model/yeni_grandland.html?model=yeni_grandland",
-                    "isComingSoon": true
+                    "BadgeStatus": "soon"
                 },
                 {
                     "name": "Yeni Frontera",
                     "image": "../img/markalar/opel/frontera.webp",
                     "link": "https://m-budak.github.io/cargurue/model/yeni_frontera.html?model=yeni_frontera",
-                    "isComingSoon": true
+                    "BadgeStatus": "soon"
                 }
             ]
         },
@@ -294,13 +294,13 @@
                             "name": "208",
                             "image": "../img/markalar/peugeot/208.jpg",
                             "link": "https://m-budak.github.io/cargurue/model/208.html?model=208",
-                            "isComingSoon": true
+                            "BadgeStatus": "soon"
                         },
                         {
                             "name": "308",
                             "image": "../img/markalar/peugeot/308.webp",
                             "link": "https://m-budak.github.io/cargurue/model/308.html?model=308",
-                            "isComingSoon": true
+                            "BadgeStatus": "soon"
                         }
                     ],
                     "SUV": [
@@ -323,7 +323,7 @@
                             "name": "5008",
                             "image": "../img/markalar/peugeot/5008.jpg",
                             "link": "https://m-budak.github.io/cargurue/model/5008.html?model=5008",
-                            "isComingSoon": true
+                            "BadgeStatus": "soon"
                         }
                     ],
                     "Sedan": [
@@ -331,7 +331,7 @@
                             "name": "508",
                             "image": "../img/markalar/peugeot/508.jpg",
                             "link": "https://m-budak.github.io/cargurue/model/508.html?model=508",
-                            "isComingSoon": true
+                            "BadgeStatus": "soon"
                         }
                     ]
                 },
@@ -379,7 +379,7 @@
                             "name": "Juke",
                             "image": "../img/markalar/nissan/juke.jpg",
                             "link": "https://m-budak.github.io/cargurue/model/juke.html?model=juke",
-                            "isComingSoon": true
+                            "BadgeStatus": "soon"
                         },
                         {
                             "name": "Qasqai",
@@ -390,7 +390,7 @@
                             "name": "X-Trail",
                             "image": "../img/markalar/nissan/x_trail.webp",
                             "link": "https://m-budak.github.io/cargurue/model/x_trail.html?model=x_trail",
-                            "isComingSoon": true
+                            "BadgeStatus": "soon"
                         }
                     ]
                 },
@@ -400,7 +400,7 @@
                             "name": "Spring",
                             "image": "../img/markalar/dacia/spring.jpg",
                             "link": "https://m-budak.github.io/cargurue/model/spring.html?model=spring",
-                            "isComingSoon": true
+                            "BadgeStatus": "soon"
                         },
                         {
                             "name": "Duster",
