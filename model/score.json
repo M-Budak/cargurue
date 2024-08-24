@@ -1,41 +1,4 @@
 {
-    "A": {
-        "average": "8.8",
-        "votes": 113,
-        "categories": {
-            "Performans": "8.8",
-            "Konfor": "8.8",
-            "Tasarım": "8.8",
-            "Sürüş": "8.8",
-            "Servis": "8.8",
-            "Malzeme": "8.8"
-        }
-    },
-    "B": {
-        "average": "9.0",
-        "votes": 85,
-        "categories": {
-            "Performans": "9.0",
-            "Konfor": "9.0",
-            "Tasarım": "9.0",
-            "Sürüş": "9.0",
-            "Servis": "9.0",
-            "Malzeme": "9.0"
-        }
-    },
-    
-    "BMW": {
-        "average": "23",
-        "votes": 113,
-        "categories": {
-            "Performans": "9.0",
-            "Konfor": "9.0",
-            "Tasarım": "9.0",
-            "Sürüş": "9.0",
-            "Servis": "9.0",
-            "Malzeme": "9.0"
-        }
-    },
 "Clio_1.0_Sce": {"average": "2.81", "votes": 91, "categories": {"Performans": "3.3", "Konfor": "3.2", "Tasarım": "2.6", "Sürüş": "3.1", "Servis": "2.3", "Malzeme": "2.5"}},
 "Clio_1.0_Tce": {"average": "3.17", "votes": 60, "categories": {"Performans": "3.1", "Konfor": "2.4", "Tasarım": "3.3", "Sürüş": "3.3", "Servis": "3.6", "Malzeme": "3.3"}},
 "Clio_1.3_Tce": {"average": "3.1", "votes": 79, "categories": {"Performans": "2.7", "Konfor": "3.4", "Tasarım": "3.5", "Sürüş": "3.4", "Servis": "3", "Malzeme": "2.6"}},
