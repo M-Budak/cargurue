@@ -86,19 +86,19 @@ class MyFooter extends HTMLElement {
                             <ul class="list-unstyled">
                                 <div class="row">
                                     <div class="col-6 col-md-12">
-                                        <li><a href="https://m-budak.github.io/cargurue/model/egea_sedan.html">Fiat Egea Sedan</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/model/clio5.html">Renault Clio</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/model/mokka.html">Opel Mokka</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/model/crossland.html">Opel Crossland</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/model/i20.html">Hyundai i20</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/model/3008.html">Peugeot 3008</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/egea_sedan.html?model=egea_sedan">Fiat Egea Sedan</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/clio5.html?model=clio5">Renault Clio</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/mokka.html?model=mokka">Opel Mokka</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/crossland.html?model=crossland">Opel Crossland</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/i20.html?model=i20">Hyundai i20</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/3008.html?model=3008">Peugeot 3008</a></li>
                                     </div>
                                     <div class="col-6 col-md-12">
-                                        <li><a href="https://m-budak.github.io/cargurue/model/corsa.html">Opel Corsa</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/model/corolla.html">Toyota Corolla</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/model/golf.html">Volkswagen Golf</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/model/t10x.html">Togg T10X</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/model/320i.html">BMW 320i</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/corsa.html?model=corsa">Opel Corsa</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/corolla.html?model=corolla">Toyota Corolla</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/golf.html?model=golf">Volkswagen Golf</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/t10x.html?model=t10x">Togg T10X</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/model/320i.html?model=320i">BMW 320i</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/markalar.html">Tümü ></a></li>
                                     </div>
                                 </div>

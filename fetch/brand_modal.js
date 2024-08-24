@@ -47,6 +47,8 @@ class BrandModal extends HTMLElement {
         { name: "Renault", img: "logo/renault.svg" },
         { name: "Seat", img: "logo/seat.svg" },
         { name: "Skoda", img: "logo/skoda.svg" },
+        { name: "Tesla", img: "logo/tesla.png" },
+        { name: "Togg", img: "logo/togg.png" },
         { name: "Toyota", img: "logo/toyota.svg" },
         { name: "Volkswagen", img: "logo/volkswagen.svg" },
         { name: "Volvo", img: "logo/volvo.svg" }
