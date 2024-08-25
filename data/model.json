@@ -1,22 +1,22 @@
 {
     "yeni": [
         {
-            "name": "i20",
+            "title": "i20",
             "image": "../img/markalar/hyundai/i20.jpg",
             "link": "https://m-budak.github.io/cargurue/model/i20.html?model=i20"
         },
     {
-        "name": "Ford Kuga",
+        "title": "Ford Kuga",
         "image": "../img/markalar/ford/kuga.jpg",
         "link": "https://m-budak.github.io/cargurue/model/kuga.html?model=kuga"
     },
     {
-        "name": "Crossland",
+        "title": "Crossland",
         "image": "../img/markalar/opel/crossland.jpg",
         "link": "https://m-budak.github.io/cargurue/model/crossland.html?model=crossland"
     },
     {
-        "name": "T10X",
+        "title": "T10X",
         "image": "../img/markalar/togg/t10x.jpg",
         "link": "https://m-budak.github.io/cargurue/model/t10x.html?model=t10x"
     }

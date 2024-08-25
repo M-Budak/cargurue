@@ -1,31 +1,33 @@
 // JSON verinizi fetch işlemiyle çekin
 fetch('data/data.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+  })
   .then(data => {
-    // Dinamik olarak veri ekle
-    const sections = {
-      'yeni': ['PE48HB1N', 'CT4XHB1N'],
-      'yorum': ['most_commented_model_id1', 'most_commented_model_id2'],
-      'popular': ['most_popular_model_id1', 'most_popular_model_id2']
-    };
+    // Her kategori için işlem yap
+    document.querySelectorAll('.row[data-model-ids]').forEach(container => {
+      const modelIds = container.getAttribute('data-model-ids').split(',');
 
-    // Her section için işlem yap
-    Object.keys(sections).forEach(sectionId => {
-      const container = document.getElementById(sectionId);
-      const modelIds = sections[sectionId];
-      
       // İlgili modelleri filtrele
-      const modelsToShow = modelIds.map(id => data[id]).filter(model => model !== undefined);
+      const modelsToShow = modelIds.map(id => data[id]).filter(model => model);
 
       // Filtrelenen modelleri ekrana bas
       displayModels(container, modelsToShow);
     });
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
   });
 
 function displayModels(container, models) {
+  container.innerHTML = ''; // Boşalt
+
   models.forEach(model => {
     const modelDiv = document.createElement('div');
-    modelDiv.classList.add('col-lg-3', 'col-6');
+    modelDiv.classList.add('kasa-list', 'col-lg-3', 'col-6');
 
     modelDiv.innerHTML = `
       <div class="card car-card">

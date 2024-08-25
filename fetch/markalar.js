@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const params = new URLSearchParams(window.location.search);
     const brand = params.get('brand');
-    
+
     if (!brand) {
         console.error("Brand parameter is missing");
         return;
@@ -9,21 +9,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelector('h1.genel-baslik-1').textContent = `${brand.charAt(0).toUpperCase() + brand.slice(1)} Otomobiller`;
 
-    fetch('../data/markalar.json')
+    fetch('../data/data.json')
         .then(response => response.json())
         .then(data => {
-            const brandData = data[brand.toLowerCase()];
-            if (!brandData) {
+            // Marka verilerini filtrele
+            const brandData = Object.values(data).filter(item => item.marka.toLowerCase() === brand.toLowerCase());
+
+            if (brandData.length === 0) {
                 console.error("Data for the brand not found");
                 return;
             }
 
             const navbarNav = document.getElementById('navbar-nav');
             const categoriesContainer = document.getElementById('categories-container');
+            const categories = [...new Set(brandData.map(item => item.kasa))];
 
-            Object.keys(brandData).forEach(category => {
-                const categoryData = brandData[category];
-                
+            // Navbar ve section'lar ekleme
+            categories.forEach(category => {
                 // Navbar item ekleme
                 const navItem = document.createElement('li');
                 navItem.className = 'nav-item';
@@ -39,58 +41,27 @@ document.addEventListener("DOMContentLoaded", function() {
                 `;
                 categoriesContainer.appendChild(categorySection);
 
-            //     // Kategori verilerini ekleme
-            //     const categoryRow = categorySection.querySelector('.row');
-            //     categoryRow.innerHTML = categoryData.map(item => `
-            //         <div class="col-lg-6 col-12">
-            //             <div class="card car-card ${item.isComingSoon ? 'coming-soon' : ''}">
-            //                     <a href="${item.link}" ${item.isComingSoon ? 'class="disabled-link"' : ''}>
-            //                 <img src="${item.image}" class="card-img-top-brand ${item.isComingSoon ? 'grayscale' : ''}" alt="${item.name}">
-            //                 <div class="card-body">
-            //                     ${item.isComingSoon ? '<div class="badge">Çok Yakında</div>' : ''}
-            //                         <h5 class="card-title">${item.name}</h5>
-            //                     </a>
-            //                 </div>
-            //             </div>
-            //         </div>
-            //     `).join('');
-            // });
-
-// Kategori verilerini ekleme
-const categoryRow = categorySection.querySelector('.row');
-categoryRow.innerHTML = categoryData.map(item => {
-    const badgeInfo = getBadgeInfo(item.BadgeStatus);
-    return `
-        <div class="col-lg-6 col-12">
-            <div class="card car-card ${item.BadgeStatus === 'soon' ? 'coming-soon' : ''}">
-                <a href="${item.link}" ${item.BadgeStatus === 'soon' ? 'class="disabled-link"' : ''}>
-                    <img src="${item.image}" class="card-img-top-brand ${item.BadgeStatus === 'soon' ? 'grayscale' : ''}" alt="${item.name}">
-                    <div class="card-body">
-                        ${badgeInfo ? `<div class="badge" style="background-color:${badgeInfo.color}">${badgeInfo.text}</div>` : ''}
-                        <h5 class="card-title">${item.name}</h5>
-                    </div>
-                </a>
-            </div>
-        </div>
-    `;
-}).join('');
-});
-
-function getBadgeInfo(status) {
-    switch (status) {
-        case 'elk':
-            return { text: 'Elektrikli', color: 'green' };
-        case 'hyb':
-            return { text: 'Hybrid', color: 'blue' };
-        case 'soon':
-            return { text: 'Çok Yakında', color: 'red' };
-        case 'new':
-            return { text: 'Yeni Eklendi', color: 'orange' };
-        default:
-            return null;  // Badge eklenmeyecekse null dönebiliriz
-    }
-}
-
+                // Kategori verilerini ekleme
+                const categoryRow = categorySection.querySelector('.row');
+                categoryRow.innerHTML = brandData
+                    .filter(item => item.kasa.toLowerCase() === category.toLowerCase())
+                    .map(item => {
+                        const badgeInfo = getBadgeInfo(item.BadgeStatus);
+                        return `
+                            <div class="col-lg-6 col-12">
+                                <div class="card car-card ${item.BadgeStatus === 'soon' ? 'coming-soon' : ''}">
+                                    <a href="${item.link}" ${item.BadgeStatus === 'soon' ? 'class="disabled-link"' : ''}>
+                                        <img src="${item.img}" class="card-img-top-brand ${item.BadgeStatus === 'soon' ? 'grayscale' : ''}" alt="${item.model}">
+                                        <div class="card-body">
+                                            ${badgeInfo ? `<div class="badge" style="background-color:${badgeInfo.color}">${badgeInfo.text}</div>` : ''}
+                                            <h5 class="card-title">${item.model}</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+            });
 
             // Scrollspy'ı yeniden başlat
             const scrollSpyElement = document.querySelector('[data-bs-spy="scroll"]');
@@ -130,3 +101,18 @@ function getBadgeInfo(status) {
         })
         .catch(error => console.error("Error fetching data:", error));
 });
+
+function getBadgeInfo(status) {
+    switch (status) {
+        case 'elk':
+            return { text: 'Elektrikli', color: 'green' };
+        case 'hyb':
+            return { text: 'Hybrid', color: 'blue' };
+        case 'soon':
+            return { text: 'Çok Yakında', color: 'red' };
+        case 'new':
+            return { text: 'Yeni Eklendi', color: 'orange' };
+        default:
+            return null;
+    }
+}
