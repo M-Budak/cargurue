@@ -7,10 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
-    document.querySelector('h1.genel-baslik-1').textContent = `${brand.charAt(0).toUpperCase() + brand.slice(1)} Otomobiller`;
-
     fetch('../data/testdata.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
             // Marka verilerini filtrele
             const brandData = Object.values(data).filter(item => item.brand.toLowerCase() === brand.toLowerCase());
@@ -20,9 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
+            // Navbar ve kategori container'ları seç
             const navbarNav = document.getElementById('navbar-nav');
             const categoriesContainer = document.getElementById('categories-container');
-            const categories = [...new Set(brandData.map(item => item.body))];
+            const categories = [...new Set(brandData.map(item => item.kasa))];
 
             // Navbar ve section'lar ekleme
             categories.forEach(category => {
@@ -37,30 +41,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 categorySection.id = category.toLowerCase();
                 categorySection.innerHTML = `
                     <h2 class="genel-baslik-2">${category} Modeller</h2>
-                    <div class="row"></div>
+                    <div class="row" data-model-ids="${brandData.filter(item => item.kasa.toLowerCase() === category.toLowerCase()).map(item => item.id).join(',')}"></div>
                 `;
                 categoriesContainer.appendChild(categorySection);
+            });
 
-                // Kategori verilerini ekleme
-                const categoryRow = categorySection.querySelector('.row');
-                categoryRow.innerHTML = brandData
-                    .filter(item => item.body.toLowerCase() === category.toLowerCase())
-                    .map(item => {
-                        const badgeInfo = getBadgeInfo(item.BadgeStatus);
-                        return `
-                            <div class="col-lg-6 col-12">
-                                <div class="card car-card ${item.BadgeStatus === 'soon' ? 'coming-soon' : ''}">
-                                    <a href="${item.link}" ${item.BadgeStatus === 'soon' ? 'class="disabled-link"' : ''}>
-                                        <img src="${item.img}" class="card-img-top-brand ${item.BadgeStatus === 'soon' ? 'grayscale' : ''}" alt="${item.alt}">
-                                        <div class="card-body">
-                                            ${badgeInfo ? `<div class="badge" style="background-color:${badgeInfo.color}">${badgeInfo.text}</div>` : ''}
-                                            <h5 class="card-title">${item.model}</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        `;
-                    }).join('');
+            // Modelleri göster
+            document.querySelectorAll('.row[data-model-ids]').forEach(container => {
+                const modelIds = container.getAttribute('data-model-ids').split(',');
+
+                // İlgili modelleri filtrele
+                const modelsToShow = modelIds.map(id => data[id]).filter(model => model);
+
+                // Filtrelenen modelleri ekrana bas
+                displayModels(container, modelsToShow);
             });
 
             // Scrollspy'ı yeniden başlat
@@ -102,17 +96,24 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error("Error fetching data:", error));
 });
 
-function getBadgeInfo(status) {
-    switch (status) {
-        case 'elk':
-            return { text: 'Elektrikli', color: 'green' };
-        case 'hyb':
-            return { text: 'Hybrid', color: 'blue' };
-        case 'soon':
-            return { text: 'Çok Yakında', color: 'red' };
-        case 'new':
-            return { text: 'Yeni Eklendi', color: 'orange' };
-        default:
-            return null;
-    }
+function displayModels(container, models) {
+    container.innerHTML = ''; // Boşalt
+
+    models.forEach(model => {
+        const modelDiv = document.createElement('div');
+        modelDiv.classList.add('kasa-list', 'col-lg-3', 'col-6');
+
+        modelDiv.innerHTML = `
+            <div class="card car-card">
+                <a href="${model.link}" class="card-link">
+                    <img src="${model.img}" class="card-img-top" alt="${model.alt}">
+                    <div class="card-body">
+                        <h5 class="card-title">${model.model}</h5>
+                    </div>
+                </a>
+            </div>
+        `;
+
+        container.appendChild(modelDiv);
+    });
 }

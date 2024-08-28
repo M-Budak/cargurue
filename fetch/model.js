@@ -1,43 +1,75 @@
-// JSON verinizi fetch işlemiyle çekin
-fetch('data/data.json')
-  .then(response => response.json())
-  .then(data => {
-    // Dinamik olarak veri ekle
-    const sections = {
-      'yeni': ['PE48HB1N', 'CT4XHB1N'],
-      'yorum': ['most_commented_model_id1', 'most_commented_model_id2'],
-      'popular': ['most_popular_model_id1', 'most_popular_model_id2']
-    };
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('../data/model.json')
+        .then(response => response.json())
+        .then(data => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const modelId = urlParams.get('model') || 'egea_sedan'; // Default olarak 'egea_sedan' kullanılır
 
-    // Her section için işlem yap
-    Object.keys(sections).forEach(sectionId => {
-      const container = document.getElementById(sectionId);
-      const modelIds = sections[sectionId];
-      
-      // İlgili modelleri filtrele
-      const modelsToShow = modelIds.map(id => data[id]).filter(model => model !== undefined);
+            const model = data.models.find(m => m.id === modelId);
 
-      // Filtrelenen modelleri ekrana bas
-      displayModels(container, modelsToShow);
-    });
-  });
+            if (model) {
+                // Sayfa başlığı
+                document.title = model.title;
 
-function displayModels(container, models) {
-  models.forEach(model => {
-    const modelDiv = document.createElement('div');
-    modelDiv.classList.add('col-lg-3', 'col-6');
+                // H1 Başlığı
+                document.querySelector('.genel-baslik-1').textContent = model.name;
 
-    modelDiv.innerHTML = `
-      <div class="card car-card">
-        <a href="${model.link}" class="card-link">
-          <img src="${model.img}" class="card-img-top" alt="Araç Resmi">
-          <div class="card-body">
-            <h5 class="card-title">${model.model}</h5>
-          </div>
-        </a>
-      </div>
-    `;
+                // Açıklama Paragrafı
+                document.querySelector('.container p').textContent = model.description;
 
-    container.appendChild(modelDiv);
-  });
+                // Görsel
+                const imgElement = document.querySelector('.container img');
+                imgElement.src = model.image;
+                imgElement.alt = model.alt;
+
+                // Benzer araçları yükleme
+                loadSimilarCars(modelId, data.models);
+            } else {
+                console.error('Model bulunamadı!');
+            }
+        })
+        .catch(error => console.error('JSON dosyası yüklenirken hata oluştu:', error));
+});
+
+function loadSimilarCars(modelId, models) {
+    fetch('../data/benzer.json')
+        .then(response => response.json())
+        .then(similarData => {
+            const similarModels = similarData[modelId];
+
+            if (similarModels && similarModels.length > 0) {
+                const container = document.querySelector('.scrollable-cards');
+                container.innerHTML = ''; // Mevcut içeriği temizleyin
+
+                similarModels.forEach(similarId => {
+                    const model = models.find(m => m.id === similarId);
+
+                    if (model) {
+                        const card = document.createElement('div');
+                        card.classList.add('card');
+                        card.style.width = '225px';
+
+                        const link = document.createElement('a');
+                        link.href = `polo.html?model=${model.id}`;
+
+                        const img = document.createElement('img');
+                        img.src = model.image;
+                        img.classList.add('card-img-top');
+                        img.alt = model.alt;
+
+                        const title = document.createElement('h5');
+                        title.classList.add('yeni-eklenen-title');
+                        title.textContent = model.name;
+
+                        link.appendChild(img);
+                        link.appendChild(title);
+                        card.appendChild(link);
+                        container.appendChild(card);
+                    }
+                });
+            } else {
+                console.error('Benzer araçlar bulunamadı!');
+            }
+        })
+        .catch(error => console.error('Benzer araçlar yüklenirken hata oluştu:', error));
 }

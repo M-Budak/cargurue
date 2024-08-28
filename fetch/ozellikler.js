@@ -37,7 +37,7 @@ const icons = [
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('ozellikler.json')
+    fetch('../data/ozellikler.json')
         .then(response => response.json())
         .then(fetchedData => {
             featuresData = fetchedData;

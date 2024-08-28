@@ -1,7 +1,7 @@
 // labels.js
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('labels.json')
+    fetch('../data/labels.json')
         .then(response => response.json())
         .then(labels => {
             // Özellikler bölümü başlığı
