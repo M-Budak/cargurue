@@ -4,36 +4,29 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json())
         .then(data => {
             const urlParams = new URLSearchParams(window.location.search);
-            const slug = urlParams.get('model'); // URL'den model parametresini al
+            const slug = urlParams.get('model');
 
-            // Model verilerini bul
             const modelData = Object.values(data).find(model => model.slug === slug);
 
             if (modelData) {
-                // Başlık ve açıklama kısmını doldur
                 document.querySelector('.genel-baslik-1').textContent = `${modelData.brand} ${modelData.model}`;
                 document.querySelector('.description').textContent = modelData.desc;
 
-                // Görseli güncelle
                 const imgElement = document.querySelector('.img-fluid');
                 imgElement.src = modelData.img;
                 imgElement.alt = modelData.alt;
 
-                // Butonları doldur
                 const buttonContainer = document.querySelector('.button-container');
                 modelData.engine.forEach((engineCode, index) => {
                     const button = document.createElement('button');
                     button.type = 'button';
                     button.className = 'btn btn-custom';
                     button.textContent = modelData.engineName[index];
-                    button.dataset.engineId = engineCode; // Butona engine id'sini ekle
+                    button.dataset.engineId = engineCode;
                     button.addEventListener('click', () => {
-                        // Diğer butonlardan 'active' sınıfını kaldır
                         document.querySelectorAll('.btn-custom').forEach(btn => btn.classList.remove('active'));
-                        // Tıklanan butona 'active' sınıfını ekle
                         button.classList.add('active');
                         
-                        // Skorları, özellikleri ve yorumları göster
                         showScores(engineCode);
                         showFeatures(engineCode);
                         showComments(engineCode);
@@ -41,26 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     buttonContainer.appendChild(button);
                 });
 
-                // İlk butona tıklama işlevini ekleyin
-                function activateFirstButton() {
-                    const firstButton = document.querySelector('.btn-custom');
-                    if (firstButton) {
-                        // Diğer butonların 'active' sınıfını kaldır
-                        document.querySelectorAll('.btn-custom').forEach(btn => btn.classList.remove('active'));
-                        // İlk butona 'active' sınıfını ekle
-                        firstButton.classList.add('active');
-                        // İlk butona tıklayın
-                        firstButton.click();
-                    }
-                }
+                activateFirstButton(); // İlk butona tıklamayı buradan çağırın
 
-                // İlk butona tıklamayı sayfa tamamen yüklendiğinde yapın
-                setTimeout(activateFirstButton, 100);  // Küçük bir gecikme ile çalıştır
-
-                // Benzer modelleri göster
                 showSimilarModels(modelData.similar);
 
-                // AOS animasyonlarını başlat
                 AOS.init();
             } else {
                 console.error("Model kodu bulunamadı veya geçersiz.");
@@ -68,14 +45,19 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error("Veri yüklenirken bir hata oluştu: ", error));
 
-    // Benzer modelleri göster
+    function activateFirstButton() {
+        const firstButton = document.querySelector('.btn-custom');
+        if (firstButton) {
+            document.querySelectorAll('.btn-custom').forEach(btn => btn.classList.remove('active'));
+            firstButton.classList.add('active');
+            firstButton.click();
+        }
+    }
+
     function showSimilarModels(similarIds) {
         const scrollableCards = document.querySelector('.scrollable-cards');
-
-        // Önceki içeriği temizle
         scrollableCards.innerHTML = '';
 
-        // testdata.json'ı yükle
         fetch('../data/testdata.json')
             .then(response => response.json())
             .then(data => {
@@ -108,7 +90,6 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(error => console.error("Benzer modeller yüklenirken bir hata oluştu: ", error));
     }
 
-    // Skorları yükle ve göster
     function showScores(engineId) {
         fetch('../data/testskor.json')
             .then(response => response.json())
@@ -161,9 +142,7 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .catch(error => console.error("Skor verileri yüklenirken bir hata oluştu: ", error));
     }
-    
 
-    // Özellikleri yükle ve göster
     function showFeatures(category) {
         fetch('../data/testfeatures.json')
             .then(response => response.json())
@@ -187,23 +166,23 @@ document.addEventListener("DOMContentLoaded", function() {
                     const featureUnits = [
                         "km/h", 
                         "s", 
-                        "",         // Yakıt Türü için birim yok
+                        "",         
                         "hp", 
-                        "",         // Şanzıman için birim yok
+                        "",         
                         "nm", 
                         "lt/100km", 
                         "lt"
                     ];
 
                     const icons = [
-                        'speed',                  // Max Hız
-                        'avg_pace',               // 0-100
-                        'local_gas_station',      // Yakıt
-                        'bolt',                   // Beygir
-                        'auto_transmission',      // Vites
-                        'settings',               // Tork
-                        'local_gas_station',      // Tüketim
-                        'luggage'                 // Bagaj
+                        'speed',                  
+                        'avg_pace',               
+                        'local_gas_station',      
+                        'bolt',                   
+                        'auto_transmission',      
+                        'settings',               
+                        'local_gas_station',      
+                        'luggage'                 
                     ];
 
                     features.forEach((value, index) => {
@@ -231,19 +210,25 @@ document.addEventListener("DOMContentLoaded", function() {
         return featureElement;
     }
 
-    // Yorumları yükle ve göster
-    function showComments(engineCode) {
-        fetch('../data/testyorum.json')
-            .then(response => response.json())
-            .then(commentsData => {
-                const commentsContainer = document.getElementById('yorumlar');
-                commentsContainer.innerHTML = '';
 
-                // Yorumları filtrele
-                const engineComments = Object.values(commentsData).filter(comment => comment.engine === engineCode);
+    // Yorumlar için maksimum gösterim sayısını belirleyen parametre
+const maxVisibleComments = 5; // Bu değeri istediğiniz gibi değiştirebilirsiniz.
 
-                if (engineComments.length > 0) {
-                    engineComments.forEach(comment => {
+function showComments(engineCode) {
+    fetch('../data/testyorum.json')
+        .then(response => response.json())
+        .then(commentsData => {
+            const commentsContainer = document.getElementById('yorumlar');
+            commentsContainer.innerHTML = '';
+
+            const engineComments = Object.values(commentsData).filter(comment => comment.engine === engineCode);
+
+            if (engineComments.length > 0) {
+                let visibleCount = 0;
+
+                const loadMoreComments = () => {
+                    const nextBatch = engineComments.slice(visibleCount, visibleCount + maxVisibleComments);
+                    nextBatch.forEach(comment => {
                         const commentElement = document.createElement('div');
                         commentElement.className = 'card yorum-card';
                         commentElement.innerHTML = `
@@ -255,12 +240,53 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <p class="card-text">${comment.content}</p>
                             </div>
                         `;
-                        commentsContainer.appendChild(commentElement);
+                        commentsContainer.insertBefore(commentElement, loadMoreButton);
                     });
-                } else {
-                    commentsContainer.innerHTML = '<p>Henüz yorum yapılmamış.</p>';
+                    visibleCount += nextBatch.length;
+
+                    // Yorumların hepsi yüklendiyse butonu gizle
+                    if (visibleCount >= engineComments.length) {
+                        loadMoreButton.style.display = 'none';
+                    }
+                };
+
+                const loadMoreButton = document.createElement('button');
+                loadMoreButton.className = 'btn btn-custom mt-2';
+                loadMoreButton.textContent = 'Daha Fazla Yükle';
+                loadMoreButton.style.display = 'none'; // Başlangıçta gizli
+                loadMoreButton.addEventListener('click', loadMoreComments);
+
+                commentsContainer.appendChild(loadMoreButton);
+
+                loadMoreComments(); // İlk yorum kümesini yükle
+
+                if (engineComments.length > maxVisibleComments) {
+                    loadMoreButton.style.display = 'block'; // Eğer fazla yorum varsa butonu göster
                 }
-            })
-            .catch(error => console.error('Yorum verileri yüklenirken bir hata oluştu: ', error));
-    }
+            } else {
+                commentsContainer.innerHTML = '<p>Henüz yorum yapılmamış.</p>';
+            }
+
+            const newCommentElement = document.createElement('div');
+            newCommentElement.className = 'card yorum-card';
+            newCommentElement.innerHTML = `
+                <div class="card-body">
+                    <textarea class="form-control" id="newComment" placeholder="Yorumunuzu buraya yazın..."></textarea>
+                    <button id="submitComment" class="btn btn-custom mt-2">Gönder</button>
+                </div>
+            `;
+            commentsContainer.appendChild(newCommentElement);
+
+            document.getElementById('submitComment').addEventListener('click', () => {
+                const newCommentText = document.getElementById('newComment').value;
+                if (newCommentText.trim() !== '') {
+                    console.log('Yeni yorum:', newCommentText);
+                } else {
+                    alert('Yorum alanı boş olamaz.');
+                }
+            });
+        })
+        .catch(error => console.error('Yorum verileri yüklenirken bir hata oluştu: ', error));
+}
+
 });

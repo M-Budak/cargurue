@@ -2,12 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const params = new URLSearchParams(window.location.search);
     const brand = params.get('brand');
 
-    if (!brand) {
-        console.error("Brand parameter is missing");
-        return;
-    }
-
-    fetch('../data/testdata.json')
+    fetch('./data/testdata.json') // Yolun doğruluğundan emin olun
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
@@ -15,56 +10,19 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
-            // Marka verilerini filtrele
-            const brandData = Object.values(data).filter(item => item.brand.toLowerCase() === brand.toLowerCase());
-
-            if (brandData.length === 0) {
-                console.error("Data for the brand not found");
-                return;
+            if (brand) {
+                handleBrandFiltering(data, brand);
+            } else {
+                handleIdBasedFiltering(data);
             }
 
-            // Navbar ve kategori container'ları seç
-            const navbarNav = document.getElementById('navbar-nav');
-            const categoriesContainer = document.getElementById('categories-container');
-            const categories = [...new Set(brandData.map(item => item.kasa))];
-
-            // Navbar ve section'lar ekleme
-            categories.forEach(category => {
-                // Navbar item ekleme
-                const navItem = document.createElement('li');
-                navItem.className = 'nav-item';
-                navItem.innerHTML = `<a class="nav-link" href="#${category.toLowerCase()}">${category}</a>`;
-                navbarNav.appendChild(navItem);
-
-                // Kategori section ekleme
-                const categorySection = document.createElement('div');
-                categorySection.id = category.toLowerCase();
-                categorySection.innerHTML = `
-                    <h2 class="genel-baslik-2">${category} Modeller</h2>
-                    <div class="row" data-model-ids="${brandData.filter(item => item.kasa.toLowerCase() === category.toLowerCase()).map(item => item.id).join(',')}"></div>
-                `;
-                categoriesContainer.appendChild(categorySection);
-            });
-
-            // Modelleri göster
-            document.querySelectorAll('.row[data-model-ids]').forEach(container => {
-                const modelIds = container.getAttribute('data-model-ids').split(',');
-
-                // İlgili modelleri filtrele
-                const modelsToShow = modelIds.map(id => data[id]).filter(model => model);
-
-                // Filtrelenen modelleri ekrana bas
-                displayModels(container, modelsToShow);
-            });
-
-            // Scrollspy'ı yeniden başlat
+            // Scrollspy ve scroll event listener eklemeleri
             const scrollSpyElement = document.querySelector('[data-bs-spy="scroll"]');
             new bootstrap.ScrollSpy(document.body, {
                 target: '#navbar-example2',
                 offset: 0
             });
 
-            // Scroll event listener ekleme
             document.addEventListener('scroll', function() {
                 const sections = document.querySelectorAll('#categories-container > div');
                 const navLinks = document.querySelectorAll('#navbar-nav .nav-link');
@@ -89,15 +47,42 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             });
 
-            // Sayfa yüklendiğinde ilk section'ı kontrol et
             const event = new Event('scroll');
             document.dispatchEvent(event);
         })
         .catch(error => console.error("Error fetching data:", error));
 });
 
+function handleBrandFiltering(data, brand) {
+    const filteredData = Object.values(data).filter(item => item.brand === brand);
+
+    document.querySelectorAll('.row[data-model-ids]').forEach(container => {
+        const modelIds = container.getAttribute('data-model-ids').split(',');
+        const modelsToShow = modelIds.map(id => filteredData.find(model => model.id === id)).filter(model => model);
+
+        if (modelsToShow.length > 0) {
+            displayModels(container, modelsToShow);
+        } else {
+            console.error("No models found for the given IDs and brand:", modelIds);
+        }
+    });
+}
+
+function handleIdBasedFiltering(data) {
+    document.querySelectorAll('.row[data-model-ids]').forEach(container => {
+        const modelIds = container.getAttribute('data-model-ids').split(',');
+        const modelsToShow = modelIds.map(id => data[id]).filter(model => model);
+
+        if (modelsToShow.length > 0) {
+            displayModels(container, modelsToShow);
+        } else {
+            console.error("No models found for the given IDs:", modelIds);
+        }
+    });
+}
+
 function displayModels(container, models) {
-    container.innerHTML = ''; // Boşalt
+    container.innerHTML = '';
 
     models.forEach(model => {
         const modelDiv = document.createElement('div');
