@@ -211,8 +211,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    // Yorumlar için maksimum gösterim sayısını belirleyen parametre
-const maxVisibleComments = 5; // Bu değeri istediğiniz gibi değiştirebilirsiniz.
+// Yorumlar için maksimum gösterim sayısını belirleyen parametre
+const maxVisibleComments = 1; // Bu değeri istediğiniz gibi değiştirebilirsiniz.
 
 function showComments(engineCode) {
     fetch('../data/testyorum.json')
@@ -240,23 +240,36 @@ function showComments(engineCode) {
                                 <p class="card-text">${comment.content}</p>
                             </div>
                         `;
-                        commentsContainer.insertBefore(commentElement, loadMoreButton);
+                        commentsContainer.insertBefore(commentElement, buttonsContainer);
                     });
                     visibleCount += nextBatch.length;
 
-                    // Yorumların hepsi yüklendiyse butonu gizle
+                    // Yorumların hepsi yüklendiyse "Daha Fazla Yükle" butonunu gizle
                     if (visibleCount >= engineComments.length) {
                         loadMoreButton.style.display = 'none';
                     }
                 };
 
+                const buttonsContainer = document.createElement('div');
+                buttonsContainer.className = 'buttons-container d-flex justify-content-between mt-2';
+
+                const addCommentButton = document.createElement('a');
+                addCommentButton.className = 'btn btn-custom';
+                addCommentButton.textContent = 'Yorum Ekle';
+                addCommentButton.href = '#'; // Şimdilik boş
+
                 const loadMoreButton = document.createElement('button');
-                loadMoreButton.className = 'btn btn-custom mt-2';
-                loadMoreButton.textContent = 'Daha Fazla Yükle';
+                loadMoreButton.className = 'btn btn-custom';
+                loadMoreButton.textContent = 'Daha Fazla';
                 loadMoreButton.style.display = 'none'; // Başlangıçta gizli
                 loadMoreButton.addEventListener('click', loadMoreComments);
 
-                commentsContainer.appendChild(loadMoreButton);
+
+                buttonsContainer.appendChild(addCommentButton);
+
+                buttonsContainer.appendChild(loadMoreButton);
+
+                commentsContainer.appendChild(buttonsContainer);
 
                 loadMoreComments(); // İlk yorum kümesini yükle
 
@@ -266,25 +279,6 @@ function showComments(engineCode) {
             } else {
                 commentsContainer.innerHTML = '<p>Henüz yorum yapılmamış.</p>';
             }
-
-            const newCommentElement = document.createElement('div');
-            newCommentElement.className = 'card yorum-card';
-            newCommentElement.innerHTML = `
-                <div class="card-body">
-                    <textarea class="form-control" id="newComment" placeholder="Yorumunuzu buraya yazın..."></textarea>
-                    <button id="submitComment" class="btn btn-custom mt-2">Gönder</button>
-                </div>
-            `;
-            commentsContainer.appendChild(newCommentElement);
-
-            document.getElementById('submitComment').addEventListener('click', () => {
-                const newCommentText = document.getElementById('newComment').value;
-                if (newCommentText.trim() !== '') {
-                    console.log('Yeni yorum:', newCommentText);
-                } else {
-                    alert('Yorum alanı boş olamaz.');
-                }
-            });
         })
         .catch(error => console.error('Yorum verileri yüklenirken bir hata oluştu: ', error));
 }
