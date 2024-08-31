@@ -12,11 +12,11 @@ fetch('../data/testdata.json')
             if (modelData) {
                 // Kartın dış yapısını oluştur
                 const card = document.createElement('div');
-                card.className = 'col';
+                card.className = 'col-lg-3 col-6'; // Bu sınıfları ekleyerek genişlik ve yüksekliği ayarlıyoruz
 
                 // Kartın içeriğini oluştur
                 card.innerHTML = `
-                    <div class="card h-100">
+                    <div class="card car-card h-100">
                         <a href="${modelData.link}">
                             <img src="${modelData.img}" class="card-img-top" alt="${modelData.alt}">
                         </a>

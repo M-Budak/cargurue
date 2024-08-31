@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="../style.css">
   <script src="https://kit.fontawesome.com/a67856db21.js" crossorigin="anonymous"></script>
-  <script src="../fetch/body.js"></script>
-  <script src="../fetch/header.js" defer></script>
-  <script src="../fetch/footer.js" defer></script>
+  <script src="/fetch/body.js"></script>
+  <script src="/fetch/header.js" defer></script>
+  <script src="/fetch/footer.js" defer></script>
     <title>Document</title>
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0">
@@ -45,20 +45,18 @@
           </nav>
     
         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -25%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-            <!-- Sedan Modeller -->
-            <section id="sedan">
-                <h2 class="genel-baslik-2">Sedan Modeller</h2>
-                <div class="row" id="sedan-models" data-model-ids="BMBSHBF4,PE48HB1N,CT4XHB1N,HNCVSE11,PE48HB1N,CT4XHB1N"></div>
-                <div class="kasa-list col-lg-3 col-6">
-                  <div class="card car-card">
-                  <a href="kasa/sedan.html">
-                      <img src="img/32213.png" class="card-img-top" alt="sedan-modeller">
-                  </a>
-                  <div class="card-body">
-                      <h5 class="card-title">Sedan Modeller</h5>
-                  </div>
-              </div></div>
-            </section>
+
+          <!-- Sedan Modeller -->
+          <section id="sedan">
+            <h2 class="genel-baslik-2">Sedan Modeller</h2>
+            <div class="row" id="given-ids" data-model-ids="BMBSHBF4,PE48HB1N,CT4XHB1N,HNCVSE11,PE48HB1N,CT4XHB1N">
+                <!-- Otomatik olarak eklenen kartlar buraya gelecek -->
+            </div>
+            <div class="kasa-link">
+              <a href="kasa/sedan.html">Tüm Sedan Modeller ></a>
+            </div>
+          </section>
+
 
           <!-- Other sections... -->
           
@@ -67,12 +65,18 @@
             <section id="hb">
                 <h2 class="genel-baslik-2">Hatchback Modeller</h2>
                 <div class="row" id="hb-models" data-model-ids="CT4XHB1N,PE48HB1N,CT4XHB1N,RNCLHB5N,OPCSHBFN,FTEGHB1N"></div>
+                <div class="kasa-link">
+                  <a href="kasa/hatchback.html">Tüm Hatchback Modeller ></a>
+                </div>
             </section>
     
             <!-- SUV Modeller -->
             <section id="suv">
                 <h2 class="genel-baslik-2">SUV Modeller</h2>
                 <div class="row" id="suv-models" data-model-ids="PE38SU2N,HYBASU1N"></div>
+                <div class="kasa-link">
+                  <a href="kasa/suv.html">Tüm SUV Modeller ></a>
+                </div>
             </section>
     
             <!-- Diğer Kategoriler -->
@@ -158,7 +162,7 @@
     
         <brand-modal></brand-modal>
     
-        <script src="../fetch/testdata.js"></script>
+        <script src="/fetch/testdata.js"></script>
     </div>
     
     <my-footer></my-footer>
