@@ -1,4 +1,16 @@
 /* CSS Dosyası */
+.hidden {
+    display: none;
+}
+
+#show-more .card {
+    width: 180px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .kasa-link {
     display: flex;
     justify-content: flex-end; /* İçeriği sağa hizalar */
@@ -574,32 +586,89 @@ a, a:visited, a:focus, a:active a:hover {
     margin: 0px;
 }
 
-/* CAR BODY STARTS  */
-#navbar-example2 {
-    background-color: white;
-    margin: 0px 0px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+car-bodies .brand{
+    padding: 1px 5px 0px 5px;
 }
 
-#navbar-example2 .nav-link {
-    font-size: 22px;
-    color: var(--primary-color);
-    width: 10rem;
-    padding: 5px 15px;
-    margin: 0.3rem;
-    margin-bottom: 0.3rem;
-    border: 0.1rem solid black;
-    transition: background-color 0.3s, color 0.3s;
+car-bodies .home-card-body{
+    margin-top: 5px;
 }
+/* CAR BODY STARTS  */
+
+.navbar{
+    padding: 0.5rem 0rem;
+    position: sticky;
+}
+
+#navbar-example2 {
+    background-color: white;
+    margin: 0;
+    position: -webkit-sticky;
+    position: sticky; /* Sticky özelliği */
+    top: 0; /* Üstte sabitlenmesi için */
+    z-index: 1000; /* İçeriklerin üstünde kalması için */
+    overflow-x: auto; /* Yatay kaydırma özelliği */
+    white-space: nowrap; /* Butonların tek satırda kalması için */
+    -webkit-overflow-scrolling: touch; /* Mobilde yumuşak kaydırma için */
+    scrollbar-width: none; /* Firefox için kaydırma çubuğunu gizler */
+}
+
+#navbar-example2::-webkit-scrollbar {
+    display: none; /* Chrome ve diğer WebKit tarayıcılar için kaydırma çubuğunu gizler */
+}
+
+#navbar-example2 .nav-pills {
+    display: inline-flex; /* Butonları yan yana sıralar */
+    flex-wrap: nowrap; /* Tek satırda tutar */
+    justify-content: flex-start; /* Butonları sola hizalar */
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav-link stil ayarları */
+#navbar-example2 .nav-link {
+    font-size: 14px;
+    color: var(--primary-color);
+    padding: 8px 16px;
+    margin: 0 5px; /* Butonlar arasında biraz boşluk */
+    border-radius: 20px; /* Chip stili için yuvarlak kenarlar */
+    border: 1px solid var(--primary-color);
+    transition: background-color 0.3s, color 0.3s;
+    background-color: rgb(211, 0, 0);
+    display: inline-block;
+    white-space: nowrap;
+}
+
 #navbar-example2 .nav-link.active {
     background-color: var(--primary-color);
     color: white;
-    border-color: white;
+    border-color: var(--primary-color);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition: background-color 0.3s, color 0.3s;
 }
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-start; /* Butonları sola yaslar */
+}
+
+#navbar-example2 .nav-item {
+    margin: 0; /* Butonlar arası boşluk kaldırıldı */
+}
+
+
+.nav-pills .nav-link {
+    background-color: #cebd07; /* Butonlar için varsayılan arka plan rengi */
+    color: #333; /* Buton metin rengi */
+    border: 1px solid #ddd; /* Hafif kenarlık */
+}
+
+.nav-pills .nav-link.active {
+    background-color: #007bff; /* Aktif olan chip'in rengi */
+    color: white; /* Aktif olan chip'in metin rengi */
+}
+
 
 .car-card {
     text-align: center;
@@ -918,17 +987,19 @@ header {
     width: 100%; 
 }
 
+
 #navbar-example2 .nav-link {
     font-size: 1.25rem;
     color: var(--primary-color);
+    width: auto; /* İçerikle uyumlu genişlik */
     padding: 5px 15px;
-    width: fit-content;
-    margin: 0.5rem;
-    margin-bottom: 0.3rem;
-    border-radius:25px;
-    border: 0.05rem solid black;
+    border-radius: 20px; /* Chip stili */
+    border: 1px solid var(--primary-color);
     transition: background-color 0.3s, color 0.3s;
+    background-color: #ffffff; /* Chip arka plan rengi */
+    position: sticky;
 }
+
 
 .card-title{
     font-size: 1rem;
