@@ -104,7 +104,7 @@ class MyFooter extends HTMLElement {
                                         <li><a href="https://m-budak.github.io/cargurue/model/golf.html?model=golf">Volkswagen Golf</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/model/t10x.html?model=t10x">Togg T10X</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/model/320i.html?model=320i">BMW 320i</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/arac-yorumu/markalar.html">Tümü ></a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/arac-yorumu/modeller.html">Tümü ></a></li>
                                     </div>
                                 </div>
                             </ul>
