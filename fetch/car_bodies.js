@@ -10,7 +10,7 @@ class CarBodies extends HTMLElement {
           <h2 id="kasa" class="genel-baslik-2">Kasa Tipleri</h2>
                       <div class="row row-cols-3 row-cols-md-6 g-4 mt-3 justify-content-center align-items-center">
                 <div class="brand kasa-card">
-                  <a href="kasa.html#sedan" class="brand-link"> 
+                  <a href="kasa/sedan.html" class="brand-link"> 
                       <div class="card h-100 d-flex flex-column align-items-center">
                           <div class="home-card-body">
                               <h5 class="home-text-brand">Sedan</h5>
@@ -19,7 +19,7 @@ class CarBodies extends HTMLElement {
                   </a>
                 </div>
                 <div class="brand kasa-card">
-                  <a href="kasa.html#hb" class="brand-link"> 
+                  <a href="kasa/hatchback.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">Hatchback</h5>
@@ -28,7 +28,7 @@ class CarBodies extends HTMLElement {
                   </a>
                 </div>
                 <div class="brand kasa-card">
-                  <a href="kasa.html#suv" class="brand-link"> 
+                  <a href="kasa/suv.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">SUV</h5>
@@ -37,7 +37,7 @@ class CarBodies extends HTMLElement {
                   </a>
                 </div>
                 <div class="brand kasa-card">
-                  <a href="kasa.html#pickup" class="brand-link"> 
+                  <a href="kasa/pickup.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">Pick-Up</h5>
@@ -46,7 +46,7 @@ class CarBodies extends HTMLElement {
                   </a>
                 </div>
                 <div class="brand kasa-card">
-                  <a href="kasa.html#crossover" class="brand-link"> 
+                  <a href="kasa/crossover.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">Crossover</h5>
@@ -62,7 +62,7 @@ class CarBodies extends HTMLElement {
                     </div>
                 </div>
                 <div class="brand kasa-card hidden">
-                  <a href="kasa.html#mpv" class="brand-link"> 
+                  <a href="kasa/mpv.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">MPV</h5>
@@ -71,7 +71,7 @@ class CarBodies extends HTMLElement {
                   </a>
                 </div>
                 <div class="brand kasa-card hidden">
-                  <a href="kasa.html#station" class="brand-link"> 
+                  <a href="kasa/station.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">Station</h5>
@@ -80,7 +80,7 @@ class CarBodies extends HTMLElement {
                   </a>
                 </div>
                 <div class="brand kasa-card hidden">
-                  <a href="kasa.html#cabrio" class="brand-link"> 
+                  <a href="kasa/cabrio.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">Cabrio</h5>
@@ -89,7 +89,7 @@ class CarBodies extends HTMLElement {
                   </a>
                 </div>
                 <div class="brand kasa-card hidden">
-                  <a href="kasa.html#coupe" class="brand-link"> 
+                  <a href="kasa/coupe.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">Coupe</h5>
@@ -98,7 +98,7 @@ class CarBodies extends HTMLElement {
                   </a>
                 </div>
                 <div class="brand kasa-card hidden">
-                  <a href="kasa.html#minivan" class="brand-link"> 
+                  <a href="kasa/minivan.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">Minivan</h5>
@@ -107,7 +107,7 @@ class CarBodies extends HTMLElement {
                   </a>
                 </div>
                 <div class="brand kasa-card hidden">
-                  <a href="kasa.html#panelvan" class="brand-link"> 
+                  <a href="kasa/panelvan.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">Panelvan</h5>
@@ -116,7 +116,7 @@ class CarBodies extends HTMLElement {
                   </a>
                 </div>
                 <div class="brand kasa-card hidden">
-                  <a href="kasa.html#micro" class="brand-link"> 
+                  <a href="kasa/micro.html" class="brand-link"> 
                     <div class="card h-100 d-flex flex-column align-items-center">
                       <div class="home-card-body">
                         <h5 class="home-text-brand">Micro</h5>
