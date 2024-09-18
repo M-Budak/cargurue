@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   document.getElementById('home-button').addEventListener('click', function() {
-      window.location.href = 'https://m-budak.github.io/cargurue/anasayfa.html'; // Ana sayfa URL'sini burada belirtin
+      window.location.href = 'https://m-budak.github.io/cargurue'; // Ana sayfa URL'sini burada belirtin
   });
 
   document.getElementById('google-review-button').addEventListener('click', function() {

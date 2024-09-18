@@ -15,7 +15,7 @@ fetch('../data/testdata.json')
                 if (modelData) {
                     // Kartın dış yapısını oluştur
                     const card = document.createElement('div');
-                    card.className = 'col-lg-3 col-6'; // Bu sınıfları ekleyerek genişlik ve yüksekliği ayarlıyoruz
+                    card.className = 'col-lg-6 col-12'; // Bu sınıfları ekleyerek genişlik ve yüksekliği ayarlıyoruz
 
                     // Kartın içeriğini oluştur
                     card.innerHTML = `

@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .catch(error => console.error("Benzer modeller yüklenirken bir hata oluştu: ", error));
     }
-
     function showScores(engineId) {
         fetch('../data/testskor.json')
             .then(response => response.json())
@@ -99,6 +98,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     console.error('Skorlar yüklenemedi.');
                     return;
                 }
+    
+                // Unique veri alındı, örneğin "name" alanı
+                const uniqueData = categoryData.name || engineId; // Eğer name yoksa engineId kullanılır
     
                 const scoreContainer = document.getElementById('score');
                 scoreContainer.innerHTML = '';
@@ -110,7 +112,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <div class="col-7">
                             <h2 class="skor-baslik">Skor</h2>
                             <p class="skor-bilgi">Bu sonuçlar kullanıcılar tarafından verilen puanların ortalamasıdır.</p>
-                            <a href="../puan_ver.html?page=${encodeURIComponent(engineId)}" class="btn btn-custom">Oy Ver</a>
+                            <!-- Burada engineId yerine uniqueData kullanılıyor -->
+                            <a href="../puan_ver.html?page=${encodeURIComponent(uniqueData)}" class="btn btn-custom">Oy Ver</a>
                         </div>
                         <div class="skor col-5">
                             <p>
@@ -142,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .catch(error => console.error("Skor verileri yüklenirken bir hata oluştu: ", error));
     }
+    
 
     function showFeatures(category) {
         fetch('../data/testfeatures.json')
