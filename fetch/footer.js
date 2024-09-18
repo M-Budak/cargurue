@@ -79,13 +79,13 @@ class MyFooter extends HTMLElement {
                                         <li><a href="https://m-budak.github.io/cargurue/yakit/lpg.html">LPG</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/yakit/Elektrikli.html">Elektrikli</a></li>
                                         <li><a href="https://m-budak.github.io/cargurue/yakit/hibrit.html">Hibrit</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/segments/a-segment.html">A Segmenti</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/segments/b-segment.html">B Segmenti</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/segments/c-segment.html">C Segmenti</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/segments/d-segment.html">D Segmenti</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/segments/f-segment.html">F Segmenti</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/segments/m-segment.html">M Segmenti</a></li>
-                                        <li><a href="https://m-budak.github.io/cargurue/segments/j-segment.html">J Segmenti</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/segments/a-segment.html">A Segment</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/segments/b-segment.html">B Segment</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/segments/c-segment.html">C Segment</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/segments/d-segment.html">D Segment</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/segments/f-segment.html">F Segment</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/segments/m-segment.html">M Segment</a></li>
+                                        <li><a href="https://m-budak.github.io/cargurue/segments/j-segment.html">J Segment</a></li>
                                     </div>
                                 </div>
                             </ul>
