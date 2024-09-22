@@ -97,7 +97,7 @@ function displayModels(container, models) {
                     </div>
                 </a>
             </div>
-        `;
+        `;""
 
         container.appendChild(modelDiv);
     });

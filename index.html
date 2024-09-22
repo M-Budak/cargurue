@@ -8,19 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="bg-dark text-light py-2">
-    <a href="index.html">
-    <h1 class="logo m-2">aracyorumu.com</h1>
-    </a>
-    <nav class="menu">
-        <ul>
-            <li><a href="arac-yorumu/markalar.html">Marka</a></li>
-            <li><a href="arac-yorumu/kasa.html">Kasa</a></li>
-            <li><a href="arac-yorumu/modeller.html">Model</a></li>
-            <li><a href="arac-yorumu/bizbize.html">Biz Bize</a></li>
-        </ul>
-    </nav>
-  </header>
+  
+  <my-header></my-header>
 
     <div class="full-width-carousel">
       <div id="carouselExampleCaptions" class="carousel slide">
@@ -311,7 +300,10 @@
       </div>
     </div>
      <!-- İhtiyaç duyulan sayıda kartı ekleyebilirsiniz -->
-  </div>
+    </div>
+
+
+    <car-fuel></car-fuel>
 
   <car-segments></car-segments>
 
@@ -384,7 +376,10 @@
 
   </div>
   <my-footer></my-footer>
-   <script src="fetch/segments.js"></script>
+  
+    <script src="fetch/header.js"></script>
+    <script src="fetch/fuels.js"></script>
+    <script src="fetch/segments.js"></script>
     <script src="fetch/footer.js"></script> 
     <script src="fetch/six_brands.js"></script> 
     <script src="fetch/brand_modal.js"></script>
@@ -393,29 +388,41 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="fetch/include.js"></script>
-
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-              const cards = document.querySelectorAll('.scrollable-cards .card-body');
-
-              cards.forEach(card => {
-                  const cardText = card.querySelector('.card-text');
-                  const readMore = card.querySelector('.read-more');
-                  const fullText = cardText.textContent;
-
-                  if (fullText.length > 150) {
-                      const truncatedText = fullText.substring(0, 150) + '...';
-                      cardText.textContent = truncatedText;
-                      readMore.style.display = 'inline';
-                  }
-
-                  readMore.addEventListener('click', function() {
-                      cardText.textContent = fullText;
-                      readMore.style.display = 'none';
-                  });
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          // Kartların metinlerini kısaltma işlemi
+          const cards = document.querySelectorAll('.scrollable-cards .card-body');
+  
+          cards.forEach(card => {
+              const cardText = card.querySelector('.card-text');
+              const readMore = card.querySelector('.read-more');
+              const fullText = cardText.textContent;
+  
+              if (fullText.length > 150) {
+                  const truncatedText = fullText.substring(0, 150) + '...';
+                  cardText.textContent = truncatedText;
+                  readMore.style.display = 'inline';
+              }
+  
+              readMore.addEventListener('click', function () {
+                  cardText.textContent = fullText;
+                  readMore.style.display = 'none';
               });
           });
-      </script>
+  
+          // Hamburger menüsünün açılıp kapanma işlemi
+          const menuToggle = document.getElementById('menu-toggle');
+          const menu = document.getElementById('menu');
+  
+          menuToggle.addEventListener('click', function () {
+              // Menüye "show" sınıfını ekleyerek gizli/görünür yapıyoruz
+              menu.classList.toggle('show');
+          });
+      });
+  </script>
+  
+
+      
 
     </body>
     </html>

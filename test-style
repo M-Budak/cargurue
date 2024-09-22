@@ -1,0 +1,83 @@
+/* Header düzeni */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    background-color: var(--background-color);
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Menü varsayılan olarak desktop görünümünde */
+.menu ul {
+    list-style: block;
+    margin: 6px;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+    color: white;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hamburger menü ikonu */
+.menu-toggle {
+    display: block; /* Masaüstünde görünmez */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 10px; /* Sağdan 10px */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 767px ve altı için mobil düzen */
+@media (max-width: 767px) {
+    /* Menü öğeleri dikey dizilir ve gizlenir */
+    .menu {
+        display: none; /* Başlangıçta gizli */
+    }
+
+    .menu-toggle {
+        display: block; /* Mobilde görünür */
+    }
+
+    .menu ul {
+        flex-direction: column;
+        background-color: var(--background-color);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .menu ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu ul li a {
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+    }
+
+    .menu.show {
+        display: block; /* Menü açıldığında görünür hale gelir */
+    }
+}

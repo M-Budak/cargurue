@@ -15,19 +15,20 @@ fetch('../data/testdata.json')
                 if (modelData) {
                     // Kartın dış yapısını oluştur
                     const card = document.createElement('div');
-                    card.className = 'col-lg-6 col-12'; // Bu sınıfları ekleyerek genişlik ve yüksekliği ayarlıyoruz
-
+                    card.className = 'col-lg-6 col-12 mb-3 body-specific-card'; // Kart için yeni bir class ekliyoruz
+                    
                     // Kartın içeriğini oluştur
                     card.innerHTML = `
-                        <div class="card car-card h-100">
+                        <div class="card body-specific-car-card h-100">
                             <a href="${modelData.link}">
-                                <img src="${modelData.img}" class="card-img-top" alt="${modelData.alt}">
+                                <img src="${modelData.img}" class="body-specific-card-img" alt="${modelData.alt}">
                             </a>
-                            <div class="card-body">
-                                <h5 class="card-title">${modelData.brand} ${modelData.model}</h5>
+                            <div class="body-specific-card-body">
+                                <h5 class="body-specific-card-title">${modelData.brand} ${modelData.model}</h5>
                             </div>
                         </div>
                     `;
+                    
 
                     // Kartı container'a ekle
                     container.appendChild(card);

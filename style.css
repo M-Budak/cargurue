@@ -1,4 +1,88 @@
 /* CSS Dosyası */
+
+
+/* Fuel kısmı start */
+
+.fuels-container {
+    display: flex;
+    flex-wrap: nowrap; /* Tek satırda kalmasını sağlar */
+    overflow-x: auto;  /* Yatay kaydırılabilir hale getirir */
+    padding: 10px;
+    gap: 20px;         /* Kartlar arasında boşluk bırakır */
+}
+
+.fuel-card {
+    min-width: 150px;   /* Kartların minimum genişliği */
+    flex: 0 0 auto;     /* Kartların boyutu sabit kalır, küçülüp büyümez */
+
+}
+
+.fuel-card-inner {
+    width: 100%;        /* Kartların içeriği tam genişlik kaplar */
+    text-align: center; /* Kart içindeki metin ortalanır */
+}
+
+.fuel-card-title {
+    color: #000; /* Başlık rengi */
+    border-color: var(--primary-color);
+    border-width: 1px;
+}
+
+/* Scrollbar stilleri */
+.fuels-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.fuels-container::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Kaydırma çubuğu rengi */
+    border-radius: 10px;
+}
+
+.fuels-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Kaydırma çubuğu izi rengi */
+}
+
+
+/* Fuel kısmı end  */
+
+/* body.js özelindeki kart ayarlamaları start */
+
+.body-specific-card-body {
+    height: 30px; /* Yüksekliği istediğiniz gibi ayarlayın */
+    display: flex;
+    justify-content: center; /* Yatayda ortalar */
+    align-items: center; /* Dikeyde ortalar */
+    text-align: center;
+}
+
+.body-specific-card-title{
+    margin: 0px;
+}
+
+
+.body-specific-card-img {
+    width: 100%; /* Genişliği tamamen doldur */
+    height: auto; /* Yüksekliği orantılı olsun */
+}
+
+/* Mobil görünüm için */
+@media (max-width: 767px) {
+    .body-specific-card-img {
+        height: 200px; /* Mobilde özel bir yükseklik ver */
+        object-fit: cover; /* Görseli alanı dolduracak şekilde kes */
+    }
+}
+
+/* Desktop görünüm için */
+@media (min-width: 768px) {
+    .body-specific-card-img {
+        height: 300px; /* Desktop için farklı bir yükseklik */
+        object-fit: cover; /* Görseli alanı dolduracak şekilde kes */
+    }
+}
+
+/* body.js özelindeki kart ayarlamaları end */
+
 .hidden {
     display: none;
 }
@@ -422,27 +506,132 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 6px 10px;
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    position: relative;
+    z-index: 1001;
 }
 
 .logo {
-    text-align: center;
     color: white;
     font-size: 18px;
     font-weight: bold;
 }
 
+.highlight a {
+    background-color: #f0f0f0; /* İstediğin arka plan rengi */
+    color: #333; /* Yazı rengi */
+    padding: 0px 10px; /* İçeride biraz boşluk eklemek için */
+    border-radius: 5px; /* Kenarları yuvarlatmak için isteğe bağlı */
+}
+
+.menu li.highlight {
+    background-color: #f0f0f0; /* İstediğin arka plan rengi */
+}
+
+.menu li.highlight a {
+    color: #333; /* Yazı rengi */
+    display: block; /* Tam boyutta tıklanabilir alan için */
+}
+
+
+/* Hamburger ikonu */
+.hamburger {
+    display: none; /* Masaüstünde gizli */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+}
+
+/* Menü öğeleri */
 .menu ul {
     list-style: none;
-    margin: 6px;
     padding: 0;
+    margin: 0;
     display: flex;
 }
 
-.menu li {
-    margin: 0 15px;
-    color: white;
+.menu {
+    margin-left: auto; /* Menü öğelerini sağa hizalamak için */
 }
+
+.menu li {
+    margin-right: 15px;
+    position: relative;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Mobil görünüm (767px ve altı) */
+@media only screen and (max-width: 767px) {
+    .hamburger {
+        display: flex; /* Mobilde hamburger görünsün */
+    }
+
+    .menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100%;
+        width: 70%;
+        background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+        transition: right 0.3s ease;
+        z-index: 1002;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    
+    .highlight a {
+        background-color: #f0f0f0; /* İstediğin arka plan rengi */
+        color: #333; /* Yazı rengi */
+        padding: 10px 10px; /* İçeride biraz boşluk eklemek için */
+        border-radius: 5px; /* Kenarları yuvarlatmak için isteğe bağlı */
+    }
+
+    /* Overlay for darkening the rest of the screen */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        z-index: 1000;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Mobile menu styling */
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
 
 /* HEADER ENDS  */
 
@@ -955,19 +1144,6 @@ margin-top: -0.5rem;
     width: 100%;
 }
 
-header {
-    flex-direction: column;
-}
-
-.logo {
-    margin-bottom: 8px;
-}
-
-.menu ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 0px;
-}
 
 /* HEADER ENDS  */
 
