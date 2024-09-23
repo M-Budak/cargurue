@@ -17,7 +17,7 @@ class BrandModal extends HTMLElement {
                 </div>
               </div>
 <div class="modal-footer">
-  <a href="kasa.html" class="btn btn-custom brand-link">Kasa Tipleri</a>
+  <a href="https://m-budak.github.io/cargurue/arac-yorumu/kasa.html" class="btn btn-custom brand-link">Kasa Tipleri</a>
 </div>
 
             </div>

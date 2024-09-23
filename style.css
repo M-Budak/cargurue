@@ -1,5 +1,50 @@
 /* CSS Dosyası */
 
+.background-wrapper {
+    background-color:#00264b; /* Arka plan rengi */
+    width: 100vw; /* Ekranın tam genişliğini kaplar */
+    margin-left: calc(-50vw + 50%); /* Tüm ekran genişliğine yayılma */
+    margin-right: calc(-50vw + 50%);
+}
+
+/* Segment kısmı scrollable olsun diye start */
+.segment-row {
+    display: flex;
+    flex-wrap: nowrap; /* Kartların tek satırda olmasını sağlar */
+    overflow-x: auto; /* Yatayda kaydırılabilir yapar */
+    -webkit-overflow-scrolling: touch; /* Mobil cihazlarda yumuşak kaydırmayı sağlar */
+    scrollbar-width: none; /* Firefox'ta scroll bar'ı gizler */
+    padding-left: 0; /* Sol boşluğu kaldırır */
+    margin-left: 0; /* Sol boşluğu kaldırır */
+}
+
+.segment-row::-webkit-scrollbar {
+    display: none; /* Webkit tabanlı tarayıcılarda scroll bar'ı gizler */
+}
+
+.segment-card {
+    flex: 0 0 auto; /* Kartların genişliğini sabit tutar ve kaydırılabilir olmasını sağlar */
+    margin-right: 16px; /* Kartlar arasına boşluk ekler */
+    width: 8rem;
+    margin-bottom: 10rem;
+}
+
+.segment-row .segment-card:first-child {
+    margin-left: 0; /* İlk kartın sol kenara yapışmasını sağlar */
+}
+
+/* Mobil görünüm için */
+@media (max-width: 767px) {
+    .segment-card {
+        width: 3.8rem;
+    }
+}
+
+/* Segment kısmı scrollable olsun diye end */
+
+.home-text-brand {
+    margin: 0.3rem;
+}
 
 /* Fuel kısmı start */
 
@@ -520,13 +565,23 @@ header {
 .highlight a {
     background-color: #f0f0f0; /* İstediğin arka plan rengi */
     color: #333; /* Yazı rengi */
-    padding: 0px 10px; /* İçeride biraz boşluk eklemek için */
+    padding: 0 1.5rem; /* İçeride biraz boşluk eklemek için */
     border-radius: 5px; /* Kenarları yuvarlatmak için isteğe bağlı */
 }
 
 .menu li.highlight {
     background-color: #f0f0f0; /* İstediğin arka plan rengi */
 }
+
+/* Mobil görünüm (767px ve altı) */
+@media only screen and (max-width: 767px) {
+    .menu li.highlight {
+        background-color: #f0f0f0; /* İstediğin arka plan rengi */
+        padding: 10px 10px;
+        margin: 0px -20px;
+    }
+}    
+
 
 .menu li.highlight a {
     color: #333; /* Yazı rengi */
@@ -583,7 +638,7 @@ header {
         top: 0;
         height: 100%;
         width: 70%;
-        background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+        background-color: #333;
         transition: right 0.3s ease;
         z-index: 1002;
         flex-direction: column;
@@ -779,9 +834,6 @@ car-bodies .brand{
     padding: 1px 5px 0px 5px;
 }
 
-car-bodies .home-card-body{
-    margin-top: 5px;
-}
 /* CAR BODY STARTS  */
 
 .navbar{
