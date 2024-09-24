@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .catch(error => console.error("Benzer modeller yüklenirken bir hata oluştu: ", error));
     }
+
     function showScores(engineId) {
         fetch('../data/testskor.json')
             .then(response => response.json())
@@ -98,34 +99,33 @@ document.addEventListener("DOMContentLoaded", function() {
                     console.error('Skorlar yüklenemedi.');
                     return;
                 }
-    
-                // Unique veri alındı, örneğin "name" alanı
+
                 const uniqueData = categoryData.name || engineId; // Eğer name yoksa engineId kullanılır
-    
+
                 const scoreContainer = document.getElementById('score');
                 scoreContainer.innerHTML = '';
-    
+
                 const scoreElement = document.createElement('div');
                 scoreElement.className = 'col-md-6';
                 scoreElement.innerHTML = `
-                    <div class="row">
-                        <div class="col-7">
-                            <h2 class="skor-baslik">Skor</h2>
-                            <p class="skor-bilgi">Bu sonuçlar kullanıcılar tarafından verilen puanların ortalamasıdır.</p>
-                            <!-- Burada engineId yerine uniqueData kullanılıyor -->
-                            <a href="../puan_ver.html?page=${encodeURIComponent(uniqueData)}" class="btn btn-custom">Oy Ver</a>
-                        </div>
-                        <div class="skor col-5">
-                            <p>
-                                <span class="skor_number">${categoryData.average}</span>
-                                <span class="skor_unit">/ 5</span>
-                            </p>
-                            <p class="skor-oy">${categoryData.votes} Oy</p>
-                        </div>
+                <div class="row">
+                    <div class="col-6">
+                        <h2 class="skor-baslik">Skor</h2>
+                        <p class="skor-bilgi" style="margin-bottom: 0.5rem;">Bu sonuçlar kullanıcılar tarafından verilen puanların ortalamasıdır.</p>
+                        <!-- Burada engineId yerine uniqueData kullanılıyor -->
+                        <a href="../puan_ver.html?page=${encodeURIComponent(uniqueData)}" class="btn btn-custom oy-ver-btn" style="margin-bottom: 1rem; padding: 0rem; width: 8rem;">Oy Ver</a>
                     </div>
+                    <div class="skor col-6">
+                        <p>
+                            <span class="skor_number">${categoryData.average}</span>
+                            <span class="skor_unit">/ 5</span>
+                        </p>
+                        <p class="skor-oy">${categoryData.votes} Oy</p>
+                    </div>
+                </div>
                 `;
                 scoreContainer.appendChild(scoreElement);
-    
+
                 const scoresElement = document.createElement('div');
                 scoresElement.className = 'skor-puan col-md-6';
                 let categoriesHtml = '';
@@ -145,7 +145,6 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .catch(error => console.error("Skor verileri yüklenirken bir hata oluştu: ", error));
     }
-    
 
     function showFeatures(category) {
         fetch('../data/testfeatures.json')
@@ -214,10 +213,43 @@ document.addEventListener("DOMContentLoaded", function() {
         return featureElement;
     }
 
+// Maksimum görünen yorum sayısını belirleyen parametre
+const maxVisibleComments = 1; 
 
-// Yorumlar için maksimum gösterim sayısını belirleyen parametre
-const maxVisibleComments = 1; // Bu değeri istediğiniz gibi değiştirebilirsiniz.
+// Yorum ekleme düğmesini ayarlayan işlev
+function setAddCommentButton(addCommentButton, engineCode) {
+    fetch('../data/name-id.json')
+        .then(response => response.json())
+        .then(nameIdData => {
+            const name = nameIdData[engineCode];
+            if (name) {
+                addCommentButton.href = `../yorum_ekle.html?page=${encodeURIComponent(name)}`;
+            } else {
+                console.error('ID için bir name bulunamadı.');
+            }
+        })
+        .catch(error => {
+            console.error('JSON dosyası yüklenirken bir hata oluştu:', error);
+        });
+}
 
+// Yorum elemanını oluşturan işlev
+function createCommentElement(comment) {
+    const commentElement = document.createElement('div');
+    commentElement.className = 'card yorum-card';
+    commentElement.innerHTML = `
+        <div class="card-header">
+            <h4 class="card-title"><strong>${comment.author}</strong></h4>
+            <p class="card-text">${comment.date} ${comment.duration}</p>
+        </div>
+        <div class="card-body">
+            <p class="card-text">${comment.content}</p>
+        </div>
+    `;
+    return commentElement;
+}
+
+// Yorumları yükleyen ve gösteren işlev
 function showComments(engineCode) {
     fetch('../data/testyorum.json')
         .then(response => response.json())
@@ -225,42 +257,37 @@ function showComments(engineCode) {
             const commentsContainer = document.getElementById('yorumlar');
             commentsContainer.innerHTML = '';
 
+            // engineCode'a göre filtrelenen yorumlar
             const engineComments = Object.values(commentsData).filter(comment => comment.engine === engineCode);
 
             if (engineComments.length > 0) {
                 let visibleCount = 0;
 
+                // Yorumları yükleme fonksiyonu
                 const loadMoreComments = () => {
                     const nextBatch = engineComments.slice(visibleCount, visibleCount + maxVisibleComments);
                     nextBatch.forEach(comment => {
-                        const commentElement = document.createElement('div');
-                        commentElement.className = 'card yorum-card';
-                        commentElement.innerHTML = `
-                            <div class="card-header">
-                                <h4 class="card-title"><strong>${comment.author}</strong></h4>
-                                <p class="card-text">${comment.date} ${comment.duration}</p>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">${comment.content}</p>
-                            </div>
-                        `;
+                        const commentElement = createCommentElement(comment);
                         commentsContainer.insertBefore(commentElement, buttonsContainer);
                     });
                     visibleCount += nextBatch.length;
 
-                    // Yorumların hepsi yüklendiyse "Daha Fazla Yükle" butonunu gizle
+                    // Eğer tüm yorumlar yüklendiyse, "Daha Fazla" butonunu gizle
                     if (visibleCount >= engineComments.length) {
                         loadMoreButton.style.display = 'none';
                     }
                 };
 
+                // Butonlar için container oluşturma
                 const buttonsContainer = document.createElement('div');
                 buttonsContainer.className = 'buttons-container d-flex justify-content-between mt-2';
 
                 const addCommentButton = document.createElement('a');
                 addCommentButton.className = 'btn btn-custom';
                 addCommentButton.textContent = 'Yorum Ekle';
-                addCommentButton.href = '#'; // Şimdilik boş
+                
+                // addCommentButton için href'i ayarla
+                setAddCommentButton(addCommentButton, engineCode);
 
                 const loadMoreButton = document.createElement('button');
                 loadMoreButton.className = 'btn btn-custom';
@@ -268,23 +295,25 @@ function showComments(engineCode) {
                 loadMoreButton.style.display = 'none'; // Başlangıçta gizli
                 loadMoreButton.addEventListener('click', loadMoreComments);
 
-
                 buttonsContainer.appendChild(addCommentButton);
-
                 buttonsContainer.appendChild(loadMoreButton);
 
                 commentsContainer.appendChild(buttonsContainer);
 
-                loadMoreComments(); // İlk yorum kümesini yükle
+                // İlk yorum kümesini yükle
+                loadMoreComments();
 
+                // Eğer fazla yorum varsa "Daha Fazla" butonunu göster
                 if (engineComments.length > maxVisibleComments) {
-                    loadMoreButton.style.display = 'block'; // Eğer fazla yorum varsa butonu göster
+                    loadMoreButton.style.display = 'block';
                 }
             } else {
                 commentsContainer.innerHTML = '<p>Henüz yorum yapılmamış.</p>';
             }
         })
-        .catch(error => console.error('Yorum verileri yüklenirken bir hata oluştu: ', error));
-}
-
-});
+        .catch(error => {
+            console.error('Yorum verileri yüklenirken bir hata oluştu: ', error);
+            const commentsContainer = document.getElementById('yorumlar');
+            commentsContainer.innerHTML = '<p>Yorumlar yüklenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.</p>';
+        });
+}});

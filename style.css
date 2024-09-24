@@ -1,5 +1,11 @@
 /* CSS Dosyası */
 
+.no-comments-message {
+    padding: 12px;
+    color: #555; /* İsteğe bağlı renk */
+    font-size: 16px;
+}
+
 .background-wrapper {
     background-color:#00264b; /* Arka plan rengi */
     width: 100vw; /* Ekranın tam genişliğini kaplar */
@@ -34,7 +40,7 @@
 }
 
 /* Mobil görünüm için */
-@media (max-width: 767px) {
+@media (max-width: 769px) {
     .segment-card {
         width: 3.8rem;
     }
@@ -111,7 +117,7 @@
 }
 
 /* Mobil görünüm için */
-@media (max-width: 767px) {
+@media (max-width: 769px) {
     .body-specific-card-img {
         height: 200px; /* Mobilde özel bir yükseklik ver */
         object-fit: cover; /* Görseli alanı dolduracak şekilde kes */
@@ -360,6 +366,41 @@ a.modal-btn-oy, a.modal-btn-oy:visited, a.modal-btn-oy:focus, a.modal-btn-oy:act
     display: inline-block; 
 }
 
+/* Oy Verme Butonu Start  */
+.oy-ver-btn {
+    background-color: #ffcc00; /* Örnek arka plan rengi */
+    color: #fff; /* Yazı rengi */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.oy-ver-btn:hover {
+    background-color: #ffaa00; /* Hover durumu için farklı renk */
+    color: #000; /* Hover durumunda yazı rengi değişebilir */
+}
+
+/* Mobil görünüm (769px ve altı) */
+@media only screen and (max-width: 769px) {
+    .oy-ver-btn {
+        background-color: ffaa00; /* Örnek arka plan rengi */
+        color: #fff; /* Yazı rengi */
+        padding: 5px 0px;
+        border-radius: 5px;
+        font-weight: bold;
+        border: none;
+        margin-bottom: 1rem;
+        width: 1rem;
+    }
+}    
+
+
+
+/* Oy Verme Butonu End */
+
+
     .modal-btn:hover {
         background-color: #e09a00; /* Hover rengi */
     }
@@ -573,8 +614,8 @@ header {
     background-color: #f0f0f0; /* İstediğin arka plan rengi */
 }
 
-/* Mobil görünüm (767px ve altı) */
-@media only screen and (max-width: 767px) {
+/* Mobil görünüm (769px ve altı) */
+@media only screen and (max-width: 769px) {
     .menu li.highlight {
         background-color: #f0f0f0; /* İstediğin arka plan rengi */
         padding: 10px 10px;
@@ -626,8 +667,8 @@ header {
     font-size: 18px;
 }
 
-/* Mobil görünüm (767px ve altı) */
-@media only screen and (max-width: 767px) {
+/* Mobil görünüm (769px ve altı) */
+@media only screen and (max-width: 769px) {
     .hamburger {
         display: flex; /* Mobilde hamburger görünsün */
     }
@@ -1301,6 +1342,11 @@ font-size: 1rem;
 .skor-bilgi{
 font-size: 0.75rem;
 }
+
+.skor-bilgi p{
+    margin-bottom: 0rem;
+    }
+    
 
 
 /* Skor Ends*/ 

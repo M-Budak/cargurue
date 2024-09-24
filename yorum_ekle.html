@@ -6,6 +6,13 @@
   <title id="page-title">Geri Bildirim Formu</title>
   <link rel="stylesheet" href="nps.css">
   <style>
+    /* Sayfa stili */
+    body {
+      display: block; /* Dikey ortalamayı kaldırmak için */
+      margin: 0; /* Varsayılan marginleri sıfırlama */
+      padding: 20px; /* Üstten biraz boşluk eklemek için */
+    }
+
     /* Pop-up stili */
     .popup {
       display: none; /* Başlangıçta gizli */
@@ -36,60 +43,72 @@
     .popup-button:hover {
       background-color: #1f4d55;
     }
+
+    /* Checkbox stili */
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px; /* Seçenekler arası boşluk */
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    @media (max-width: 767px) {
+      .checkbox-group {
+        justify-content: space-between; /* Eşit aralık bırak */
+      }
+    }
   </style>
   <script>
-    // Cookie oluşturma fonksiyonu
-    function setCookie(name, value, days) {
-      var expires = "";
-      if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
-
-    // Cookie okuma fonksiyonu
-    function getCookie(name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-      }
-      return null;
-    }
-
-    // Pop-up gösterme fonksiyonu
-    function showPopup() {
-      var popup = document.getElementById('feedback-popup');
-      popup.style.display = 'flex'; // Pop-up'ı göster
-    }
-
-    // Cookie kontrolü ve form gönderme fonksiyonu
-    function checkCookieAndSubmit() {
-      var feedbackGiven = getCookie('feedbackGiven');
-      if (feedbackGiven) {
-        showPopup(); // Pop-up'ı göster
-        return false; // Formun gönderilmesini engelle
-      } else {
-        setCookie('feedbackGiven', 'true', 1); // 1 gün geçerli
-        return true; // Formun gönderilmesine izin ver
-      }
-    }
-    
     document.addEventListener('DOMContentLoaded', function() {
-      // Form gönderme kontrolü
-      const form = document.getElementById('feedback-form');
-      if (form) {
-        form.addEventListener('submit', function(event) {
-          if (!checkCookieAndSubmit()) {
-            event.preventDefault(); // Formun gönderilmesini engelle
+      const urlParams = new URLSearchParams(window.location.search);
+      const pageParam = urlParams.get('page'); // 'page' parametresini al
+
+      // Eğer page parametresi varsa
+      if (pageParam) {
+          const pageTitle = document.getElementById('page-title');
+          const feedbackTitle = document.getElementById('feedback-title'); // yeni h1 için ID
+          const decodedPage = decodeURIComponent(pageParam);
+
+          // Başlıkları güncelle
+          pageTitle.textContent = `Geri Bildirim Formu`; // sayfa başlığı
+          feedbackTitle.textContent = `${decodedPage} Hakkında Düşüncelerini Paylaş!`; // dinamik başlık
+      }
+
+      // "Evet" veya "Hayır" seçimleri için olay dinleyicisi
+      const usedBeforeRadio = document.getElementsByName('used_before');
+      const durationFieldset = document.getElementById('duration-fieldset');
+      const durationLabel = document.getElementById('duration-label');
+
+      usedBeforeRadio.forEach(radio => {
+        radio.addEventListener('change', function() {
+          if (this.value === 'yes') {
+            durationFieldset.style.display = 'block'; // Combo box göster
+          } else {
+            durationFieldset.style.display = 'none'; // Combo box gizle
           }
         });
-      }
-      
+      });
+
+      // Checkbox tıklama olayını dinle
+      const checkboxes = document.querySelectorAll('input[name="duration"]');
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+          if (this.checked) {
+            // Tüm checkbox'ları uncheck et
+            checkboxes.forEach(cb => {
+              if (cb !== this) cb.checked = false;
+            });
+          }
+        });
+      });
+
       // Pop-up kapatma butonuna tıklama olayını dinle
       const closeButton = document.getElementById('close-popup');
       if (closeButton) {
@@ -102,12 +121,46 @@
   </script>
 </head>
 <body>
-  <form id="feedback-form" method="post" action="" name="nps-form">
-    <h1 id="page-title">Hakkında Düşüncelerini Paylaş!</h1>
-    <br>
+  <form id="feedback-form" method="post" action="https://script.google.com/macros/s/AKfycbwCW_o7m5yBsSMgFFUd5F6c4BklTX40LOzy6981HOIcqpBhhurqlc3DjBgJPv_ZFBD7/exec" name="nps-form">
+    <h1 id="feedback-title"></h1> <!-- Sayfa başlığı burada dinamik olarak güncellenecek -->
+
+    <!-- Ad-Soyad Girişi -->
+    <legend for="name">Ad-Soyad:</legend>
+    
+    <textarea id="name-surname" placeholder="Ad Soyad" name="name-surname" style="margin-bottom: 1rem;"></textarea>
+
+    <!-- Bu aracı daha önce kullandınız mı? -->
     <fieldset>
-      <legend>Eklemek İstedikleriniz Var mı?</legend>
-      <textarea placeholder="Düşüncelerinizi paylaşın" name="additional_thoughts"></textarea>
+      <legend>Bu aracı daha önce kullandınız mı?</legend>
+      <label>
+        <input type="checkbox" name="used_before" value="yes"> Evet
+      </label>
+      <label>
+        <input type="checkbox" name="used_before" value="no"> Hayır
+      </label>
+    </fieldset>
+
+    <fieldset id="duration-fieldset" style="display: none;">
+      <legend style="margin-bottom: 10px;">Kullanım Süresi:</legend>
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" name="duration" value="0-1 Yıl"> 0-1 Yıl
+        </label>
+        <label>
+          <input type="checkbox" name="duration" value="2-3 Yıl"> 2-3 Yıl
+        </label>
+        <label>
+          <input type="checkbox" name="duration" value="4-5 Yıl"> 4-5 Yıl
+        </label>
+        <label>
+          <input type="checkbox" name="duration" value="5+ Yıl"> 5+ Yıl
+        </label>
+      </div>
+    </fieldset>
+    
+    <fieldset>
+      <legend id="dynamic-legend">Düşüncelerinizi Otomobil Severler ile Buluşturun!</legend> <!-- Yeni ID -->
+      <textarea placeholder="Yorumunuzu yazın" name="additional_thoughts"></textarea>
     </fieldset>
     <button type="submit" class="submit-btn">Gönder</button>
   </form>
