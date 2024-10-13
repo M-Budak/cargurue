@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('feedback-form');
-  const successPopup = document.getElementById('feedback-popup');
+  const successPopup = document.getElementById('success-popup');
   const closeButton = document.getElementById('close-popup');
 
   // Get model parameter from URL
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
       if (data.result === 'success') {
         form.reset(); // Reset form fields
-        successPopup.style.display = 'flex'; // Show the success popup
+        successPopup.classList.remove('hidden'); // Show the success popup
       } else {
         console.error('Form submission failed:', data.error);
       }
@@ -43,6 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   closeButton.addEventListener('click', function() {
-    successPopup.style.display = 'none'; // Hide the pop-up
+    successPopup.classList.add('hidden'); // Hide the pop-up
   });
 });

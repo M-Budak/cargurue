@@ -5,13 +5,15 @@
     color: #555; /* İsteğe bağlı renk */
     font-size: 16px;
 }
-
 .background-wrapper {
-    background-color:#00264b; /* Arka plan rengi */
-    width: 100vw; /* Ekranın tam genişliğini kaplar */
-    margin-left: calc(-50vw + 50%); /* Tüm ekran genişliğine yayılma */
-    margin-right: calc(-50vw + 50%);
+    background-color: #00264b; /* Arka plan rengi */
+    max-width: 100%; /* Maksimum genişlik sayfanın genişliği ile sınırlı */
+    margin: 0; /* Ortalamayı kaldırıp, sola yaslar */
+    padding: 0; /* Sola ve sağa yaslama */
+    overflow: hidden; /* Taşmayı gizle */
+    margin-top: 1.5rem;
 }
+
 
 /* Segment kısmı scrollable olsun diye start */
 .segment-row {
@@ -104,6 +106,7 @@
     justify-content: center; /* Yatayda ortalar */
     align-items: center; /* Dikeyde ortalar */
     text-align: center;
+    background-color: yellow;
 }
 
 .body-specific-card-title{
@@ -368,7 +371,7 @@ a.modal-btn-oy, a.modal-btn-oy:visited, a.modal-btn-oy:focus, a.modal-btn-oy:act
 
 /* Oy Verme Butonu Start  */
 .oy-ver-btn {
-    background-color: #ffcc00; /* Örnek arka plan rengi */
+    background-color: #fff; /* Örnek arka plan rengi */
     color: #fff; /* Yazı rengi */
     padding: 10px 20px;
     border-radius: 5px;
@@ -378,21 +381,22 @@ a.modal-btn-oy, a.modal-btn-oy:visited, a.modal-btn-oy:focus, a.modal-btn-oy:act
 }
 
 .oy-ver-btn:hover {
-    background-color: #ffaa00; /* Hover durumu için farklı renk */
-    color: #000; /* Hover durumunda yazı rengi değişebilir */
+    background-color: var(--primary-color); /* Hover durumu için farklı renk */
+    color: #fff; /* Hover durumunda yazı rengi değişebilir */
 }
 
 /* Mobil görünüm (769px ve altı) */
 @media only screen and (max-width: 769px) {
     .oy-ver-btn {
-        background-color: ffaa00; /* Örnek arka plan rengi */
+        background-color: #fff; /* Örnek arka plan rengi */
         color: #fff; /* Yazı rengi */
         padding: 5px 0px;
         border-radius: 5px;
         font-weight: bold;
         border: none;
         margin-bottom: 1rem;
-        width: 1rem;
+        width: 50px;
+        margin-left: -10px;
     }
 }    
 
@@ -605,7 +609,7 @@ header {
 
 .highlight a {
     background-color: #f0f0f0; /* İstediğin arka plan rengi */
-    color: #333; /* Yazı rengi */
+    color:  var(--primary-color); /* Yazı rengi */
     padding: 0 1.5rem; /* İçeride biraz boşluk eklemek için */
     border-radius: 5px; /* Kenarları yuvarlatmak için isteğe bağlı */
 }
@@ -625,7 +629,7 @@ header {
 
 
 .menu li.highlight a {
-    color: #333; /* Yazı rengi */
+    color:  var(--primary-color); /* Yazı rengi */
     display: block; /* Tam boyutta tıklanabilir alan için */
 }
 
@@ -679,7 +683,7 @@ header {
         top: 0;
         height: 100%;
         width: 70%;
-        background-color: #333;
+        background-color:  var(--primary-color);
         transition: right 0.3s ease;
         z-index: 1002;
         flex-direction: column;
@@ -693,7 +697,7 @@ header {
     
     .highlight a {
         background-color: #f0f0f0; /* İstediğin arka plan rengi */
-        color: #333; /* Yazı rengi */
+        color:  var(--primary-color); /* Yazı rengi */
         padding: 10px 10px; /* İçeride biraz boşluk eklemek için */
         border-radius: 5px; /* Kenarları yuvarlatmak için isteğe bağlı */
     }
@@ -821,9 +825,9 @@ a, a:visited, a:focus, a:active a:hover {
   }
 
 :root {
-    --primary-color: #0a1543;
+    --primary-color: #00264b;
     --secondary-color: #f5f5f5;
-    --background-color: #0a1e70;
+    --background-color: #00264b;
     --elektrikli-color:#25965a;
 }
 
@@ -942,7 +946,7 @@ car-bodies .brand{
 
 .nav-pills .nav-link {
     background-color: #cebd07; /* Butonlar için varsayılan arka plan rengi */
-    color: #333; /* Buton metin rengi */
+    color:  var(--primary-color); /* Buton metin rengi */
     border: 1px solid #ddd; /* Hafif kenarlık */
 }
 
@@ -974,10 +978,11 @@ car-bodies .brand{
 /* Header Starts */
 
 .button-container {
-    display:block;
+    display: block;
     justify-content: space-between;
 }
-.btn{
+
+.btn {
     border: 10px;
     font-size: 3rem;
 }
@@ -985,35 +990,79 @@ car-bodies .brand{
 .modal-footer .btn-custom {
     font-size: 22px;
     background-color: var(--primary-color);
-    /* color: var(--primary-color); */
     color: white;
     border: 0.1rem solid rgba(0, 0, 0, 0.793);
     border-color: #020A2B;
-    width: 10rem;
+    width: 10rem; /* Sabit genişlik */
     padding: 5px 15px;
     margin: 0.3rem;
-    /* transition: background-color 0.3s, color 0.3s, border-color 0.3s; */
+    white-space: nowrap; /* Yazının butonun boyutunu etkilememesi için */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .btn-custom {
     font-size: 22px;
-    /* background-color: var(--primary-color); */
     color: var(--primary-color);
     border: 0.1rem solid rgba(0, 0, 0, 0.793);
     border-color: #020A2B;
-    width: 10rem;
+    min-width:10rem; 
+    max-width: fit-content;
     padding: 5px 15px;
     margin: 0.3rem;
-    /* transition: background-color 0.3s, color 0.3s, border-color 0.3s; */
+    white-space: nowrap; /* Yazının butonun boyutunu etkilememesi için */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .btn-custom.active {
     background-color: var(--primary-color);
     color: white;
-    border-color: red;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
+
+
+/* ENGINE BUTTON SETTING STARTS */
+
+.button-container {
+    display: block;
+    justify-content: space-between;
+}
+
+.EngineButton {
+    border: 10px;
+    font-size: 3rem;
+    color: var(--primary-color);
+    border: 0.1rem solid rgba(0, 0, 0, 0.793);
+    border-color: #020A2B;
+    min-width: 22rem; /* Buton genişliği sabit */
+    padding: 5px 15px;
+    margin: 0.3rem;
+    white-space: nowrap; /* Yazı butonun boyutunu etkilemesin */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.modal-footer .EngineButton {
+    font-size: 22px;
+    background-color: var(--primary-color);
+    color: white;
+    border: 0.1rem solid rgba(0, 0, 0, 0.793);
+    border-color: #020A2B;
+    width: 10rem; /* Sabit genişlik */
+    padding: 5px 15px;
+    margin: 0.3rem;
+    white-space: nowrap; /* Buton içinde yazı taşmasın */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.EngineButton.active {
+    background-color: var(--primary-color);
+    color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* ENGINE BUTTON SETTING ENDS  */
+
 
 .btn-motor {
     font-size: 22px;
@@ -1102,8 +1151,9 @@ margin-top: -0.5rem;
 }
 
 .feature p {
-    color: #777; /* Açıklama rengi */
+    color: var(--primary-color); /* Açıklama rengi */
     text-align: center;
+    font-weight: 500;
 }
 
 .f_number {

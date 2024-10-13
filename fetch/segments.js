@@ -7,7 +7,9 @@ class Segments extends HTMLElement {
 
   render() {
       this.innerHTML = `
+      <a href="arac-yorumu/segment.html">
           <h2 id="segmentler" class="genel-baslik-2">Segmentler</h2>
+          </a>
           <div class="segment-row g-4 mt-3">
               <div class="brand segment-card">
                 <a href="segments/a-segment.html" class="brand-link "> 

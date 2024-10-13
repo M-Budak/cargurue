@@ -8,9 +8,10 @@
   <style>
     /* Sayfa stili */
     body {
-      display: block; /* Dikey ortalamayı kaldırmak için */
-      margin: 0; /* Varsayılan marginleri sıfırlama */
-      padding: 20px; /* Üstten biraz boşluk eklemek için */
+      display: block;
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
     }
 
     /* Pop-up stili */
@@ -31,7 +32,7 @@
       border-radius: 5px;
       text-align: center;
     }
-    .popup-button {
+    .popup-button, .submit-btn {
       margin-top: 10px;
       padding: 10px 20px;
       background-color: #2a5e68;
@@ -39,8 +40,9 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
-    .popup-button:hover {
+    .popup-button:hover, .submit-btn:hover {
       background-color: #1f4d55;
     }
 
@@ -59,6 +61,21 @@
       margin-right: 5px;
     }
 
+    /* Radio buttonları checkbox gibi göster */
+    input[type="radio"] {
+      appearance: none; /* Varsayılan radio görünümünü kaldır */
+      width: 16px;
+      height: 16px;
+      border: 2px solid #2a5e68;
+      border-radius: 3px;
+      position: relative;
+      outline: none;
+      cursor: pointer;
+    }
+    input[type="radio"]:checked {
+      background-color: #2a5e68;
+    }
+
     @media (max-width: 767px) {
       .checkbox-group {
         justify-content: space-between; /* Eşit aralık bırak */
@@ -68,40 +85,30 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const urlParams = new URLSearchParams(window.location.search);
-      const pageParam = urlParams.get('page'); // 'page' parametresini al
+      const pageParam = urlParams.get('page');
 
-      // Eğer page parametresi varsa
       if (pageParam) {
           const pageTitle = document.getElementById('page-title');
-          const feedbackTitle = document.getElementById('feedback-title'); // yeni h1 için ID
+          const feedbackTitle = document.getElementById('feedback-title');
           const decodedPage = decodeURIComponent(pageParam);
 
-          // Başlıkları güncelle
-          pageTitle.textContent = `Geri Bildirim Formu`; // sayfa başlığı
-          feedbackTitle.textContent = `${decodedPage} Hakkında Düşüncelerini Paylaş!`; // dinamik başlık
+          pageTitle.textContent = `Geri Bildirim Formu`;
+          feedbackTitle.textContent = `${decodedPage} Hakkında Düşüncelerini Paylaş!`;
       }
 
-      // "Evet" veya "Hayır" seçimleri için olay dinleyicisi
       const usedBeforeRadio = document.getElementsByName('used_before');
       const durationFieldset = document.getElementById('duration-fieldset');
-      const durationLabel = document.getElementById('duration-label');
 
       usedBeforeRadio.forEach(radio => {
         radio.addEventListener('change', function() {
-          if (this.value === 'yes') {
-            durationFieldset.style.display = 'block'; // Combo box göster
-          } else {
-            durationFieldset.style.display = 'none'; // Combo box gizle
-          }
+          durationFieldset.style.display = this.value === 'yes' ? 'block' : 'none';
         });
       });
 
-      // Checkbox tıklama olayını dinle
       const checkboxes = document.querySelectorAll('input[name="duration"]');
       checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', function() {
           if (this.checked) {
-            // Tüm checkbox'ları uncheck et
             checkboxes.forEach(cb => {
               if (cb !== this) cb.checked = false;
             });
@@ -109,11 +116,18 @@
         });
       });
 
-      // Pop-up kapatma butonuna tıklama olayını dinle
+      // Form gönderim işlemi
+      const form = document.getElementById('feedback-form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Varsayılan gönderim işlemini durdur
+        const popup = document.getElementById('success-popup');
+        popup.style.display = 'flex'; // Pop-up'ı göster
+      });
+
       const closeButton = document.getElementById('close-popup');
       if (closeButton) {
         closeButton.addEventListener('click', function() {
-          const popup = document.getElementById('feedback-popup');
+          const popup = document.getElementById('success-popup');
           popup.style.display = 'none'; // Pop-up'ı gizle
         });
       }
@@ -122,21 +136,20 @@
 </head>
 <body>
   <form id="feedback-form" method="post" action="https://script.google.com/macros/s/AKfycbwCW_o7m5yBsSMgFFUd5F6c4BklTX40LOzy6981HOIcqpBhhurqlc3DjBgJPv_ZFBD7/exec" name="nps-form">
-    <h1 id="feedback-title"></h1> <!-- Sayfa başlığı burada dinamik olarak güncellenecek -->
+    <h1 id="feedback-title"></h1>
 
     <!-- Ad-Soyad Girişi -->
     <legend for="name">Ad-Soyad:</legend>
-    
     <textarea id="name-surname" placeholder="Ad Soyad" name="name-surname" style="margin-bottom: 1rem;"></textarea>
 
     <!-- Bu aracı daha önce kullandınız mı? -->
     <fieldset>
       <legend>Bu aracı daha önce kullandınız mı?</legend>
       <label>
-        <input type="checkbox" name="used_before" value="yes"> Evet
+        <input type="radio" name="used_before" value="yes"> Evet
       </label>
       <label>
-        <input type="checkbox" name="used_before" value="no"> Hayır
+        <input type="radio" name="used_before" value="no"> Hayır
       </label>
     </fieldset>
 
@@ -151,7 +164,7 @@
         </label>
         <label>
           <input type="checkbox" name="duration" value="4-5 Yıl"> 4-5 Yıl
-        </label>
+        </label>  
         <label>
           <input type="checkbox" name="duration" value="5+ Yıl"> 5+ Yıl
         </label>
@@ -159,18 +172,22 @@
     </fieldset>
     
     <fieldset>
-      <legend id="dynamic-legend">Düşüncelerinizi Otomobil Severler ile Buluşturun!</legend> <!-- Yeni ID -->
+      <legend id="dynamic-legend">Düşüncelerinizi Otomobil Severler ile Buluşturun!</legend>
       <textarea placeholder="Yorumunuzu yazın" name="additional_thoughts"></textarea>
     </fieldset>
     <button type="submit" class="submit-btn">Gönder</button>
   </form>
 
   <!-- Success Pop-up -->
-  <div id="feedback-popup" class="popup">
+  <div id="success-popup" class="popup">
     <div class="popup-content">
-      <h2>Hata</h2>
-      <p>Zaten oy verdiniz.</p>
-      <button id="close-popup" class="popup-button">Tamam</button>
+      <h2>Teşekkürler!</h2>
+      <p>Geri bildiriminiz için teşekkür ederiz.</p>
+      <div class="button-container">
+        <button id="tekrar-degerlendir" class="submit-btn">Araca Dön</button>
+        <button id="home-button" class="submit-btn">Ana Sayfa</button>
+      </div>
+      <button id="close-popup" class="popup-button">Kapat</button>
     </div>
   </div>
 </body>

@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <h2 class="skor-baslik">Skor</h2>
                         <p class="skor-bilgi" style="margin-bottom: 0.5rem;">Bu sonuçlar kullanıcılar tarafından verilen puanların ortalamasıdır.</p>
                         <!-- Burada engineId yerine uniqueData kullanılıyor -->
-                        <a href="../puan_ver.html?page=${encodeURIComponent(uniqueData)}" class="btn btn-custom oy-ver-btn" style="margin-bottom: 1rem; padding: 0rem; width: 8rem;">Oy Ver</a>
+                        <a href="../puan_ver.html?page=${encodeURIComponent(uniqueData)}" class="btn btn-custom oy-ver-btn" style="margin-bottom: 1rem; padding: 0rem; width: 8rem;">Puan Ver ⭐️</a>
                     </div>
                     <div class="skor col-6">
                         <p>
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 // Maksimum görünen yorum sayısını belirleyen parametre
-const maxVisibleComments = 1; 
+const maxVisibleComments = 10; 
 
 // Yorum ekleme düğmesini ayarlayan işlev
 function setAddCommentButton(addCommentButton, engineCode) {
@@ -260,6 +260,23 @@ function showComments(engineCode) {
             // engineCode'a göre filtrelenen yorumlar
             const engineComments = Object.values(commentsData).filter(comment => comment.engine === engineCode);
 
+            // Butonlar için container oluşturma
+            const buttonsContainer = document.createElement('div');
+            buttonsContainer.className = 'buttons-container d-flex justify-content-between mt-1';
+            buttonsContainer.style.marginLeft = '0.75rem';  // margin-left ekleme
+
+            // Yorum Ekle butonunu oluştur
+            const addCommentButton = document.createElement('a');
+            addCommentButton.className = 'btn btn-custom';
+            addCommentButton.textContent = 'Yorum Ekle';
+
+            // addCommentButton için href'i ayarla
+            setAddCommentButton(addCommentButton, engineCode);
+
+            // Yorum ekleme butonunu her durumda ekle
+            buttonsContainer.appendChild(addCommentButton);
+
+            // Yorumlar varsa
             if (engineComments.length > 0) {
                 let visibleCount = 0;
 
@@ -278,26 +295,15 @@ function showComments(engineCode) {
                     }
                 };
 
-                // Butonlar için container oluşturma
-                const buttonsContainer = document.createElement('div');
-                buttonsContainer.className = 'buttons-container d-flex justify-content-between mt-2';
-
-                const addCommentButton = document.createElement('a');
-                addCommentButton.className = 'btn btn-custom';
-                addCommentButton.textContent = 'Yorum Ekle';
-                
-                // addCommentButton için href'i ayarla
-                setAddCommentButton(addCommentButton, engineCode);
-
+                // "Daha Fazla" butonunu oluştur
                 const loadMoreButton = document.createElement('button');
                 loadMoreButton.className = 'btn btn-custom';
                 loadMoreButton.textContent = 'Daha Fazla';
                 loadMoreButton.style.display = 'none'; // Başlangıçta gizli
                 loadMoreButton.addEventListener('click', loadMoreComments);
 
-                buttonsContainer.appendChild(addCommentButton);
+                // Butonları container'a ekle
                 buttonsContainer.appendChild(loadMoreButton);
-
                 commentsContainer.appendChild(buttonsContainer);
 
                 // İlk yorum kümesini yükle
@@ -308,7 +314,11 @@ function showComments(engineCode) {
                     loadMoreButton.style.display = 'block';
                 }
             } else {
-                commentsContainer.innerHTML = '<p>Henüz yorum yapılmamış.</p>';
+// Eğer yorum yoksa
+commentsContainer.innerHTML = '<p style="margin-left: 1rem; margin-top: 1rem;">Henüz yorum yapılmadı. İlk yorumu sen yap!</p>';
+// Yorumlar yoksa da butonları ekle
+commentsContainer.appendChild(buttonsContainer);
+
             }
         })
         .catch(error => {
@@ -316,4 +326,6 @@ function showComments(engineCode) {
             const commentsContainer = document.getElementById('yorumlar');
             commentsContainer.innerHTML = '<p>Yorumlar yüklenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.</p>';
         });
-}});
+}
+
+});

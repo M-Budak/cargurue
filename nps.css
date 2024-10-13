@@ -57,12 +57,12 @@ body {
   }
   
   .rating-btn.selected {
-    background: #f39c12;
+    background: #f04400;
     color: #fff;
   }
   
   .rating-btn:hover {
-    background: #f39c12;
+    background: #ff8600;
     color: #fff;
   }
   
@@ -94,12 +94,12 @@ body {
   }
   
   .criteria-btn.selected {
-    background: #f39c12;
+    background: #ff9d00;
     color: #fff;
   }
   
   .criteria-btn:hover {
-    background: #f39c12;
+    background: #ff8600;
     color: #fff;
   }
   
@@ -112,7 +112,7 @@ body {
   }
   
   .submit-btn {
-    background: #f39c12;
+    background: #ff8600;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -124,7 +124,7 @@ body {
   }
   
   .submit-btn:hover {
-    background: #e67e22;
+    background: #ff7500;
   }
   
   /* Pop-up Stil */
