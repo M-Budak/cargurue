@@ -33,7 +33,6 @@ class MyFooter extends HTMLElement {
                 .fa-youtube { background: #bb0000; color: white; }
                 .fa-instagram { background: #125688; color: white; }
                 
-                footer h5 { color: #ffc107; }
                 footer ul { list-style: none; padding: 0; }
                 footer ul li { margin-bottom: 8px; }
                 footer .d-flex a { font-size: 1.5rem; }
@@ -168,22 +167,10 @@ class MyFooter extends HTMLElement {
                             </ul>
                         </div>
               
-                        <div class="col-sm-12 col-md-2 mt-3 footer_haberler">
-                            <a href="https://m-budak.github.io/cargurue/arac-yorumu/bizbize.html">
-                                <h5 class="column-title">Araç Yorumu Biz Bize</h5>
-                            </a>
-                            <ul class="list-unstyled">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <li><a href="#link16">2023’te Türkiye’de En Çok Satan Arabalar</a></li>
-                                        <li><a href="#link17">2024 Tesla Fiyatları Nasıl?</a></li>
-                                        <li><a href="#link18">Yeni Yılda Hangi Arabalar Çıkıyor?</a></li>
-                                        <li><a href="#link19">TOGG Yerli Elektrikli Araba</a></li>
-                                        <li><a href="#link15">İkinci El Araba Alırken Dikkat Edilmesi Gerekenler</a></li>
-                                    </div>
-                                </div>
-                            </ul>
-                        </div>
+
+
+
+
                     </div>
                 </div>
             </footer>
@@ -194,3 +181,22 @@ class MyFooter extends HTMLElement {
 }
 
 customElements.define('my-footer', MyFooter);
+
+
+// boşluğa haberler kısmını  ekle 
+// <div class="col-sm-12 col-md-2 mt-3 footer_haberler">
+//     <a href="https://m-budak.github.io/cargurue/arac-yorumu/bizbize.html">
+//         <h5 class="column-title">Araç Yorumu Biz Bize</h5>
+//     </a>
+//     <ul class="list-unstyled">
+//         <div class="row">
+//             <div class="col-12">
+//                 <li><a href="#link16">2023’te Türkiye’de En Çok Satan Arabalar</a></li>
+//                 <li><a href="#link17">2024 Tesla Fiyatları Nasıl?</a></li>
+//                 <li><a href="#link18">Yeni Yılda Hangi Arabalar Çıkıyor?</a></li>
+//                 <li><a href="#link19">TOGG Yerli Elektrikli Araba</a></li>
+//                 <li><a href="#link15">İkinci El Araba Alırken Dikkat Edilmesi Gerekenler</a></li>
+//             </div>
+//         </div>
+//     </ul>
+// </div>

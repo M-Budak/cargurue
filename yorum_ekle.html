@@ -154,19 +154,19 @@
     </fieldset>
 
     <fieldset id="duration-fieldset" style="display: none;">
-      <legend style="margin-bottom: 10px;">Kullanım Süresi:</legend>
+      <legend style="margin-bottom: 10px;">Kullanım Süreniz Ne Kadar?:</legend>
       <div class="checkbox-group">
+        <label>
+          <input type="checkbox" name="duration" value="Kısa Süreli"> Kısa Süreli
+        </label>
         <label>
           <input type="checkbox" name="duration" value="0-1 Yıl"> 0-1 Yıl
         </label>
         <label>
-          <input type="checkbox" name="duration" value="2-3 Yıl"> 2-3 Yıl
-        </label>
+          <input type="checkbox" name="duration" value="1-3 Yıl"> 1-3 Yıl
+        </label> 
         <label>
-          <input type="checkbox" name="duration" value="4-5 Yıl"> 4-5 Yıl
-        </label>  
-        <label>
-          <input type="checkbox" name="duration" value="5+ Yıl"> 5+ Yıl
+          <input type="checkbox" name="duration" value="3+ Yıl"> 3+ Yıl
         </label>
       </div>
     </fieldset>
@@ -178,17 +178,38 @@
     <button type="submit" class="submit-btn">Gönder</button>
   </form>
 
+
   <!-- Success Pop-up -->
-  <div id="success-popup" class="popup">
+  <div id="success-popup" class="popup hidden">
     <div class="popup-content">
       <h2>Teşekkürler!</h2>
       <p>Geri bildiriminiz için teşekkür ederiz.</p>
+      <button id="google-review-button" class="submit-btn hidden">Bizi Google'da Değerlendir! ⭐️</button>
       <div class="button-container">
         <button id="tekrar-degerlendir" class="submit-btn">Araca Dön</button>
         <button id="home-button" class="submit-btn">Ana Sayfa</button>
       </div>
-      <button id="close-popup" class="popup-button">Kapat</button>
     </div>
   </div>
+
+  <script src="yorum_ekle.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const pageParam = urlParams.get('page');
+    if (pageParam) {
+        const pageTitle = document.getElementById('page-title');
+        pageTitle.textContent = `Araç Puanlama - ${decodeURIComponent(pageParam)}`;
+    }
+    });
+  </script>
+  <!-- Önceki sayfayı saklama -->
+<script>
+    // Sayfa yüklendiğinde mevcut sayfayı sakla
+    document.addEventListener('DOMContentLoaded', function() {
+      localStorage.setItem('previousPage', document.referrer);
+    });
+  </script>
+  
 </body>
 </html>

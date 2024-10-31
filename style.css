@@ -106,7 +106,6 @@
     justify-content: center; /* Yatayda ortalar */
     align-items: center; /* Dikeyde ortalar */
     text-align: center;
-    background-color: yellow;
 }
 
 .body-specific-card-title{
@@ -913,7 +912,7 @@ car-bodies .brand{
 
 /* Nav-link stil ayarları */
 #navbar-example2 .nav-link {
-    font-size: 14px;
+    font-size: 1.25rem;
     color: var(--primary-color);
     padding: 8px 16px;
     margin: 0 5px; /* Butonlar arasında biraz boşluk */
@@ -1308,7 +1307,7 @@ margin-top: -0.5rem;
 
 
 #navbar-example2 .nav-link {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: var(--primary-color);
     width: auto; /* İçerikle uyumlu genişlik */
     padding: 5px 15px;
@@ -1520,7 +1519,8 @@ font-size: 0.9rem;
 }
 
   footer h5 {
-    color: #ffc107;
+    color: white;
+    font-weight: 600;
   }
 
   footer ul {

@@ -1,7 +1,7 @@
 class MyHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <header class="bg-dark text-light py-2">
+            <header class="text-light py-2">
                 <a href="https://m-budak.github.io/cargurue/index.html" class="logo-link">
                     <h1 class="logo m-2">aracyorumu.com</h1>
                 </a>
@@ -17,12 +17,14 @@ class MyHeader extends HTMLElement {
                         <li><a href="https://m-budak.github.io/cargurue/arac-yorumu/yakit.html">Yakıt</a></li>
                         <li><a href="https://m-budak.github.io/cargurue/arac-yorumu/segment.html">Segment</a></li>
                         <li><a href="https://m-budak.github.io/cargurue/arac-yorumu/modeller.html">Model</a></li>
-                        <li class="highlight"><a href="https://m-budak.github.io/cargurue/arac-yorumu/bizbize.html">Biz Bize</a></li>
                     </ul>
                 </nav>
                 <div class="overlay" id="menuOverlay"></div>
             </header>
         `;
+
+
+        // bunu ekle <li class="highlight"><a href="https://m-budak.github.io/cargurue/arac-yorumu/bizbize.html">Biz Bize</a></li>
         
         const hamburger = document.getElementById('hamburgerMenu');
         const sideMenu = document.getElementById('sideMenu');
