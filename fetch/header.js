@@ -2,7 +2,7 @@ class MyHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <header class="text-light py-2">
-                <a href="https://m-budak.github.io/cargurue/index.html" class="logo-link">
+                <a href="../index.html" class="logo-link">
                     <h1 class="logo m-2">aracyorumu.com</h1>
                 </a>
                 <div class="hamburger" id="hamburgerMenu">
@@ -12,11 +12,11 @@ class MyHeader extends HTMLElement {
                 </div>
                 <nav class="menu" id="sideMenu">
                     <ul id="menuList">
-                        <li><a href="https://m-budak.github.io/cargurue/arac-yorumu/markalar.html">Marka</a></li>
-                        <li><a href="https://m-budak.github.io/cargurue/arac-yorumu/kasa.html">Kasa</a></li>
-                        <li><a href="https://m-budak.github.io/cargurue/arac-yorumu/yakit.html">Yakıt</a></li>
-                        <li><a href="https://m-budak.github.io/cargurue/arac-yorumu/segment.html">Segment</a></li>
-                        <li><a href="https://m-budak.github.io/cargurue/arac-yorumu/modeller.html">Model</a></li>
+                        <li><a href="../arac-yorumu/markalar.html">Marka</a></li>
+                        <li><a href="../arac-yorumu/kasa.html">Kasa</a></li>
+                        <li><a href="../arac-yorumu/yakit.html">Yakıt</a></li>
+                        <li><a href="../arac-yorumu/segment.html">Segment</a></li>
+                        <li><a href="../arac-yorumu/modeller.html">Model</a></li>
                     </ul>
                 </nav>
                 <div class="overlay" id="menuOverlay"></div>
@@ -24,7 +24,7 @@ class MyHeader extends HTMLElement {
         `;
 
 
-        // bunu ekle <li class="highlight"><a href="https://m-budak.github.io/cargurue/arac-yorumu/bizbize.html">Biz Bize</a></li>
+        // bunu ekle <li class="highlight"><a href="arac-yorumu/bizbize.html">Biz Bize</a></li>
         
         const hamburger = document.getElementById('hamburgerMenu');
         const sideMenu = document.getElementById('sideMenu');
