@@ -40,7 +40,7 @@ class Segments extends HTMLElement {
                 </a>
               </div>
               <div class="brand">
-                <a href="segments/d--segment.html" class="brand-link"> 
+                <a href="segments/d-segment.html" class="brand-link"> 
                   <div class="card">
                     <div class="home-card-body">
                       <h5 class="home-text-brand">D</h5>
@@ -94,7 +94,7 @@ class Segments extends HTMLElement {
                 </a>
               </div>
               <div class="brand">
-                <a href="segments/s-segment.html" class="brand-link"> 
+                <a href="arac-yorumu/segment.html" class="brand-link"> 
                   <div class="card">
                     <div class="home-card-body">
                       <h5 class="home-text-brand">Tümü</h5>
